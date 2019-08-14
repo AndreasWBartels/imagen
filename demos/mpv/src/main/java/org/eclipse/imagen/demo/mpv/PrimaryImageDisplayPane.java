@@ -9,34 +9,28 @@ package org.eclipse.imagen.demo.mpv;
 
 import java.awt.Color;
 import java.awt.Component;
-import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Insets;
 import java.awt.Point;
 import java.awt.Rectangle;
+import java.awt.RenderingHints;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
-import java.awt.geom.AffineTransform;
-import java.awt.image.RenderedImage;
-import javax.swing.BorderFactory;
-import javax.swing.JComponent;
-import javax.swing.JPanel;
-import javax.swing.JSplitPane;
-import javax.swing.border.Border;
-import java.util.Vector;
-import org.eclipse.imagen.JAI;
-import org.eclipse.imagen.LookupTableJAI;
 import java.awt.image.DataBuffer;
-import java.awt.image.renderable.ParameterBlock;
-import java.awt.RenderingHints;
-import org.eclipse.imagen.ImageLayout;
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeEvent;
+import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
+import java.awt.image.renderable.ParameterBlock;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.util.Vector;
+
+import javax.swing.JSplitPane;
+
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.KernelJAI;
+import org.eclipse.imagen.LookupTableJAI;
 import org.eclipse.imagen.ROIShape;
 import org.eclipse.imagen.RenderedOp;
 

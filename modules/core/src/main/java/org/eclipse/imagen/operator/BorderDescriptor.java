@@ -23,6 +23,7 @@ import java.awt.Shape;
 import java.awt.geom.Area;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
+
 import org.eclipse.imagen.BorderExtender;
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.OperationDescriptorImpl;

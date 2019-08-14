@@ -16,9 +16,8 @@
  */
 
 package org.eclipse.imagen;
-import java.io.Serializable;
-import java.awt.Rectangle;
 import java.awt.image.WritableRaster;
+import java.io.Serializable;
 
 /**
  * An abstract superclass for classes that extend or "pad" a

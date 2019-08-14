@@ -17,8 +17,6 @@
 
 package org.eclipse.imagen;
 
-import org.eclipse.imagen.media.util.ImageUtil;
-import org.eclipse.imagen.media.util.JDKWorkarounds;
 import java.awt.Dimension;
 import java.awt.Point;
 import java.awt.Rectangle;
@@ -29,12 +27,11 @@ import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel; // 3-22-00 used in deprecated methods only
 import java.awt.image.WritableRaster;
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
 import java.util.Vector;
-import org.eclipse.imagen.util.CaselessStringKey;
+
+import org.eclipse.imagen.media.util.ImageUtil;
+import org.eclipse.imagen.media.util.JDKWorkarounds;
 
 /**
  * This is the base class for all image operations.  It provides a home

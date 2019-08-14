@@ -33,23 +33,24 @@ import java.awt.image.SinglePixelPackedSampleModel;
 import java.awt.image.WritableRaster;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderContext;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.Vector;
+
 import org.eclipse.imagen.DeferredData;
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.KernelJAI;
 import org.eclipse.imagen.PixelAccessor;
-import org.eclipse.imagen.RasterAccessor;
 import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.RasterAccessor;
 import org.eclipse.imagen.UnpackedImageData;
 import org.eclipse.imagen.util.ImagingException;
 import org.eclipse.imagen.util.ImagingListener;
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 
 public final class ImageUtil {
 

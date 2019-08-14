@@ -17,10 +17,9 @@
 
 package org.eclipse.imagen.media.codecimpl;
 import java.awt.image.RenderedImage;
-import java.io.InputStream;
 import java.io.IOException;
+
 import org.eclipse.imagen.media.codec.FPXDecodeParam;
-import org.eclipse.imagen.media.codec.ImageDecoder;
 import org.eclipse.imagen.media.codec.ImageDecodeParam;
 import org.eclipse.imagen.media.codec.ImageDecoderImpl;
 import org.eclipse.imagen.media.codec.SeekableStream;

@@ -7,9 +7,10 @@
  */
 package org.eclipse.imagen.demo.medical;
 
-import java.beans.PropertyChangeListener;
 import java.awt.image.RenderedImage;
+import java.beans.PropertyChangeListener;
 import java.util.Iterator;
+
 import javax.swing.event.SwingPropertyChangeSupport;
 
 /**

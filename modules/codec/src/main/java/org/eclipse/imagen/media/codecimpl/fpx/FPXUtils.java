@@ -16,9 +16,7 @@
  */
 
 package org.eclipse.imagen.media.codecimpl.fpx;
-import java.io.IOException;
 import java.text.DecimalFormat;
-import org.eclipse.imagen.media.codec.SeekableStream;
 
 public class FPXUtils {
 

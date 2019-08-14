@@ -18,6 +18,7 @@
 package org.eclipse.imagen.registry;
 
 import java.lang.reflect.Method;
+
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.RegistryMode;
 import org.eclipse.imagen.tilecodec.TileCodecDescriptor;

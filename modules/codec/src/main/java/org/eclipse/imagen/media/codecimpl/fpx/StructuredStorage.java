@@ -16,12 +16,10 @@
  */
 
 package org.eclipse.imagen.media.codecimpl.fpx;
-import java.awt.RenderingHints;
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.StringTokenizer;
+
 import org.eclipse.imagen.media.codec.ByteArraySeekableStream;
 import org.eclipse.imagen.media.codec.FileSeekableStream;
 import org.eclipse.imagen.media.codec.SeekableStream;

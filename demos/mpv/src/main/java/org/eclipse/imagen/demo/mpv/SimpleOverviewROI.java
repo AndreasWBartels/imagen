@@ -7,17 +7,17 @@
  */
 package org.eclipse.imagen.demo.mpv;
 
+import java.awt.BasicStroke;
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.RenderingHints;
-import java.awt.BasicStroke;
-import java.awt.Stroke;
 import java.awt.Point;
-import java.awt.Color;
-import java.awt.geom.Dimension2D;
-import java.awt.geom.Point2D;
-import java.awt.geom.Line2D;
+import java.awt.RenderingHints;
+import java.awt.Stroke;
 import java.awt.geom.AffineTransform;
+import java.awt.geom.Dimension2D;
+import java.awt.geom.Line2D;
+import java.awt.geom.Point2D;
 
 /**
  * A class to represent a ROI (region of interest) for an overview image.

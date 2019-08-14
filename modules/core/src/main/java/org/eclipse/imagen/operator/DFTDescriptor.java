@@ -16,11 +16,11 @@
  */
 
 package org.eclipse.imagen.operator;
-import org.eclipse.imagen.media.util.PropertyGeneratorImpl;
 import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderableImage;
+
 import org.eclipse.imagen.EnumeratedParameter;
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.OperationDescriptorImpl;
@@ -28,8 +28,7 @@ import org.eclipse.imagen.ParameterBlockJAI;
 import org.eclipse.imagen.PropertyGenerator;
 import org.eclipse.imagen.RenderableOp;
 import org.eclipse.imagen.RenderedOp;
-import org.eclipse.imagen.operator.DFTDataNature;
-import org.eclipse.imagen.operator.DFTScalingType;
+import org.eclipse.imagen.media.util.PropertyGeneratorImpl;
 import org.eclipse.imagen.registry.RenderableRegistryMode;
 import org.eclipse.imagen.registry.RenderedRegistryMode;
 

@@ -30,11 +30,11 @@ import java.awt.image.SinglePixelPackedSampleModel;
 import java.awt.image.WritableRaster;
 import java.awt.image.WritableRenderedImage;
 import java.lang.reflect.Method;
-import java.util.Map;
-import java.util.Vector;
 import java.security.AccessController;
 import java.security.PrivilegedAction;
-import org.eclipse.imagen.util.CaselessStringKey;
+import java.util.Map;
+import java.util.Vector;
+
 import org.eclipse.imagen.media.util.ImageUtil;
 import org.eclipse.imagen.media.util.JDKWorkarounds;
 

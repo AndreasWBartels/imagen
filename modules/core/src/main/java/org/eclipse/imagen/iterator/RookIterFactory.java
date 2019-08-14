@@ -20,10 +20,11 @@ import java.awt.Rectangle;
 import java.awt.image.ComponentSampleModel;
 import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
-import java.awt.image.WritableRaster;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
+import java.awt.image.WritableRaster;
 import java.awt.image.WritableRenderedImage;
+
 // import org.eclipse.imagen.media.iterator.RookIterCSMByte;
 // import org.eclipse.imagen.media.iterator.RookIterCSMShort;
 // import org.eclipse.imagen.media.iterator.RookIterCSMUShort;

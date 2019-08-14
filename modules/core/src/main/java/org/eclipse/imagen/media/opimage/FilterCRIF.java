@@ -19,9 +19,8 @@ package org.eclipse.imagen.media.opimage;
 import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
-import java.awt.image.renderable.RenderableImage;
-import java.awt.image.renderable.RenderContext;
 import java.util.Arrays;
+
 import org.eclipse.imagen.CRIFImpl;
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.KernelJAI;

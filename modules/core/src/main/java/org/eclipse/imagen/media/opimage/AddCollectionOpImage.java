@@ -19,19 +19,16 @@ package org.eclipse.imagen.media.opimage;
 import java.awt.Rectangle;
 import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
-import java.awt.image.RenderedImage;
-import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Vector;
+
 import org.eclipse.imagen.ImageLayout;
-import org.eclipse.imagen.OpImage;
 import org.eclipse.imagen.PointOpImage;
 import org.eclipse.imagen.RasterAccessor;
 import org.eclipse.imagen.RasterFormatTag;
-import org.eclipse.imagen.RenderedOp;
-import java.util.Map;
 import org.eclipse.imagen.media.util.ImageUtil;
 
 /**

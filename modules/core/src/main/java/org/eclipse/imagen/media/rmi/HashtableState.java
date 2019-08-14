@@ -21,14 +21,10 @@ import java.awt.RenderingHints;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.Serializable;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Set;
-import org.eclipse.imagen.JAI;
-import org.eclipse.imagen.remote.SerializerFactory;
-import org.eclipse.imagen.remote.SerializableState;
 
 /**
  * This class is a serializable proxy for a Hashtable object.

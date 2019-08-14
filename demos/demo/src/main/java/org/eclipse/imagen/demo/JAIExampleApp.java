@@ -8,17 +8,13 @@
 package org.eclipse.imagen.demo;
 
 import java.awt.Frame;
-import java.awt.image.WritableRaster;
-import java.awt.image.DataBuffer;
-import java.awt.image.Raster;
-import java.awt.image.renderable.RenderedImageFactory;
-import java.awt.image.RenderedImage;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
-import java.io.File;
+import java.awt.image.renderable.RenderedImageFactory;
+
 import org.eclipse.imagen.JAI;
-import org.eclipse.imagen.ParameterBlockJAI;
 import org.eclipse.imagen.OperationDescriptor;
 import org.eclipse.imagen.OperationRegistry;
 import org.eclipse.imagen.PlanarImage;

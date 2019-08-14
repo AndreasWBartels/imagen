@@ -352,7 +352,7 @@ public abstract class Warp extends Object implements Serializable {
         int h = destRect.height;        // and bottom of the last column
 
         // Alloc an array large enough for the largest destRect side
-        float[] warpPoints = new float[Math.max(w * 2, (h - 2) * 2)];;
+        float[] warpPoints = new float[Math.max(w * 2, (h - 2) * 2)];
 
         // Map the pixels along the edges and find their min and max.
 

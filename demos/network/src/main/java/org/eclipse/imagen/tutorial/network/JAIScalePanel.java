@@ -7,15 +7,26 @@
  */
 package org.eclipse.imagen.tutorial.network;
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.BorderLayout;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.awt.image.renderable.ParameterBlock;
 import java.util.Hashtable;
 import java.util.Vector;
-import org.eclipse.imagen.*;
-import org.eclipse.imagen.remote.*;
-import javax.swing.*;
-import javax.swing.event.*;
+
+import javax.swing.BoxLayout;
+import javax.swing.ButtonGroup;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JSlider;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
+import org.eclipse.imagen.Interpolation;
+import org.eclipse.imagen.InterpolationNearest;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.remote.RemoteJAI;
 
 public class JAIScalePanel extends JAIDemoPanel
     implements ChangeListener, ItemListener {

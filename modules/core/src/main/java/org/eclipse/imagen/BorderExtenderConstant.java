@@ -16,7 +16,6 @@
  */
 
 package org.eclipse.imagen;
-import java.awt.Rectangle;
 import java.awt.image.DataBuffer;
 import java.awt.image.WritableRaster;
 

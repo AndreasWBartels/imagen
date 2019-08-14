@@ -23,9 +23,10 @@ import java.awt.image.Raster;
 import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
 import java.util.Map;
+
 import org.eclipse.imagen.ImageLayout;
-import org.eclipse.imagen.SourcelessOpImage;
 import org.eclipse.imagen.RasterFactory;
+import org.eclipse.imagen.SourcelessOpImage;
 
 /** Defines a checkerboard image for testing purpose. */
 final class CheckerboardOpImage extends SourcelessOpImage {

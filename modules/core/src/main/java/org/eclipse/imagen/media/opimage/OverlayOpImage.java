@@ -17,9 +17,6 @@
 
 package org.eclipse.imagen.media.opimage;
 
-import org.eclipse.imagen.media.util.ImageUtil;
-import org.eclipse.imagen.media.util.JDKWorkarounds;
-import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
@@ -28,12 +25,14 @@ import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
 import java.util.Map;
 import java.util.Vector;
+
 import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.PlanarImage;
 import org.eclipse.imagen.PointOpImage;
 import org.eclipse.imagen.RasterAccessor;
-import org.eclipse.imagen.RasterFactory;
 import org.eclipse.imagen.RasterFormatTag;
+import org.eclipse.imagen.media.util.ImageUtil;
+import org.eclipse.imagen.media.util.JDKWorkarounds;
 
 /**
  * An <code>OpImage</code> implementing the "Overlay" operation.

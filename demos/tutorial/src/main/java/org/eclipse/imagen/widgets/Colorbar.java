@@ -7,12 +7,12 @@
  */
 package org.eclipse.imagen.widgets;
 
-import java.awt.*;
-import java.awt.image.*;
-import java.awt.event.*;
-import java.awt.geom.*;
-import org.eclipse.imagen.*;
-import javax.swing.*;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+
+import javax.swing.JComponent;
+import javax.swing.SwingConstants;
 
 /**
  * A output widget used to display a colormap, derived from the

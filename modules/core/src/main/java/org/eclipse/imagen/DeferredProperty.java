@@ -19,7 +19,6 @@ package org.eclipse.imagen;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
-import java.util.Arrays;
 
 /**
  * A subclass of <code>DeferredData</code> to be used to wrap JAI property

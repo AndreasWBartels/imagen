@@ -18,24 +18,22 @@
 package org.eclipse.imagen.media.opimage;
 import java.awt.Point;
 import java.awt.Rectangle;
+import java.awt.geom.AffineTransform;
+import java.awt.geom.Point2D;
 import java.awt.image.ColorModel;
 import java.awt.image.DataBuffer;
 import java.awt.image.IndexColorModel;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
-import java.awt.image.renderable.ParameterBlock;
-import java.awt.geom.AffineTransform;
-import java.awt.geom.Point2D;
+import java.util.Map;
+
+import org.eclipse.imagen.BorderExtender;
 import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.Interpolation;
-import org.eclipse.imagen.InterpolationNearest;
-import org.eclipse.imagen.OpImage;
 import org.eclipse.imagen.RasterAccessor;
 import org.eclipse.imagen.RasterFormatTag;
 import org.eclipse.imagen.util.Range;
-import java.util.Map;
-import org.eclipse.imagen.BorderExtender;
 
 /**
  * An OpImage subclass that performs nearest-neighbour Affine mapping

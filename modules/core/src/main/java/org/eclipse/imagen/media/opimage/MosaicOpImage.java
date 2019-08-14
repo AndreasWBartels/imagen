@@ -29,18 +29,18 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.Vector;
+
 import org.eclipse.imagen.BorderExtender;
 import org.eclipse.imagen.BorderExtenderConstant;
 import org.eclipse.imagen.ImageLayout;
-import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.OpImage;
 import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.ROI;
 import org.eclipse.imagen.RasterAccessor;
 import org.eclipse.imagen.RasterFormatTag;
-import org.eclipse.imagen.ROI;
-import org.eclipse.imagen.operator.MosaicType;
-import org.eclipse.imagen.operator.MosaicDescriptor;
 import org.eclipse.imagen.media.util.ImageUtil;
+import org.eclipse.imagen.operator.MosaicDescriptor;
+import org.eclipse.imagen.operator.MosaicType;
 
 public class MosaicOpImage extends OpImage {
     private static final int WEIGHT_TYPE_ALPHA = 1;

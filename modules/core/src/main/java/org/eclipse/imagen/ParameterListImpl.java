@@ -17,11 +17,10 @@
 
 package org.eclipse.imagen;
 
-import org.eclipse.imagen.media.util.CaselessStringArrayTable;
 import java.text.MessageFormat;
-import java.util.Hashtable;
 import java.util.Locale;
-import org.eclipse.imagen.util.CaselessStringKey;
+
+import org.eclipse.imagen.media.util.CaselessStringArrayTable;
 
 /**
  * A concrete implementation of the <code>ParameterList</code>

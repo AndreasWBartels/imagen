@@ -23,8 +23,6 @@ import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
 import java.util.Map;
 import java.util.Vector;
-import org.eclipse.imagen.ImageLayout;
-import org.eclipse.imagen.PlanarImage;
 
 /**
  * A general class for single-source operations which require cobbled

@@ -19,8 +19,9 @@ package org.eclipse.imagen.registry;
 
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderContext;
-import org.eclipse.imagen.OperationRegistry;
+
 import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.OperationRegistry;
 import org.eclipse.imagen.remote.RemoteCRIF;
 import org.eclipse.imagen.remote.RemoteRenderedImage;
 

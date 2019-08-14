@@ -7,14 +7,28 @@
  */
 package org.eclipse.imagen.tutorial;
 
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.image.renderable.ParameterBlock;
+import java.awt.image.renderable.RenderableImage;
 import java.io.File;
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.image.renderable.*;
-import javax.swing.*;
-import javax.swing.border.*;
-import org.eclipse.imagen.*;
-import org.eclipse.imagen.widgets.*;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.EtchedBorder;
+import javax.swing.border.LineBorder;
+
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.widgets.ImageDisplay;
+import org.eclipse.imagen.widgets.Panner;
 
 
 

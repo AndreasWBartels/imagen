@@ -7,13 +7,30 @@
  */
 package org.eclipse.imagen.tutorial;
 
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.image.renderable.*;
-import javax.swing.*;
-import javax.swing.border.*;
-import org.eclipse.imagen.*;
-import org.eclipse.imagen.widgets.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.image.renderable.ParameterBlock;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.EtchedBorder;
+import javax.swing.border.LineBorder;
+
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.LookupTableJAI;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.widgets.Colorbar;
+import org.eclipse.imagen.widgets.ImageDisplay;
+import org.eclipse.imagen.widgets.Panner;
+import org.eclipse.imagen.widgets.ReadImage;
 
 
 public class LookupTable extends JPanel

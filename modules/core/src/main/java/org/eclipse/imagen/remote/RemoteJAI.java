@@ -22,24 +22,21 @@ import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderableImage;
 import java.text.MessageFormat;
-import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Vector;
+
 import org.eclipse.imagen.JAI;
-import org.eclipse.imagen.OperationRegistry;
 import org.eclipse.imagen.OperationDescriptor;
+import org.eclipse.imagen.OperationRegistry;
 import org.eclipse.imagen.PlanarImage;
-import org.eclipse.imagen.RenderedOp;
-import org.eclipse.imagen.RenderableOp;
 import org.eclipse.imagen.TileCache;
 import org.eclipse.imagen.util.CaselessStringKey;
 import org.eclipse.imagen.util.ImagingException;
 import org.eclipse.imagen.util.ImagingListener;
-import org.eclipse.imagen.media.util.ImageUtil;
 
 /**
  * A convenience class for instantiating operations on remote machines.

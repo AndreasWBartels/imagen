@@ -14,10 +14,7 @@ import java.awt.LayoutManager;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.image.RenderedImage;
-import java.awt.image.renderable.ParameterBlock;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
-import java.util.Hashtable;
+
 import javax.swing.JPanel;
 
 /**

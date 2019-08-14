@@ -18,12 +18,7 @@
 package org.eclipse.imagen.tilecodec ;
 
 import java.awt.image.SampleModel ;
-/*
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
-*/
-import org.eclipse.imagen.PropertyGenerator;
+
 import org.eclipse.imagen.ParameterListDescriptor;
 import org.eclipse.imagen.ParameterListDescriptorImpl;
 import org.eclipse.imagen.util.Range ;

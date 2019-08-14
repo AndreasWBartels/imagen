@@ -19,20 +19,20 @@ package org.eclipse.imagen.media.opimage;
 import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
-import java.awt.image.renderable.RenderedImageFactory;
 import java.io.IOException;
+
 import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.OpImage;
 import org.eclipse.imagen.TileCache;
-import org.eclipse.imagen.util.ImagingException;
-import org.eclipse.imagen.util.ImagingListener;
 import org.eclipse.imagen.media.codec.ImageCodec;
-import org.eclipse.imagen.media.codec.ImageDecoder;
 import org.eclipse.imagen.media.codec.ImageDecodeParam;
+import org.eclipse.imagen.media.codec.ImageDecoder;
 import org.eclipse.imagen.media.codec.SeekableStream;
 import org.eclipse.imagen.media.util.DisposableNullOpImage;
 import org.eclipse.imagen.media.util.ImageUtil;
+import org.eclipse.imagen.util.ImagingException;
+import org.eclipse.imagen.util.ImagingListener;
 
 public class CodecRIFUtil {
 

@@ -20,6 +20,7 @@ package org.eclipse.imagen.media.rmi;
 import java.awt.RenderingHints;
 import java.io.Serializable;
 import java.lang.reflect.Method;
+
 import org.eclipse.imagen.remote.SerializableState;
 import org.eclipse.imagen.remote.SerializerFactory;
 

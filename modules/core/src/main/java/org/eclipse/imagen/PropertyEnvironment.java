@@ -17,13 +17,13 @@
 
 package org.eclipse.imagen;
 
-import org.eclipse.imagen.media.util.CaselessStringKeyHashtable;
-import org.eclipse.imagen.media.util.PropertyUtil;
-import java.awt.Rectangle;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Vector;
+
+import org.eclipse.imagen.media.util.CaselessStringKeyHashtable;
+import org.eclipse.imagen.media.util.PropertyUtil;
 import org.eclipse.imagen.util.CaselessStringKey;
 
 /**

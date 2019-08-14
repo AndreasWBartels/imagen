@@ -9,21 +9,22 @@ package org.eclipse.imagen.tutorial.network.server;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
-import java.awt.Rectangle;
-import java.awt.Point;
 import java.awt.Dimension;
-import java.awt.image.renderable.ParameterBlock;
-import java.awt.image.RenderedImage;
+import java.awt.Point;
+import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
-import java.awt.image.Raster;
-import java.awt.image.WritableRaster;
 import java.awt.image.ColorModel;
-import java.rmi.Naming;
+import java.awt.image.Raster;
+import java.awt.image.RenderedImage;
+import java.awt.image.WritableRaster;
+import java.awt.image.renderable.ParameterBlock;
 import java.net.InetAddress;
-import java.rmi.RemoteException;
+import java.rmi.Naming;
 import java.rmi.RMISecurityManager;
+import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
+
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -34,12 +35,12 @@ import javax.swing.ScrollPaneConstants;
 
 import org.eclipse.imagen.RenderableOp;
 import org.eclipse.imagen.RenderedOp;
-import org.eclipse.imagen.remote.JAIRMIDescriptor;
-import org.eclipse.imagen.remote.NegotiableCapabilitySet;
-import org.eclipse.imagen.remote.SerializableState;
 import org.eclipse.imagen.media.rmi.ImageServer;
 import org.eclipse.imagen.media.rmi.JAIRMIImageServer;
 import org.eclipse.imagen.media.rmi.SerializableRenderableImage;
+import org.eclipse.imagen.remote.JAIRMIDescriptor;
+import org.eclipse.imagen.remote.NegotiableCapabilitySet;
+import org.eclipse.imagen.remote.SerializableState;
 
 /**
  * GUI that displays the tile that was most recently processed on the server.

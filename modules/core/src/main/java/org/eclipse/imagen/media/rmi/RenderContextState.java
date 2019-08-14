@@ -17,7 +17,6 @@
 
 package org.eclipse.imagen.media.rmi;
 
-import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.awt.Shape;
 import java.awt.geom.AffineTransform;
@@ -25,8 +24,7 @@ import java.awt.image.renderable.RenderContext;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.Serializable;
-import org.eclipse.imagen.ROIShape;
+
 import org.eclipse.imagen.remote.SerializableState;
 import org.eclipse.imagen.remote.SerializerFactory;
 

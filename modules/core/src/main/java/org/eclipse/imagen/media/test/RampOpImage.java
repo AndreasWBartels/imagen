@@ -22,6 +22,7 @@ import java.awt.image.Raster;
 import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
 import java.util.Map;
+
 import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.RasterFactory;
 import org.eclipse.imagen.SourcelessOpImage;

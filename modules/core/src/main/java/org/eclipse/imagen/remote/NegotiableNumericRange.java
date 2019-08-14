@@ -17,8 +17,9 @@
 
 package org.eclipse.imagen.remote;
 
-import java.math.BigInteger;
 import java.math.BigDecimal;
+import java.math.BigInteger;
+
 import org.eclipse.imagen.util.Range;
 
 /**

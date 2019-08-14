@@ -20,9 +20,10 @@ package org.eclipse.imagen.remote;
 import java.awt.RenderingHints;
 import java.awt.image.renderable.ParameterBlock;
 import java.net.URL;
-import org.eclipse.imagen.PropertyGenerator;
-import org.eclipse.imagen.ParameterListDescriptor;
+
 import org.eclipse.imagen.OperationNode;
+import org.eclipse.imagen.ParameterListDescriptor;
+import org.eclipse.imagen.PropertyGenerator;
 
 /**
  * This abstract class provides a partial implementation of the

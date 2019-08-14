@@ -9,7 +9,8 @@ package org.eclipse.imagen.tutorial.network;
 
 import java.awt.image.renderable.ParameterBlock;
 import java.util.Vector;
-import org.eclipse.imagen.*;
+
+import org.eclipse.imagen.PlanarImage;
 import org.eclipse.imagen.remote.RemoteJAI;
 
 public class JAIDyadicSubtractPanel extends JAIDyadicPanel {

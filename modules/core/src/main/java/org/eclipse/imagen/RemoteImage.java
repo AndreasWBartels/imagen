@@ -24,17 +24,17 @@ import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
-import java.awt.image.renderable.RenderableImage;
 import java.awt.image.renderable.RenderContext;
 import java.io.Serializable;
 import java.net.InetAddress;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.util.Vector;
-import org.eclipse.imagen.remote.SerializableRenderedImage;
+
 import org.eclipse.imagen.media.rmi.RMIImage;
 import org.eclipse.imagen.media.rmi.RasterProxy;
 import org.eclipse.imagen.media.rmi.RenderContextProxy;
+import org.eclipse.imagen.remote.SerializableRenderedImage;
 
 /**
  * A sub-class of <code>PlanarImage</code> which represents an image on a

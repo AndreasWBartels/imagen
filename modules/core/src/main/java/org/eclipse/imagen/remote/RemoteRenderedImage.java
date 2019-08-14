@@ -18,7 +18,6 @@
 package org.eclipse.imagen.remote;
 
 import java.awt.image.RenderedImage;
-import org.eclipse.imagen.remote.NegotiableCapabilitySet;
 
 /**
  * <code>RemoteRenderedImage</code> is an interface commonly used to 

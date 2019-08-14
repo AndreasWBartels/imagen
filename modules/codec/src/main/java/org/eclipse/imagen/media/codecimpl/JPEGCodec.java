@@ -19,15 +19,15 @@ package org.eclipse.imagen.media.codecimpl;
 import java.awt.image.RenderedImage;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.InputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
+
 import org.eclipse.imagen.media.codec.ImageCodec;
-import org.eclipse.imagen.media.codec.ImageDecoder;
 import org.eclipse.imagen.media.codec.ImageDecodeParam;
-import org.eclipse.imagen.media.codec.ImageEncoder;
+import org.eclipse.imagen.media.codec.ImageDecoder;
 import org.eclipse.imagen.media.codec.ImageEncodeParam;
-import org.eclipse.imagen.media.codec.JPEGDecodeParam;
+import org.eclipse.imagen.media.codec.ImageEncoder;
 import org.eclipse.imagen.media.codec.JPEGEncodeParam;
 import org.eclipse.imagen.media.codec.SeekableStream;
 

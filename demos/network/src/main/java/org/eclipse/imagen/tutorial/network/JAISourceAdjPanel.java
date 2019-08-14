@@ -7,11 +7,16 @@
  */
 package org.eclipse.imagen.tutorial.network;
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.BorderLayout;
+import java.awt.RenderingHints;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Vector;
-import org.eclipse.imagen.*;
-import javax.swing.*;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+import org.eclipse.imagen.PlanarImage;
 
 public abstract class JAISourceAdjPanel extends JPanel implements ActionListener {
 

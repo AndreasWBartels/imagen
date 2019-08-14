@@ -20,9 +20,10 @@ package org.eclipse.imagen.remote;
 import java.awt.RenderingHints;
 import java.awt.image.renderable.ParameterBlock;
 import java.net.URL;
-import org.eclipse.imagen.RegistryElementDescriptor;
+
 import org.eclipse.imagen.OperationDescriptor;
 import org.eclipse.imagen.OperationNode;
+import org.eclipse.imagen.RegistryElementDescriptor;
 
 /**
  * This interface provides a description of a specific remote imaging

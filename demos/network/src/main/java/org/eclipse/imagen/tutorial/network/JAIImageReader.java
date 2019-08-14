@@ -9,6 +9,7 @@ package org.eclipse.imagen.tutorial.network;
 
 import java.awt.image.IndexColorModel;
 import java.awt.image.renderable.ParameterBlock;
+
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.LookupTableJAI;
 import org.eclipse.imagen.PlanarImage;

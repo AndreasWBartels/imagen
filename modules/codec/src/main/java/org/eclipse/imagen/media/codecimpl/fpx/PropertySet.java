@@ -16,13 +16,12 @@
  */
 
 package org.eclipse.imagen.media.codecimpl.fpx;
-import java.awt.RenderingHints;
 import java.io.IOException;
 import java.util.Date;
 import java.util.Hashtable;
+
 import org.eclipse.imagen.media.codec.SeekableStream;
 import org.eclipse.imagen.media.codecimpl.ImagingListenerProxy;
-import org.eclipse.imagen.media.codecimpl.util.ImagingException;
 
 class Property {
 

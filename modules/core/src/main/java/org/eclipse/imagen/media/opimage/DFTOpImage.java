@@ -17,7 +17,6 @@
 
 package org.eclipse.imagen.media.opimage;
 
-import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.geom.Point2D;
 import java.awt.image.ColorModel;
@@ -26,19 +25,17 @@ import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
-import java.text.NumberFormat;
-import java.util.Arrays;
-import java.util.Locale;
 import java.util.Map;
+
 import org.eclipse.imagen.EnumeratedParameter;
 import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.RasterAccessor;
-import org.eclipse.imagen.RasterFormatTag;
 import org.eclipse.imagen.RasterFactory;
+import org.eclipse.imagen.RasterFormatTag;
 import org.eclipse.imagen.UntiledOpImage;
-import org.eclipse.imagen.operator.DFTDescriptor;
 import org.eclipse.imagen.media.util.JDKWorkarounds;
 import org.eclipse.imagen.media.util.MathJAI;
+import org.eclipse.imagen.operator.DFTDescriptor;
 
 /**
  * An <code>OpImage</code> implementing the forward and inverse discrete

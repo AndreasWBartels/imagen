@@ -27,19 +27,14 @@ import java.awt.image.DataBufferUShort;
 import java.awt.image.MultiPixelPackedSampleModel;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
-import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
-import java.awt.image.renderable.ParameterBlock;
+import java.util.Map;
+
+import org.eclipse.imagen.BorderExtender;
 import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.Interpolation;
-import org.eclipse.imagen.InterpolationNearest;
 import org.eclipse.imagen.JAI;
-import org.eclipse.imagen.OpImage;
-import org.eclipse.imagen.RasterAccessor;
-import org.eclipse.imagen.RasterFormatTag;
 import org.eclipse.imagen.util.Range;
-import org.eclipse.imagen.BorderExtender;
-import java.util.Map;
 
 /**
  * An OpImage subclass that performs nearest-neighbour Affine mapping

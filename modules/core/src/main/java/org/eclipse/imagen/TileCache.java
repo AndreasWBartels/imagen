@@ -18,8 +18,8 @@
 package org.eclipse.imagen;
 import java.awt.Point;
 import java.awt.image.Raster;
-import java.util.Comparator;
 import java.awt.image.RenderedImage;
+import java.util.Comparator;
 
 /**
  * A class implementing a caching mechanism for image tiles.

@@ -21,7 +21,7 @@ import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ContextualRenderedImageFactory;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderContext;
-import java.util.Vector;
+
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.OperationNode;
 import org.eclipse.imagen.OperationRegistry;

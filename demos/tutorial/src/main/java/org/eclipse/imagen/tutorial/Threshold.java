@@ -7,13 +7,20 @@
  */
 package org.eclipse.imagen.tutorial;
 
-import java.util.*;
-import java.awt.*;
-import java.awt.image.renderable.*;
-import javax.swing.*;
-import javax.swing.event.*;
-import org.eclipse.imagen.*;
-import org.eclipse.imagen.widgets.*;
+import java.awt.BorderLayout;
+import java.awt.image.renderable.ParameterBlock;
+import java.util.Hashtable;
+
+import javax.swing.BorderFactory;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSlider;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.widgets.ImageDisplay;
 
 
 public class Threshold extends JPanel

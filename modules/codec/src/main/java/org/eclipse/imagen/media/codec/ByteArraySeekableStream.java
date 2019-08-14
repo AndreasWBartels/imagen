@@ -16,7 +16,6 @@
  */
 
 package org.eclipse.imagen.media.codec;
-import java.io.InputStream;
 import java.io.IOException;
 
 /**

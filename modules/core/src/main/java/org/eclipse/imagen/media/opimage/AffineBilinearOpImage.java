@@ -23,16 +23,14 @@ import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
-import java.awt.image.renderable.ParameterBlock;
+import java.util.Map;
+// import org.eclipse.imagen.media.test.OpImageTester;
+
 import org.eclipse.imagen.BorderExtender;
 import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.Interpolation;
-import org.eclipse.imagen.InterpolationBilinear;
-import org.eclipse.imagen.OpImage;
 import org.eclipse.imagen.RasterAccessor;
 import org.eclipse.imagen.RasterFormatTag;
-import java.util.Map;
-// import org.eclipse.imagen.media.test.OpImageTester;
 
 /**
  * An OpImage subclass that performs bilinear Affine mapping

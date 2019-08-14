@@ -18,13 +18,13 @@
 package org.eclipse.imagen.media.util;
 
 import java.awt.Rectangle;
-import java.awt.geom.AffineTransform;
 import java.awt.image.renderable.ParameterBlock;
+
 import org.eclipse.imagen.AreaOpImage;
 import org.eclipse.imagen.PlanarImage;
-import org.eclipse.imagen.RenderedOp;
 import org.eclipse.imagen.ROI;
 import org.eclipse.imagen.ROIShape;
+import org.eclipse.imagen.RenderedOp;
 
 public class AreaOpPropertyGenerator extends PropertyGeneratorImpl {
     /** Constructor. */

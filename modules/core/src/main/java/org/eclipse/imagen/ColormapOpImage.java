@@ -21,10 +21,6 @@ import java.awt.image.ColorModel;
 import java.awt.image.IndexColorModel;
 import java.awt.image.RenderedImage;
 import java.util.Map;
-import org.eclipse.imagen.ImageLayout;
-import org.eclipse.imagen.PointOpImage;
-import org.eclipse.imagen.TileCache;
-import org.eclipse.imagen.util.CaselessStringKey;
 
 /**
  * A class to be used to implement an operation which may conditionally

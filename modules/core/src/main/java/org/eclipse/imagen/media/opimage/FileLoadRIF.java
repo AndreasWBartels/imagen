@@ -22,19 +22,19 @@ import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
-import java.io.IOException;
 import java.lang.reflect.AccessibleObject;
 import java.lang.reflect.Method;
+
 import org.eclipse.imagen.JAI;
-import org.eclipse.imagen.OperationRegistry;
 import org.eclipse.imagen.OpImage;
+import org.eclipse.imagen.OperationRegistry;
 import org.eclipse.imagen.RenderedImageAdapter;
-import org.eclipse.imagen.registry.RIFRegistry;
-import org.eclipse.imagen.util.ImagingListener;
 import org.eclipse.imagen.media.codec.FileSeekableStream;
 import org.eclipse.imagen.media.codec.ImageDecodeParam;
 import org.eclipse.imagen.media.codec.SeekableStream;
 import org.eclipse.imagen.media.util.ImageUtil;
+import org.eclipse.imagen.registry.RIFRegistry;
+import org.eclipse.imagen.util.ImagingListener;
 
 /*
  * Package-scope class which merely adds a finalize() method to close

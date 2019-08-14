@@ -7,16 +7,21 @@
  */
 package org.eclipse.imagen.tutorial;
 
-import java.io.File;
 import java.awt.BorderLayout;
-import java.awt.Font;
 import java.awt.Color;
-import javax.swing.JPanel;
+import java.awt.Font;
+import java.io.File;
+
 import javax.swing.JLabel;
-import javax.swing.border.*;
+import javax.swing.JPanel;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.EtchedBorder;
+import javax.swing.border.LineBorder;
+
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.PlanarImage;
-import org.eclipse.imagen.widgets.*;
+import org.eclipse.imagen.widgets.ImageDisplay;
+import org.eclipse.imagen.widgets.Magnifier;
 
 public class About extends JPanel {
 

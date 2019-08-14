@@ -7,12 +7,24 @@
  */
 package org.eclipse.imagen.demo;
 
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.GridLayout;
+import java.awt.RenderingHints;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.image.RenderedImage;
-import java.awt.event.*;
 import java.util.Vector;
-import org.eclipse.imagen.*;
-import javax.swing.*;
+
+import javax.swing.Icon;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JToggleButton;
+import javax.swing.ScrollPaneConstants;
+
+import org.eclipse.imagen.PlanarImage;
 
 class AutoThread extends Thread {
     

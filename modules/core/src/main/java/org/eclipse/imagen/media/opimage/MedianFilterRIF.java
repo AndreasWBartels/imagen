@@ -20,10 +20,9 @@ import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
+
 import org.eclipse.imagen.BorderExtender;
 import org.eclipse.imagen.ImageLayout;
-import org.eclipse.imagen.KernelJAI;
-import java.util.Map;
 import org.eclipse.imagen.operator.MedianFilterDescriptor;
 import org.eclipse.imagen.operator.MedianFilterShape;
 

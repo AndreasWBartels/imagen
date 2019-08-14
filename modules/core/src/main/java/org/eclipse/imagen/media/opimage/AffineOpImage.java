@@ -20,28 +20,19 @@ import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Point2D;
-import java.awt.geom.Rectangle2D;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
-import java.awt.image.renderable.ParameterBlock;
-import java.awt.image.DataBuffer;
+import java.util.Map;
+
 import org.eclipse.imagen.BorderExtender;
 import org.eclipse.imagen.GeometricOpImage;
 import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.Interpolation;
 import org.eclipse.imagen.InterpolationNearest;
-import org.eclipse.imagen.InterpolationBilinear;
-import org.eclipse.imagen.InterpolationBicubic;
-import org.eclipse.imagen.InterpolationBicubic2;
-import org.eclipse.imagen.PlanarImage;
-import org.eclipse.imagen.RasterAccessor;
-import org.eclipse.imagen.RasterFactory;
+import org.eclipse.imagen.media.util.ImageUtil;
 import org.eclipse.imagen.util.ImagingException;
 import org.eclipse.imagen.util.ImagingListener;
-import org.eclipse.imagen.util.Range;
-import java.util.Map;
-import org.eclipse.imagen.media.util.ImageUtil;
 
 /**
  * An OpImage class to perform (possibly filtered) affine mapping between

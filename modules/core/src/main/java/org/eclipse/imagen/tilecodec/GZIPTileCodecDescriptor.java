@@ -17,9 +17,9 @@
 
 package org.eclipse.imagen.tilecodec ;
 import java.awt.image.SampleModel ;
+
 import org.eclipse.imagen.ParameterListDescriptor;
 import org.eclipse.imagen.ParameterListDescriptorImpl;
-import org.eclipse.imagen.PropertyGenerator;
 
 /**
  * <p>This class is the descriptor for the "GZIP" tile codec. This codec

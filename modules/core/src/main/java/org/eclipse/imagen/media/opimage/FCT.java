@@ -17,9 +17,7 @@
 
 package org.eclipse.imagen.media.opimage;
 
-import java.awt.image.DataBuffer;
 import org.eclipse.imagen.operator.DFTDescriptor;
-import org.eclipse.imagen.media.util.MathJAI;
 
 /**
  * The Fast Cosine Transform (FCT) class.

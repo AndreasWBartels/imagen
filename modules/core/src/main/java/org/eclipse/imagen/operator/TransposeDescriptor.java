@@ -16,13 +16,11 @@
  */
 
 package org.eclipse.imagen.operator;
-import org.eclipse.imagen.media.util.PropertyGeneratorImpl;
 import java.awt.RenderingHints;
-import java.awt.geom.AffineTransform;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderableImage;
-import org.eclipse.imagen.EnumeratedParameter;
+
 import org.eclipse.imagen.Interpolation;
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.OperationDescriptorImpl;
@@ -32,7 +30,7 @@ import org.eclipse.imagen.PropertyGenerator;
 import org.eclipse.imagen.ROI;
 import org.eclipse.imagen.RenderableOp;
 import org.eclipse.imagen.RenderedOp;
-import org.eclipse.imagen.operator.TransposeType;
+import org.eclipse.imagen.media.util.PropertyGeneratorImpl;
 import org.eclipse.imagen.registry.RenderableRegistryMode;
 import org.eclipse.imagen.registry.RenderedRegistryMode;
 

@@ -14,7 +14,6 @@ import java.awt.RenderingHints;
 import java.awt.Shape;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.GeneralPath;
-import java.awt.geom.PathIterator;
 import java.awt.image.ColorModel;
 import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
@@ -26,15 +25,17 @@ import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.util.Observable;
 import java.util.Vector;
+
+import javax.swing.JFrame;
+import javax.swing.event.SwingPropertyChangeSupport;
+
 import org.eclipse.imagen.Histogram;
 import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.InterpolationBilinear;
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.LookupTableJAI;
-import org.eclipse.imagen.ROIShape;
 import org.eclipse.imagen.PlanarImage;
-import javax.swing.JFrame;
-import javax.swing.event.SwingPropertyChangeSupport;
+import org.eclipse.imagen.ROIShape;
 
 /**
  * A wrapper class to generate the result image of the processing chain for

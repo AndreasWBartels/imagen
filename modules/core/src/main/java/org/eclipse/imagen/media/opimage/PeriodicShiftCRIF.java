@@ -17,21 +17,11 @@
 
 package org.eclipse.imagen.media.opimage;
 import java.awt.RenderingHints;
-import java.awt.geom.Rectangle2D;
-import java.awt.geom.AffineTransform;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
-import java.awt.image.renderable.RenderableImage;
-import java.awt.image.renderable.RenderableImageOp;
-import java.awt.image.renderable.RenderContext;
-import java.awt.image.renderable.RenderedImageFactory;
+
 import org.eclipse.imagen.CRIFImpl;
 import org.eclipse.imagen.ImageLayout;
-import org.eclipse.imagen.Interpolation;
-import org.eclipse.imagen.InterpolationNearest;
-import org.eclipse.imagen.InterpolationBilinear;
-import org.eclipse.imagen.InterpolationBicubic;
-import java.util.Map;
 
 /**
  * This image factory supports image operator <code>PeriodicShiftOpImage</code>

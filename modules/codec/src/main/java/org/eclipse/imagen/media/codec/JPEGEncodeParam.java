@@ -16,7 +16,6 @@
  */
 
 package org.eclipse.imagen.media.codec;
-import java.awt.image.RenderedImage;
 
 /**
  * A class which encapsulates the most common functionality required for 

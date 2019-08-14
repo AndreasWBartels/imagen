@@ -18,7 +18,6 @@
 package org.eclipse.imagen.media.codec;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
-import java.io.InputStream;
 import java.io.IOException;
 
 /**

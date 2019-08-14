@@ -19,6 +19,7 @@ package org.eclipse.imagen.media.tilecodec ;
 
 import java.io.InputStream;
 import java.util.Vector;
+
 import org.eclipse.imagen.ParameterListDescriptorImpl;
 import org.eclipse.imagen.remote.NegotiableCapability;
 import org.eclipse.imagen.tilecodec.TileCodecParameterList ;

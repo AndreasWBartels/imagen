@@ -16,17 +16,12 @@
  */
 
 package org.eclipse.imagen.media.opimage;
-import java.awt.Rectangle;
-import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
-import java.util.LinkedList;
-import java.util.ListIterator;
+
 import org.eclipse.imagen.Histogram;
-import org.eclipse.imagen.PixelAccessor;
 import org.eclipse.imagen.ROI;
 import org.eclipse.imagen.StatisticsOpImage;
-import org.eclipse.imagen.UnpackedImageData;
 
 /**
  * An <code>OpImage</code> implementing the "Histogram" operation as

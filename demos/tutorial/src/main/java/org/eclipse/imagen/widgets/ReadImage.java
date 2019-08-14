@@ -7,7 +7,8 @@
  */
 package org.eclipse.imagen.widgets;
 
-import java.io.*;
+import java.io.File;
+
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.PlanarImage;
 

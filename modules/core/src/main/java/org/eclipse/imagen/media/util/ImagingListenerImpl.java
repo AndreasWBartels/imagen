@@ -17,6 +17,7 @@
 
 package org.eclipse.imagen.media.util;
 import java.lang.ref.SoftReference;
+
 import org.eclipse.imagen.OperationRegistry;
 import org.eclipse.imagen.util.ImagingListener;
 

@@ -29,12 +29,13 @@ import java.awt.image.Raster;
 import java.awt.image.SinglePixelPackedSampleModel;
 import java.awt.image.WritableRaster;
 import java.util.Map;
+
 import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.PlanarImage;
 import org.eclipse.imagen.RasterAccessor;
 import org.eclipse.imagen.RasterFactory;
-import org.eclipse.imagen.SourcelessOpImage;
 import org.eclipse.imagen.RasterFormatTag;
+import org.eclipse.imagen.SourcelessOpImage;
 
 /**
  * An <code>OpImage</code> implementing the "AWTImage" operation as

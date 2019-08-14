@@ -28,13 +28,14 @@ import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
 import java.util.Vector;
-import java.text.MessageFormat;
+
 import org.eclipse.imagen.CollectionChangeEvent;
 import org.eclipse.imagen.CollectionOp;
 import org.eclipse.imagen.JAI;
@@ -46,10 +47,10 @@ import org.eclipse.imagen.RegistryMode;
 import org.eclipse.imagen.RenderedOp;
 import org.eclipse.imagen.RenderingChangeEvent;
 import org.eclipse.imagen.TileCache;
+import org.eclipse.imagen.media.util.ImageUtil;
 import org.eclipse.imagen.registry.RemoteRIFRegistry;
 import org.eclipse.imagen.util.ImagingException;
 import org.eclipse.imagen.util.ImagingListener;
-import org.eclipse.imagen.media.util.ImageUtil;
 
 /**
  * A node in a remote rendered imaging chain.  This class is a concrete

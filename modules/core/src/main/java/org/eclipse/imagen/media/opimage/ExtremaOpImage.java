@@ -16,23 +16,18 @@
  */
 
 package org.eclipse.imagen.media.opimage;
-import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.util.ArrayList;
-import java.util.Hashtable;
 import java.util.LinkedList;
 import java.util.ListIterator;
-import org.eclipse.imagen.ImageLayout;
-import org.eclipse.imagen.OpImage;
+
 import org.eclipse.imagen.PixelAccessor;
-import org.eclipse.imagen.PlanarImage;
 import org.eclipse.imagen.ROI;
 import org.eclipse.imagen.StatisticsOpImage;
 import org.eclipse.imagen.UnpackedImageData;
-import org.eclipse.imagen.media.util.ImageUtil;
 
 /**
  * An <code>OpImage</code> implementing the "Extrema" operation as

@@ -9,18 +9,15 @@ package org.eclipse.imagen.demo;
 
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
-import java.awt.image.ComponentSampleModel;
 import java.awt.image.DataBuffer;
-import java.awt.image.DataBufferByte;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
-import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
+
 import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.OperationDescriptorImpl;
-import org.eclipse.imagen.OpImage;
 import org.eclipse.imagen.PointOpImage;
 import org.eclipse.imagen.RasterAccessor;
 import org.eclipse.imagen.RasterFormatTag;

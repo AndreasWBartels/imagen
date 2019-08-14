@@ -34,12 +34,13 @@ import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
 import java.util.Vector;
-import org.eclipse.imagen.registry.CIFRegistry;
-import org.eclipse.imagen.registry.RCIFRegistry;
-import org.eclipse.imagen.registry.CollectionRegistryMode;
-import org.eclipse.imagen.registry.RenderableCollectionRegistryMode;
+
 import org.eclipse.imagen.media.util.ImageUtil;
 import org.eclipse.imagen.media.util.PropertyUtil;
+import org.eclipse.imagen.registry.CIFRegistry;
+import org.eclipse.imagen.registry.CollectionRegistryMode;
+import org.eclipse.imagen.registry.RCIFRegistry;
+import org.eclipse.imagen.registry.RenderableCollectionRegistryMode;
 
 /**
  * A node in a <code>CollectionImage</code> chain. A <code>CollectionOp</code>
@@ -602,7 +603,7 @@ public class CollectionOp extends CollectionImage
         }
 
         if(pb != null) {
-            Vector newSources = pb.getSources();;
+            Vector newSources = pb.getSources();
             if(newSources != null && newSources.size() > 0) {
                 Iterator it = newSources.iterator();
                 while(it.hasNext()) {

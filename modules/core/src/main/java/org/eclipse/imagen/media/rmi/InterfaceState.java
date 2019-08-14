@@ -21,15 +21,15 @@ import java.awt.RenderingHints;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.lang.reflect.Proxy;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
 import java.util.Hashtable;
+
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.remote.SerializableState;
 import org.eclipse.imagen.remote.Serializer;
-import org.eclipse.imagen.remote.SerializerFactory;
 
 /**
  * Class enabling serialization of an object which implements multiple

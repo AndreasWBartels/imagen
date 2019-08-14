@@ -25,16 +25,13 @@ import java.awt.Graphics2D;
 import java.awt.GraphicsConfiguration;
 import java.awt.Image;
 import java.awt.Paint;
-import java.awt.PaintContext;
 import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
-import java.awt.RenderingHints.Key;
 import java.awt.Shape;
 import java.awt.Stroke;
 import java.awt.font.FontRenderContext;
 import java.awt.font.GlyphVector;
-import java.awt.font.TextLayout;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Area;
 import java.awt.geom.Point2D;
@@ -53,9 +50,10 @@ import java.lang.reflect.Method;
 import java.text.AttributedCharacterIterator;
 import java.util.Hashtable;
 import java.util.Map;
+
+import org.eclipse.imagen.media.util.JDKWorkarounds;
 import org.eclipse.imagen.util.ImagingException;
 import org.eclipse.imagen.util.ImagingListener;
-import org.eclipse.imagen.media.util.JDKWorkarounds;
 
 /**
  * A concrete (i.e., non-abstract) class implementing all the methods

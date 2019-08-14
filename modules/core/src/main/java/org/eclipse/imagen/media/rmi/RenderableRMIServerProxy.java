@@ -21,18 +21,19 @@ import java.awt.Image;
 import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
-import java.awt.image.renderable.RenderableImage;
 import java.awt.image.renderable.RenderContext;
+import java.awt.image.renderable.RenderableImage;
 import java.net.InetAddress;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.util.Vector;
+
+import org.eclipse.imagen.media.util.ImageUtil;
 import org.eclipse.imagen.remote.JAIRMIDescriptor;
 import org.eclipse.imagen.remote.RemoteImagingException;
-import org.eclipse.imagen.remote.SerializerFactory;
 import org.eclipse.imagen.remote.SerializableState;
+import org.eclipse.imagen.remote.SerializerFactory;
 import org.eclipse.imagen.util.ImagingListener;
-import org.eclipse.imagen.media.util.ImageUtil;
 
 /**
  * A class that represents and allows access to a

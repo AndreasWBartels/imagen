@@ -20,25 +20,14 @@ import java.awt.Rectangle;
 import java.awt.image.ComponentSampleModel;
 import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
-import java.awt.image.WritableRaster;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
+import java.awt.image.WritableRaster;
 import java.awt.image.WritableRenderedImage;
-import org.eclipse.imagen.media.iterator.RandomIterCSMByte;
-import org.eclipse.imagen.media.iterator.RandomIterCSMShort;
-import org.eclipse.imagen.media.iterator.RandomIterCSMUShort;
-import org.eclipse.imagen.media.iterator.RandomIterCSMInt;
-import org.eclipse.imagen.media.iterator.RandomIterCSMFloat;
-import org.eclipse.imagen.media.iterator.RandomIterCSMDouble;
+
 import org.eclipse.imagen.media.iterator.RandomIterFallback;
 import org.eclipse.imagen.media.iterator.WrapperRI;
 import org.eclipse.imagen.media.iterator.WrapperWRI;
-import org.eclipse.imagen.media.iterator.WritableRandomIterCSMByte;
-import org.eclipse.imagen.media.iterator.WritableRandomIterCSMShort;
-import org.eclipse.imagen.media.iterator.WritableRandomIterCSMUShort;
-import org.eclipse.imagen.media.iterator.WritableRandomIterCSMInt;
-import org.eclipse.imagen.media.iterator.WritableRandomIterCSMFloat;
-import org.eclipse.imagen.media.iterator.WritableRandomIterCSMDouble;
 import org.eclipse.imagen.media.iterator.WritableRandomIterFallback;
 
 /**

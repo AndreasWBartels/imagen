@@ -19,21 +19,19 @@ package org.eclipse.imagen.media.opimage;
 import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
-import java.awt.Shape;
 import java.awt.color.ColorSpace;
 import java.awt.geom.AffineTransform;
-import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.ColorModel;
-import java.awt.image.ComponentColorModel;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
+import java.awt.image.renderable.RenderContext;
 import java.awt.image.renderable.RenderableImage;
 import java.awt.image.renderable.RenderableImageOp;
-import java.awt.image.renderable.RenderContext;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.Vector;
+
 import org.eclipse.imagen.CRIFImpl;
 import org.eclipse.imagen.EnumeratedParameter;
 import org.eclipse.imagen.ImageLayout;
@@ -45,13 +43,14 @@ import org.eclipse.imagen.PlanarImage;
 import org.eclipse.imagen.ROI;
 import org.eclipse.imagen.ROIShape;
 import org.eclipse.imagen.TiledImage;
-import org.eclipse.imagen.operator.TransposeDescriptor;
-import org.eclipse.imagen.util.ImagingException;
-import org.eclipse.imagen.util.ImagingListener;
 import org.eclipse.imagen.media.codec.ImageCodec;
 import org.eclipse.imagen.media.codec.ImageDecoder;
 import org.eclipse.imagen.media.codec.MemoryCacheSeekableStream;
 import org.eclipse.imagen.media.util.ImageUtil;
+import org.eclipse.imagen.operator.IIPDescriptor;
+import org.eclipse.imagen.operator.TransposeDescriptor;
+import org.eclipse.imagen.util.ImagingException;
+import org.eclipse.imagen.util.ImagingListener;
 
 /**
  * This CRIF implements the "iip" operation in the rendered and renderable
@@ -1160,7 +1159,7 @@ public class IIPCRIF extends CRIFImpl {
 
                 // Compute a complement ROI.
                 ROI complementROI =
-                    (new ROIShape(ti.getBounds())).subtract(roi);;
+                    (new ROIShape(ti.getBounds())).subtract(roi);
 
                 // Fill the background.
                 int maxTileY = ti.getMaxTileY();

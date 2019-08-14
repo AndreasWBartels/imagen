@@ -17,8 +17,6 @@
 
 package org.eclipse.imagen;
 
-import org.eclipse.imagen.media.util.PropertyUtil;
-import org.eclipse.imagen.media.util.Service;
 import java.awt.RenderingHints;
 import java.awt.image.renderable.ContextualRenderedImageFactory;
 import java.awt.image.renderable.ParameterBlock;
@@ -27,8 +25,6 @@ import java.io.BufferedWriter;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.Externalizable;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInput;
@@ -36,25 +32,25 @@ import java.io.ObjectOutput;
 import java.io.OutputStream;
 import java.io.StringWriter;
 import java.net.URL;
-import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Locale;
 import java.util.Vector;
+
+import org.eclipse.imagen.media.util.PropertyUtil;
+import org.eclipse.imagen.media.util.Service;
 import org.eclipse.imagen.registry.CIFRegistry;
 import org.eclipse.imagen.registry.CRIFRegistry;
-import org.eclipse.imagen.registry.RIFRegistry;
 import org.eclipse.imagen.registry.CollectionRegistryMode;
+import org.eclipse.imagen.registry.RIFRegistry;
 import org.eclipse.imagen.registry.RenderableRegistryMode;
 import org.eclipse.imagen.registry.RenderedRegistryMode;
 import org.eclipse.imagen.util.CaselessStringKey;
 import org.eclipse.imagen.util.ImagingException;
 import org.eclipse.imagen.util.ImagingListener;
-import org.eclipse.imagen.media.util.ImageUtil;
 /**
  * A class responsible for maintaining a registry of various types of
  * factory objects and preferences among them. The operation registry

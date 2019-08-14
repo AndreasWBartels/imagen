@@ -16,8 +16,8 @@
  */
 
 package org.eclipse.imagen;
-import java.awt.image.RenderedImage;
 import java.awt.image.Raster;
+import java.awt.image.RenderedImage;
 
 /**
  * Public interface for cached tiles used to

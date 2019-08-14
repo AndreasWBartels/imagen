@@ -8,7 +8,8 @@
 package org.eclipse.imagen.tutorial.network;
 
 import java.util.Vector;
-import org.eclipse.imagen.*;
+
+import org.eclipse.imagen.PlanarImage;
 import org.eclipse.imagen.remote.RemoteJAI;
 
 public class JAIDyadicSource1Panel extends JAIDyadicPanel {

@@ -18,15 +18,14 @@
  */
 
 package org.eclipse.imagen.media.codecimpl;
-import java.awt.image.IndexColorModel;
 import java.awt.image.ColorModel;
+import java.awt.image.IndexColorModel;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutput;
 import java.io.DataOutputStream;
-import java.io.FileOutputStream;
 import java.io.FilterOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -36,14 +35,9 @@ import java.util.GregorianCalendar;
 import java.util.TimeZone;
 import java.util.zip.Deflater;
 import java.util.zip.DeflaterOutputStream;
-import org.eclipse.imagen.media.codec.FileSeekableStream;
-import org.eclipse.imagen.media.codec.ImageCodec;
-import org.eclipse.imagen.media.codec.ImageDecoder;
-import org.eclipse.imagen.media.codec.ImageEncoder;
+
 import org.eclipse.imagen.media.codec.ImageEncoderImpl;
-import org.eclipse.imagen.media.codec.PNGDecodeParam;
 import org.eclipse.imagen.media.codec.PNGEncodeParam;
-import org.eclipse.imagen.media.codec.SeekableStream;
 
 class CRC {
 

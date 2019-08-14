@@ -22,8 +22,8 @@ import java.awt.geom.AffineTransform;
 import java.awt.geom.NoninvertibleTransformException;
 import java.awt.geom.Point2D;
 import java.util.Map;
+
 import org.eclipse.imagen.NullOpImage;
-import org.eclipse.imagen.OpImage;
 import org.eclipse.imagen.PlanarImage;
 
 /**

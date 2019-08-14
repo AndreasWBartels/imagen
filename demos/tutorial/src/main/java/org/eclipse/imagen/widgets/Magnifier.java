@@ -7,16 +7,25 @@
  */
 package org.eclipse.imagen.widgets;
 
-import java.awt.*;
-import java.awt.color.*;
-import java.awt.image.*;
-import java.awt.image.renderable.*;
-import java.awt.event.*;
-import java.awt.geom.*;
-import org.eclipse.imagen.*;
-import javax.swing.*;
-import javax.swing.event.*;
-import javax.swing.border.*;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Insets;
+import java.awt.Point;
+import java.awt.event.InputEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionAdapter;
+import java.awt.geom.AffineTransform;
+import java.awt.image.renderable.ParameterBlock;
+
+import javax.swing.JComponent;
+
+import org.eclipse.imagen.Interpolation;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.OpImage;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.RenderedOp;
 
 /**
  * An output widget used as a magnifing glass derived from

@@ -19,8 +19,6 @@ package org.eclipse.imagen.media.opimage;
 
 import java.awt.Point;
 import java.awt.Rectangle;
-import java.awt.RenderingHints;
-import java.awt.Transparency;
 import java.awt.color.ColorSpace;
 import java.awt.image.ColorConvertOp;
 import java.awt.image.ColorModel;
@@ -30,17 +28,15 @@ import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
-import java.text.NumberFormat;
+import java.lang.ref.SoftReference;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
+
 import org.eclipse.imagen.ColorSpaceJAI;
-import org.eclipse.imagen.IHSColorSpace;
 import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.PointOpImage;
 import org.eclipse.imagen.RasterFactory;
-import java.lang.ref.SoftReference;
 
 /**
  * An <code>OpImage</code> implementing the "ColorConvert" operation as

@@ -21,10 +21,11 @@ import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.io.Serializable;
-import java.util.Vector;
 import java.util.Hashtable;
-import org.eclipse.imagen.RenderedOp;
+import java.util.Vector;
+
 import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.RenderedOp;
 import org.eclipse.imagen.remote.RemoteRenderedOp;
 import org.eclipse.imagen.remote.SerializableRenderedImage;
 

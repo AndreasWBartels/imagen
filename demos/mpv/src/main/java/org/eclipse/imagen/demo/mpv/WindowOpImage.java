@@ -8,11 +8,16 @@
 package org.eclipse.imagen.demo.mpv;
 
 import java.awt.Rectangle;
-import java.awt.Toolkit;
-import java.awt.image.*;
-import java.util.*;
-import org.eclipse.imagen.*;
-import javax.swing.*;
+import java.awt.image.Raster;
+import java.awt.image.RenderedImage;
+import java.util.ArrayList;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.Set;
+
+import javax.swing.JFrame;
+
+import org.eclipse.imagen.PointOpImage;
 
 /** An <code>OpImage</code> to cache tiles for display.  The reservoir (cache) of
  *  tiles includes a corona of tiles around the display area.  Heuristics are

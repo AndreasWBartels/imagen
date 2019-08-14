@@ -19,8 +19,8 @@ package org.eclipse.imagen.media.tilecodec ;
 
 import java.awt.image.SampleModel;
 import java.io.OutputStream;
-import java.util.Vector;             
-import java.util.zip.GZIPOutputStream ;             
+import java.util.Vector;
+
 import org.eclipse.imagen.ParameterListDescriptorImpl;
 import org.eclipse.imagen.remote.NegotiableCapability;
 import org.eclipse.imagen.tilecodec.TileCodecParameterList ;

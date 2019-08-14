@@ -20,12 +20,11 @@ import java.awt.RenderingHints;
 import java.awt.image.renderable.ParameterBlock;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.Iterator;
+
 import org.eclipse.imagen.CollectionImage;
 import org.eclipse.imagen.CollectionImageFactory;
 import org.eclipse.imagen.CollectionOp;
-import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.PlanarImage;
 import org.eclipse.imagen.RenderedOp;
 

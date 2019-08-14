@@ -22,6 +22,7 @@ import java.util.Enumeration;
 import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Set;
+
 import org.eclipse.imagen.registry.CollectionRegistryMode;
 import org.eclipse.imagen.registry.RemoteRenderableRegistryMode;
 import org.eclipse.imagen.registry.RemoteRenderedRegistryMode;

@@ -18,7 +18,6 @@
 package org.eclipse.imagen;
 import java.awt.image.Kernel;
 import java.io.Serializable;
-import org.eclipse.imagen.JaiI18N;
  
 /**
  * A kernel representing a matrix with a key position,

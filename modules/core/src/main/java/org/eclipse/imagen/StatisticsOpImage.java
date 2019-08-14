@@ -21,6 +21,7 @@ import java.awt.Rectangle;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.util.Vector;
+
 import org.eclipse.imagen.media.util.PropertyUtil;
 
 /**

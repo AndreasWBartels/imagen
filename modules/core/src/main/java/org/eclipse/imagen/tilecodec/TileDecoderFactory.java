@@ -18,6 +18,7 @@
 package org.eclipse.imagen.tilecodec;
 
 import java.io.InputStream;
+
 import org.eclipse.imagen.remote.NegotiableCapability;
 
 /**

@@ -18,29 +18,23 @@
 package org.eclipse.imagen.media.codecimpl;
 import java.awt.Point;
 import java.awt.Rectangle;
-import java.awt.RenderingHints;
-import java.awt.Transparency;
-import java.awt.color.ColorSpace;
-import java.awt.image.ComponentColorModel;
 import java.awt.image.DataBuffer;
 import java.awt.image.DataBufferByte;
 import java.awt.image.DataBufferInt;
 import java.awt.image.DataBufferUShort;
-import java.awt.image.IndexColorModel;
 import java.awt.image.MultiPixelPackedSampleModel;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
-import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
 import java.io.IOException;
+import java.security.PrivilegedAction;
+
 import org.eclipse.imagen.media.codec.ImageCodec;
-import org.eclipse.imagen.media.codec.ImageDecoder;
-import org.eclipse.imagen.media.codec.ImageDecoderImpl;
 import org.eclipse.imagen.media.codec.ImageDecodeParam;
+import org.eclipse.imagen.media.codec.ImageDecoderImpl;
 import org.eclipse.imagen.media.codec.SeekableStream;
-import org.eclipse.imagen.media.codecimpl.util.RasterFactory;
-import org.eclipse.imagen.media.codecimpl.ImagingListenerProxy;
 import org.eclipse.imagen.media.codecimpl.util.ImagingException;
+import org.eclipse.imagen.media.codecimpl.util.RasterFactory;
 
 /**
  * @since EA2
@@ -102,8 +96,9 @@ class PNMImage extends SimpleRenderedImage {
 
         this.input = input;
 
+
         String ls = (String)java.security.AccessController.doPrivileged(
-               new sun.security.action.GetPropertyAction("line.separator"));
+          (PrivilegedAction<String>) () -> System.getProperty("line.separator"));
         lineSeparator = ls.getBytes();
 
         // Read file header.

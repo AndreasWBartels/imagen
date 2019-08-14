@@ -17,18 +17,17 @@
 
 package org.eclipse.imagen.media.opimage;
 
-import org.eclipse.imagen.ColormapOpImage;
 import java.awt.Rectangle;
 import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
-import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
+import java.util.Map;
+
+import org.eclipse.imagen.ColormapOpImage;
 import org.eclipse.imagen.ImageLayout;
-import org.eclipse.imagen.OpImage;
 import org.eclipse.imagen.RasterAccessor;
 import org.eclipse.imagen.RasterFormatTag;
-import java.util.Map;
 
 /**
  * An <code>OpImage</code> implementing the "Threshold" operation as

@@ -8,11 +8,12 @@
 package org.eclipse.imagen.tutorial.network.server;
 
 import java.io.File;
-import java.rmi.Naming;
 import java.net.InetAddress;
-import java.rmi.RemoteException;
+import java.rmi.Naming;
 import java.rmi.RMISecurityManager;
+import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+
 import org.eclipse.imagen.tutorial.network.DirectoryLister;
 
 /**

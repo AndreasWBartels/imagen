@@ -20,10 +20,11 @@ package org.eclipse.imagen.media.tilecodec;
 import java.awt.image.Raster;
 import java.awt.image.SampleModel;
 import java.text.MessageFormat;
+
 import org.eclipse.imagen.JAI;
-import org.eclipse.imagen.tilecodec.TileCodecDescriptor;
 import org.eclipse.imagen.remote.SerializableState;
 import org.eclipse.imagen.remote.SerializerFactory;
+import org.eclipse.imagen.tilecodec.TileCodecDescriptor;
 
 /**
  * A class containing methods of utility to all TileCodec implementations.

@@ -16,22 +16,19 @@
  */
 
 package org.eclipse.imagen.media.codecimpl;
-import java.awt.Graphics2D;
-import java.awt.Point;
-import java.awt.RenderingHints;
-import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.awt.image.ComponentSampleModel;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.io.FilterInputStream;
-import java.io.InputStream;
 import java.io.IOException;
-import org.eclipse.imagen.media.codec.ImageDecoderImpl;
+import java.io.InputStream;
+
 import org.eclipse.imagen.media.codec.ImageDecodeParam;
+import org.eclipse.imagen.media.codec.ImageDecoderImpl;
 import org.eclipse.imagen.media.codec.JPEGDecodeParam;
-import org.eclipse.imagen.media.codecimpl.ImagingListenerProxy;
 import org.eclipse.imagen.media.codecimpl.util.ImagingException;
+
 import com.sun.image.codec.jpeg.ImageFormatException;
 
 /**

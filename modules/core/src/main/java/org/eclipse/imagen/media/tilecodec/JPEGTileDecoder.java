@@ -20,25 +20,25 @@ package org.eclipse.imagen.media.tilecodec;
 import java.awt.Point;
 import java.awt.RenderingHints;
 import java.awt.image.Raster;
-import java.awt.image.WritableRaster;
 import java.awt.image.SampleModel;
-import java.io.InputStream;
-import java.io.ObjectInputStream;
+import java.awt.image.WritableRaster;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import org.eclipse.imagen.JAI;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
+
 import org.eclipse.imagen.ParameterListDescriptor;
 import org.eclipse.imagen.RasterFactory;
+import org.eclipse.imagen.media.util.ImageUtil;
 import org.eclipse.imagen.tilecodec.TileCodecDescriptor;
 import org.eclipse.imagen.tilecodec.TileCodecParameterList;
 import org.eclipse.imagen.tilecodec.TileDecoderImpl;
 import org.eclipse.imagen.util.ImagingListener;
+
+import com.sun.image.codec.jpeg.JPEGCodec;
 import com.sun.image.codec.jpeg.JPEGDecodeParam;
 import com.sun.image.codec.jpeg.JPEGImageDecoder;
-import com.sun.image.codec.jpeg.JPEGCodec;
 import com.sun.image.codec.jpeg.JPEGQTable;
-import sun.awt.image.codec.JPEGParam;
-import org.eclipse.imagen.media.util.ImageUtil;
 /**
  * A concrete implementation of the <code>TileDecoderImpl</code> class
  * for the jpeg tile codec.

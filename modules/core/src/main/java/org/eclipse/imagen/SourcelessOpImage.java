@@ -22,7 +22,6 @@ import java.awt.image.Raster;
 import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
 import java.util.Map;
-import org.eclipse.imagen.util.CaselessStringKey;
 
 /**
  * An abstract base class for image operators that have no image

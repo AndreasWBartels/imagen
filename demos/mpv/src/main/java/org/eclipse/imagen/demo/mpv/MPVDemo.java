@@ -7,35 +7,26 @@
  */
 package org.eclipse.imagen.demo.mpv;
 
-import java.awt.BorderLayout;
 import java.awt.Dimension;
-import java.awt.Event;
 import java.awt.RenderingHints;
-import java.awt.event.*;
-import java.awt.image.DataBuffer;
-import java.awt.image.BufferedImage;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
-import javax.swing.Action;
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
-import javax.swing.JComponent;
+
 import javax.swing.JFrame;
-import javax.swing.JSplitPane;
-import javax.swing.JOptionPane;
-import javax.swing.KeyStroke;
-import javax.swing.SwingUtilities;
-import org.eclipse.imagen.JAI;
-import org.eclipse.imagen.ImageLayout;
-import javax.swing.JPopupMenu;
 import javax.swing.JMenuItem;
-import javax.swing.JFileChooser;
-import java.io.File;
-import java.awt.Robot;
-import java.awt.Rectangle;
-import java.awt.Point;
-import java.awt.AWTException;
-import org.eclipse.imagen.media.codec.JPEGEncodeParam;
+import javax.swing.JOptionPane;
+import javax.swing.JPopupMenu;
+import javax.swing.JSplitPane;
+
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.JAI;
 
 /**
  * Multi-Panel Viewer (MPV) demonstration class.

@@ -18,28 +18,18 @@
 package org.eclipse.imagen.media.opimage;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
-import java.awt.image.DataBuffer;
-import java.awt.image.DataBufferByte;
-import java.awt.image.DataBufferInt;
-import java.awt.image.DataBufferUShort;
-import java.awt.image.MultiPixelPackedSampleModel;
-import java.awt.image.SampleModel;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
-import java.awt.image.renderable.ParameterBlock;
-import java.awt.image.renderable.RenderedImageFactory;
+import java.util.Map;
+
 import org.eclipse.imagen.AreaOpImage;
 import org.eclipse.imagen.BorderExtender;
 import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.KernelJAI;
-import org.eclipse.imagen.OpImage;
-import org.eclipse.imagen.RasterAccessor;
-import org.eclipse.imagen.RasterFormatTag;
-import java.util.Map;
-import org.eclipse.imagen.PixelAccessor;
 import org.eclipse.imagen.PackedImageData;
+import org.eclipse.imagen.PixelAccessor;
 
 
 /**

@@ -22,11 +22,12 @@ import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.awt.image.renderable.ParameterBlock;
 import java.util.Map;
+
 import org.eclipse.imagen.CRIFImpl;
 import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.JAI;
-import org.eclipse.imagen.OpImage;
 import org.eclipse.imagen.NullOpImage;
+import org.eclipse.imagen.OpImage;
 import org.eclipse.imagen.RasterFactory;
 import org.eclipse.imagen.media.util.JDKWorkarounds;
 

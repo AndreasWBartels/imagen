@@ -8,12 +8,17 @@
  */
 package org.eclipse.imagen.tutorial.network;
 
-import java.awt.*;
-import java.util.Vector;
-import org.eclipse.imagen.*;
-import org.eclipse.imagen.remote.RemoteJAI;
-import javax.swing.*;
+import java.awt.Rectangle;
+import java.awt.RenderingHints;
 import java.awt.image.SampleModel;
+import java.util.Vector;
+
+import javax.swing.JPanel;
+
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.RasterFactory;
+import org.eclipse.imagen.remote.RemoteJAI;
 
 public abstract class JAIDyadicPanel extends JAIDemoPanel {
   

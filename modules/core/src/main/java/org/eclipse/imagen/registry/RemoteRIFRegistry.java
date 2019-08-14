@@ -19,8 +19,9 @@ package org.eclipse.imagen.registry;
 
 import java.awt.RenderingHints;
 import java.awt.image.renderable.ParameterBlock;
-import org.eclipse.imagen.OperationRegistry;
+
 import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.OperationRegistry;
 import org.eclipse.imagen.remote.RemoteRIF;
 import org.eclipse.imagen.remote.RemoteRenderedImage;
 

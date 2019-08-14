@@ -14,8 +14,10 @@ import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.io.IOException;
 import java.io.OutputStream;
-import org.eclipse.imagen.media.codec.ImageEncoderImpl;
+import java.security.PrivilegedAction;
+
 import org.eclipse.imagen.media.codec.ImageEncodeParam;
+import org.eclipse.imagen.media.codec.ImageEncoderImpl;
 import org.eclipse.imagen.media.codec.PNMEncodeParam;
 
 /**
@@ -75,8 +77,9 @@ public class SamplePNMImageEncoder extends ImageEncoderImpl {
         int height = im.getHeight();
         SampleModel sampleModel = im.getSampleModel();
 
+
         String ls = (String)java.security.AccessController.doPrivileged(
-               new sun.security.action.GetPropertyAction("line.separator"));
+          (PrivilegedAction<String>) () -> System.getProperty("line.separator"));
         lineSeparator = ls.getBytes();
 
         int dataType = sampleModel.getTransferType();

@@ -19,10 +19,9 @@ package org.eclipse.imagen.media.tilecodec ;
 
 import java.awt.image.Raster;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.io.ObjectOutputStream;
-import org.eclipse.imagen.JAI ;
-import org.eclipse.imagen.ParameterListDescriptor ;
+import java.io.OutputStream;
+
 import org.eclipse.imagen.tilecodec.TileCodecParameterList ;
 import org.eclipse.imagen.tilecodec.TileEncoderImpl ;
 

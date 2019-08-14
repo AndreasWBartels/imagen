@@ -15,9 +15,11 @@ import java.awt.geom.Area;
 import java.awt.geom.PathIterator;
 import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
+
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+
 import org.eclipse.imagen.Histogram;
 
 /**

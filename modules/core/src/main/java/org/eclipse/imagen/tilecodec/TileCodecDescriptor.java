@@ -18,8 +18,8 @@
 package org.eclipse.imagen.tilecodec;
 
 import java.awt.image.SampleModel;
+
 import org.eclipse.imagen.RegistryElementDescriptor;
-import org.eclipse.imagen.ParameterListDescriptor;
 
 /**
  * A class to describe a particular tile codec format. The <code>getName</code>

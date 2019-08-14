@@ -17,18 +17,14 @@
 
 package org.eclipse.imagen.media.opimage;
 import java.awt.RenderingHints;
-import java.awt.Rectangle;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
-import java.awt.image.renderable.RenderableImage;
 import java.awt.image.renderable.RenderContext;
+
 import org.eclipse.imagen.CRIFImpl;
-import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.JAI;
-import org.eclipse.imagen.PlanarImage;
-import java.util.Map;
 
 /**
  * A <code>CRIF</code> supporting the "Crop" operation in the rendered

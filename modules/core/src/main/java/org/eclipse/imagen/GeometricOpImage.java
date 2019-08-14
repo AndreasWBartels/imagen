@@ -16,17 +16,16 @@
  */
 
 package org.eclipse.imagen;
+import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.awt.geom.Point2D;
 import java.awt.image.DataBuffer;
-import java.awt.image.RenderedImage;
 import java.awt.image.Raster;
 import java.awt.image.WritableRaster;
-import java.awt.Point;
 import java.util.Map;
 import java.util.Vector;
-import org.eclipse.imagen.util.CaselessStringKey;
+
 import org.eclipse.imagen.media.util.ImageUtil;
 
 /**

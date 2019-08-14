@@ -19,42 +19,25 @@ package org.eclipse.imagen.remote;
 
 import java.awt.RenderingHints;
 import java.awt.geom.Rectangle2D;
-import java.awt.geom.AffineTransform;
-import java.awt.image.ImageConsumer;
-import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
-import java.awt.image.renderable.ContextualRenderedImageFactory;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderContext;
 import java.awt.image.renderable.RenderableImage;
-import java.awt.image.renderable.RenderableImageOp;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.Serializable;
 import java.text.MessageFormat;
-import java.util.Enumeration;
-import java.util.Hashtable;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Vector;
+
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.OperationRegistry;
-import org.eclipse.imagen.PlanarImage;
 import org.eclipse.imagen.PropertyChangeEventJAI;
-import org.eclipse.imagen.PropertyGenerator;
-import org.eclipse.imagen.PropertySource;
-import org.eclipse.imagen.RenderedOp;
-import org.eclipse.imagen.RenderableOp;
 import org.eclipse.imagen.RegistryMode;
+import org.eclipse.imagen.RenderableOp;
+import org.eclipse.imagen.RenderedOp;
 import org.eclipse.imagen.WritablePropertySource;
-import org.eclipse.imagen.remote.SerializableRenderedImage;
 import org.eclipse.imagen.registry.RemoteCRIFRegistry;
 import org.eclipse.imagen.util.ImagingException;
 import org.eclipse.imagen.util.ImagingListener;
-import org.eclipse.imagen.media.util.PropertyUtil;
-import org.eclipse.imagen.media.rmi.RasterProxy;
-import org.eclipse.imagen.media.util.ImageUtil;
 
 /**
  * A subclass of <code>RenderableOp</code> for remote operations. This

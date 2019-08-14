@@ -24,13 +24,14 @@ import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
-import java.util.Vector;
-import org.eclipse.imagen.ImageLayout;
-import org.eclipse.imagen.PointOpImage;
 import java.util.Map;
+import java.util.Vector;
+
+import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.PixelAccessor;
-import org.eclipse.imagen.UnpackedImageData;
+import org.eclipse.imagen.PointOpImage;
 import org.eclipse.imagen.RasterFactory;
+import org.eclipse.imagen.UnpackedImageData;
 import org.eclipse.imagen.media.util.JDKWorkarounds;
 
 /**

@@ -17,15 +17,14 @@
 
 package org.eclipse.imagen;
 
-import org.eclipse.imagen.media.util.CaselessStringArrayTable;
 import java.awt.image.renderable.ParameterBlock;
 import java.io.IOException;
 import java.io.NotSerializableException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.util.Hashtable;
 import java.util.Vector;
-import org.eclipse.imagen.util.CaselessStringKey;
+
+import org.eclipse.imagen.media.util.CaselessStringArrayTable;
 
 /**
  * A convenience subclass of <code>ParameterBlock</code> that

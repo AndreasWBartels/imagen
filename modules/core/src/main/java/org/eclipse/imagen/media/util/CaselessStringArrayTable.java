@@ -18,6 +18,7 @@
 package org.eclipse.imagen.media.util;
 
 import java.util.Hashtable;
+
 import org.eclipse.imagen.util.CaselessStringKey;
 
 /**

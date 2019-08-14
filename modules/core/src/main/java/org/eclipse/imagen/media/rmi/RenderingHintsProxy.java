@@ -31,8 +31,8 @@ import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.Vector;
+
 import org.eclipse.imagen.JAI;
-import org.eclipse.imagen.OperationRegistry;
 
 /**
  * This class is a serializable proxy for a RenderingHints object from which

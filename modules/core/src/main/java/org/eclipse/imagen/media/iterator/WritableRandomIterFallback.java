@@ -19,6 +19,7 @@ package org.eclipse.imagen.media.iterator;
 import java.awt.Rectangle;
 import java.awt.image.Raster;
 import java.awt.image.WritableRenderedImage;
+
 import org.eclipse.imagen.iterator.WritableRandomIter;
 
 /**

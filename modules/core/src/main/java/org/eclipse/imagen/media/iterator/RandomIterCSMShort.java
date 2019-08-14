@@ -18,7 +18,6 @@
 package org.eclipse.imagen.media.iterator;
 import java.awt.Rectangle;
 import java.awt.image.RenderedImage;
-import org.eclipse.imagen.iterator.RandomIter;
 
 /**
  * @since EA2

@@ -18,9 +18,8 @@
 package org.eclipse.imagen.remote;
 
 import java.awt.RenderingHints;
-import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
-import org.eclipse.imagen.OperationDescriptor;
+
 import org.eclipse.imagen.OperationNode;
 import org.eclipse.imagen.PropertyChangeEventJAI;
 

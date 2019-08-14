@@ -21,12 +21,8 @@ import java.awt.RenderingHints;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Iterator;
-import org.eclipse.imagen.JAI;
-import org.eclipse.imagen.remote.SerializerFactory;
-import org.eclipse.imagen.remote.SerializableState;
 
 /**
  * This class is a serializable proxy for a HashSet object.

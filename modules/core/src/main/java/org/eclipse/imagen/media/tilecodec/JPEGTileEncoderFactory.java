@@ -17,16 +17,17 @@
 
 package org.eclipse.imagen.media.tilecodec ;
 
-import java.awt.image.SampleModel ;
 import java.awt.image.DataBuffer ;
+import java.awt.image.SampleModel ;
 import java.io.OutputStream;
 import java.util.Vector;
+
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.ParameterListDescriptor;
 import org.eclipse.imagen.ParameterListDescriptorImpl;
 import org.eclipse.imagen.remote.NegotiableCapability;
-import org.eclipse.imagen.remote.NegotiableNumericRange;
 import org.eclipse.imagen.remote.NegotiableCollection;
+import org.eclipse.imagen.remote.NegotiableNumericRange;
 import org.eclipse.imagen.tilecodec.TileCodecParameterList ;
 import org.eclipse.imagen.tilecodec.TileEncoder ;
 import org.eclipse.imagen.tilecodec.TileEncoderFactory ;

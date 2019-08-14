@@ -24,16 +24,14 @@ import java.awt.image.IndexColorModel;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
-import java.awt.image.renderable.ParameterBlock;
+import java.util.Map;
+
 import org.eclipse.imagen.GeometricOpImage;
 import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.IntegerSequence;
-import org.eclipse.imagen.OpImage;
 import org.eclipse.imagen.PlanarImage;
 import org.eclipse.imagen.RasterAccessor;
 import org.eclipse.imagen.RasterFormatTag;
-import org.eclipse.imagen.RasterFactory;
-import java.util.Map;
 
 /**
  * An OpImage class to perform transposition and 90 degree rotation

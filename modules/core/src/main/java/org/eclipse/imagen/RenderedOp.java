@@ -17,18 +17,14 @@
 
 package org.eclipse.imagen;
 
-import org.eclipse.imagen.media.util.ImageUtil;
-import org.eclipse.imagen.media.util.PropertyUtil;
 import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.awt.Shape;
 import java.awt.geom.Area;
 import java.awt.geom.GeneralPath;
-import java.awt.geom.PathIterator;
 import java.awt.geom.Point2D;
 import java.awt.image.ColorModel;
-import java.awt.image.ImageProducer;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
@@ -40,11 +36,9 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.lang.ref.WeakReference;
-import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
-import java.util.Enumeration;
 import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Iterator;
@@ -52,10 +46,12 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 import java.util.Vector;
+
+import org.eclipse.imagen.media.util.ImageUtil;
+import org.eclipse.imagen.media.util.PropertyUtil;
 import org.eclipse.imagen.registry.RIFRegistry;
 import org.eclipse.imagen.registry.RenderedRegistryMode;
 import org.eclipse.imagen.remote.PlanarImageServerProxy;
-import org.eclipse.imagen.remote.SerializableRenderedImage;
 import org.eclipse.imagen.util.CaselessStringKey;
 import org.eclipse.imagen.util.ImagingListener;
 
@@ -681,7 +677,7 @@ public class RenderedOp extends PlanarImage
         }
 
         if(pb != null) {
-            Vector newSources = pb.getSources();;
+            Vector newSources = pb.getSources();
             if(newSources != null && newSources.size() > 0) {
                 Iterator it = newSources.iterator();
                 while(it.hasNext()) {

@@ -21,6 +21,7 @@ import java.awt.image.RenderedImage;
 import java.lang.reflect.AccessibleObject;
 import java.lang.reflect.Method;
 import java.util.Map;
+
 import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.NullOpImage;
 import org.eclipse.imagen.PlanarImage;

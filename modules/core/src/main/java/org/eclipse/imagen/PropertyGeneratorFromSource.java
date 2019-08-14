@@ -17,6 +17,7 @@
 
 package org.eclipse.imagen;
 import java.util.Vector;
+
 import org.eclipse.imagen.media.util.PropertyGeneratorImpl;
 
 /**

@@ -16,28 +16,15 @@
  */
 
 package org.eclipse.imagen.media.opimage;
-import java.awt.Point;
 import java.awt.Rectangle;
-import java.awt.image.ColorModel;
-import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
-import org.eclipse.imagen.BorderExtender;
-import org.eclipse.imagen.BorderExtenderConstant;
-import org.eclipse.imagen.ImageLayout;
-import org.eclipse.imagen.IntegerSequence;
-import org.eclipse.imagen.OpImage;
-import org.eclipse.imagen.PlanarImage;
-import org.eclipse.imagen.RasterFactory;
-import org.eclipse.imagen.RasterFormatTag;
-import org.eclipse.imagen.RasterAccessor;
-import org.eclipse.imagen.RasterFormatTag;
 import java.util.Map;
-import org.eclipse.imagen.iterator.RandomIter;
-import org.eclipse.imagen.iterator.RandomIterFactory;
-import org.eclipse.imagen.operator.BorderDescriptor;
-import org.eclipse.imagen.media.util.ImageUtil;
+
+import org.eclipse.imagen.BorderExtender;
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.OpImage;
 
 /**
  * An <code>OpImage</code> implementing the "border" operation.

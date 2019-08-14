@@ -17,31 +17,26 @@
 
 package org.eclipse.imagen.media.opimage;
 
+import java.awt.RenderingHints;
+import java.awt.image.RenderedImage;
+import java.awt.image.renderable.ParameterBlock;
+import java.awt.image.renderable.RenderedImageFactory;
+import java.io.IOException;
+
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.OpImage;
+import org.eclipse.imagen.OperationRegistry;
+import org.eclipse.imagen.TileCache;
 import org.eclipse.imagen.media.codec.ImageCodec;
 import org.eclipse.imagen.media.codec.ImageDecodeParam;
 import org.eclipse.imagen.media.codec.ImageDecoder;
 import org.eclipse.imagen.media.codec.SeekableStream;
-import java.awt.RenderingHints;
-import java.awt.image.RenderedImage;
-import java.awt.image.renderable.RenderedImageFactory;
-import java.awt.image.renderable.ParameterBlock;
-import java.awt.image.renderable.RenderedImageFactory;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Enumeration;
-import java.util.Map;
-import org.eclipse.imagen.ImageLayout;
-import org.eclipse.imagen.JAI;
-import org.eclipse.imagen.NullOpImage;
-import org.eclipse.imagen.OpImage;
-import org.eclipse.imagen.OperationRegistry;
-import org.eclipse.imagen.PlanarImage;
-import org.eclipse.imagen.TileCache;
+import org.eclipse.imagen.media.util.DisposableNullOpImage;
+import org.eclipse.imagen.media.util.ImageUtil;
 import org.eclipse.imagen.registry.RIFRegistry;
 import org.eclipse.imagen.util.ImagingException;
 import org.eclipse.imagen.util.ImagingListener;
-import org.eclipse.imagen.media.util.DisposableNullOpImage;
-import org.eclipse.imagen.media.util.ImageUtil;
 
 /**
  * @see org.eclipse.imagen.operator.StreamDescriptor

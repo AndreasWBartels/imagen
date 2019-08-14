@@ -20,11 +20,6 @@ import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
-import org.eclipse.imagen.NullOpImage;
-import org.eclipse.imagen.OpImage;
-import org.eclipse.imagen.media.codec.ImageCodec;
-import org.eclipse.imagen.media.codec.ImageDecoder;
-import org.eclipse.imagen.media.codec.SeekableStream;
 
 /**
  * A <code>RIF</code> supporting the "GIF" operation in the rendered

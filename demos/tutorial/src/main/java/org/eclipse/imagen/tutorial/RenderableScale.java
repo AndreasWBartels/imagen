@@ -7,14 +7,22 @@
  */
 package org.eclipse.imagen.tutorial;
 
-import java.util.*;
-import java.awt.*;
-import java.awt.image.*;
-import java.awt.image.renderable.*;
-import javax.swing.*;
-import javax.swing.event.*;
-import org.eclipse.imagen.*;
-import org.eclipse.imagen.widgets.*;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.image.RenderedImage;
+import java.awt.image.renderable.RenderableImage;
+import java.util.Vector;
+
+import javax.swing.BorderFactory;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSlider;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.MultiResolutionRenderableImage;
+import org.eclipse.imagen.widgets.RenderableDisplay;
 
 
 public class RenderableScale extends JPanel

@@ -21,8 +21,9 @@ import java.awt.image.DataBuffer;
 import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Locale;
-import org.eclipse.imagen.operator.DFTDescriptor;
+
 import org.eclipse.imagen.media.util.MathJAI;
+import org.eclipse.imagen.operator.DFTDescriptor;
 
 /**
  * The Fast Fourier Transform (FFT) class.

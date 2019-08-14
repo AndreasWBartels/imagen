@@ -17,7 +17,6 @@
 
 package org.eclipse.imagen.media.codecimpl;
 import java.awt.Point;
-import java.awt.RenderingHints;
 import java.awt.color.ColorSpace;
 import java.awt.image.BufferedImage;
 import java.awt.image.ColorModel;
@@ -31,17 +30,17 @@ import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
 import java.io.IOException;
 import java.io.OutputStream;
-import org.eclipse.imagen.media.codec.ImageEncoderImpl;
+
 import org.eclipse.imagen.media.codec.ImageEncodeParam;
+import org.eclipse.imagen.media.codec.ImageEncoderImpl;
 import org.eclipse.imagen.media.codec.JPEGEncodeParam;
+import org.eclipse.imagen.media.codecimpl.util.ImagingException;
+
 //
 // Need these classes since we are currently using the
 // Java2D JpegEncoder for our Jpeg Implementation.
 //
 import com.sun.image.codec.jpeg.JPEGQTable;
-import com.sun.image.codec.jpeg.JPEGDecodeParam;
-import org.eclipse.imagen.media.codecimpl.ImagingListenerProxy;
-import org.eclipse.imagen.media.codecimpl.util.ImagingException;
 
 /**
  * An ImageEncoder for the JPEG (JFIF) file format.

@@ -18,14 +18,13 @@
 
 package org.eclipse.imagen;
 
-import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Locale;
 import java.util.Vector;
+
 import org.eclipse.imagen.util.CaselessStringKey;
 
 /**

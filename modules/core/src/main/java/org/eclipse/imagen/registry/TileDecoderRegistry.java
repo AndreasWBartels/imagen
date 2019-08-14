@@ -19,11 +19,11 @@ package org.eclipse.imagen.registry;
 
 import java.awt.Point;
 import java.awt.image.Raster;
-import java.awt.image.SampleModel;
-import java.io.InputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Iterator;
 import java.util.List;
+
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.OperationRegistry;
 import org.eclipse.imagen.tilecodec.TileCodecParameterList;

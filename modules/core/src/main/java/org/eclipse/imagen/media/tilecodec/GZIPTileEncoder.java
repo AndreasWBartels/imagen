@@ -19,13 +19,12 @@ package org.eclipse.imagen.media.tilecodec ;
 
 import java.awt.image.Raster;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.io.ObjectOutputStream;
-import java.util.zip.GZIPOutputStream ;             
-import org.eclipse.imagen.JAI ;
-import org.eclipse.imagen.ParameterListDescriptor ;
-import org.eclipse.imagen.tilecodec.TileEncoderImpl ;
+import java.io.OutputStream;
+import java.util.zip.GZIPOutputStream ;
+
 import org.eclipse.imagen.tilecodec.TileCodecParameterList ;
+import org.eclipse.imagen.tilecodec.TileEncoderImpl ;
 
 /**
  * A concrete implementation of the <code>TileEncoderImpl</code> class

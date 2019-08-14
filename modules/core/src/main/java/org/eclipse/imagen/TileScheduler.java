@@ -16,8 +16,8 @@
  */
 
 package org.eclipse.imagen;
-import java.awt.image.Raster;
 import java.awt.Point;
+import java.awt.image.Raster;
 
 
 /**

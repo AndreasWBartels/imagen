@@ -8,7 +8,6 @@
 package org.eclipse.imagen.demo.medical;
 
 import java.awt.Point;
-import javax.swing.JSplitPane;
 
 /** The class to define the resizing policy of an <code>ImagePane</code>.
  *   When the size of an <code>ImagePane</code> is changed, the position 

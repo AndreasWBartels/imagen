@@ -22,10 +22,10 @@ import java.awt.Rectangle;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
+import java.util.Map;
+
 import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.OpImage;
-import org.eclipse.imagen.RasterFactory;
-import java.util.Map;
 import org.eclipse.imagen.media.util.JDKWorkarounds;
 
 /**

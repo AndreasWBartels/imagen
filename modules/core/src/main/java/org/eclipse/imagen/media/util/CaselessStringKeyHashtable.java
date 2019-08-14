@@ -19,6 +19,7 @@ package org.eclipse.imagen.media.util;
 
 import java.util.Hashtable;
 import java.util.Map;
+
 import org.eclipse.imagen.util.CaselessStringKey;
 
 /**

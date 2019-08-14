@@ -20,17 +20,18 @@ import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
-import java.io.InputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
+
 import org.eclipse.imagen.JAI;
-import org.eclipse.imagen.OperationRegistry;
 import org.eclipse.imagen.OpImage;
-import org.eclipse.imagen.registry.RIFRegistry;
-import org.eclipse.imagen.util.ImagingListener;
+import org.eclipse.imagen.OperationRegistry;
 import org.eclipse.imagen.media.codec.ImageDecodeParam;
 import org.eclipse.imagen.media.codec.SeekableStream;
 import org.eclipse.imagen.media.util.ImageUtil;
+import org.eclipse.imagen.registry.RIFRegistry;
+import org.eclipse.imagen.util.ImagingListener;
 
 /**
  * @see org.eclipse.imagen.operator.URLDescriptor

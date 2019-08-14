@@ -16,16 +16,13 @@
  */
 
 package org.eclipse.imagen;
+import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
-import java.awt.image.RenderedImage;
-import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.Raster;
+import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
-import java.awt.Point;
 import java.util.Map;
-import java.util.Vector;
-import org.eclipse.imagen.util.CaselessStringKey;
 
 /**
  * An abstract base class for image operators that require only a

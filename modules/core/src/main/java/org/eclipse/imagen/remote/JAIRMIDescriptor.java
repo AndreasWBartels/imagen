@@ -18,31 +18,29 @@
 package org.eclipse.imagen.remote;
 
 import java.awt.RenderingHints;
-import java.awt.Rectangle;
 import java.awt.image.renderable.ParameterBlock;
-import java.net.URL;
 import java.net.InetAddress;
+import java.net.URL;
 import java.rmi.Naming;
-import java.rmi.RemoteException;
 import java.text.MessageFormat;
-import java.util.Iterator;
 import java.util.Enumeration;
 import java.util.Hashtable;
-import java.util.Locale;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Locale;
 import java.util.Vector;
+
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.OperationDescriptor;
 import org.eclipse.imagen.OperationNode;
-import org.eclipse.imagen.RenderedOp;
 import org.eclipse.imagen.ParameterListDescriptor;
+import org.eclipse.imagen.RenderedOp;
+import org.eclipse.imagen.media.rmi.ImageServer;
+import org.eclipse.imagen.media.rmi.JAIRMIUtil;
+import org.eclipse.imagen.media.rmi.RMIServerProxy;
 import org.eclipse.imagen.util.CaselessStringKey;
 import org.eclipse.imagen.util.ImagingException;
 import org.eclipse.imagen.util.ImagingListener;
-import org.eclipse.imagen.media.rmi.ImageServer;
-import org.eclipse.imagen.media.rmi.RMIServerProxy;
-import org.eclipse.imagen.media.rmi.JAIRMIUtil;
-import org.eclipse.imagen.media.util.ImageUtil;
 
 /**
  * This class describes the "jairmi" remote imaging protocol. This protocol

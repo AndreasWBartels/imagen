@@ -23,7 +23,7 @@ import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
 import java.util.Map;
-import org.eclipse.imagen.util.CaselessStringKey;
+
 import org.eclipse.imagen.media.util.ImageUtil;
 
 /**

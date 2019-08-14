@@ -17,31 +17,24 @@
 
 package org.eclipse.imagen;
 
-import org.eclipse.imagen.media.util.ImageUtil;
-import org.eclipse.imagen.media.util.PropertyUtil;
 import java.awt.Dimension;
 import java.awt.RenderingHints;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Rectangle2D;
-import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ContextualRenderedImageFactory;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderContext;
 import java.awt.image.renderable.RenderableImage;
-import java.awt.image.renderable.RenderableImageOp;
 import java.beans.PropertyChangeListener;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.util.Enumeration;
-import java.util.Hashtable;
 import java.util.HashSet;
 import java.util.Vector;
-import org.eclipse.imagen.util.CaselessStringKey;
+
+import org.eclipse.imagen.media.util.ImageUtil;
+import org.eclipse.imagen.media.util.PropertyUtil;
 import org.eclipse.imagen.registry.CRIFRegistry;
-import org.eclipse.imagen.remote.SerializableRenderedImage;
+import org.eclipse.imagen.util.CaselessStringKey;
 
 /**
  * A node in a renderable imaging chain.  This is the Java Advanced

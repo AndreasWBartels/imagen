@@ -7,12 +7,17 @@
  */
 package org.eclipse.imagen.widgets;
 
-import java.awt.*;
-import java.awt.image.*;
-import java.awt.event.*;
-import java.awt.geom.*;
-import org.eclipse.imagen.*;
-import javax.swing.*;
+import java.awt.Component;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.geom.AffineTransform;
+import java.awt.image.BufferedImage;
+
+import javax.swing.Icon;
+
+import org.eclipse.imagen.InterpolationBilinear;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.PlanarImage;
 
 /**
  * A class to create icons from Planar Images

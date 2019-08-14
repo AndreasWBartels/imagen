@@ -19,6 +19,7 @@ package org.eclipse.imagen.tilecodec;
 
 import java.awt.image.SampleModel;
 import java.io.OutputStream;
+
 import org.eclipse.imagen.remote.NegotiableCapability;
 
 /**

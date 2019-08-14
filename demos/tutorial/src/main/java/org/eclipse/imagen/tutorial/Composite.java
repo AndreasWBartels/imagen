@@ -7,15 +7,26 @@
  */
 package org.eclipse.imagen.tutorial;
 
-import java.util.*;
-import java.awt.*;
-import java.awt.image.renderable.*;
-import javax.swing.*;
-import javax.swing.event.*;
-import javax.swing.border.*;
-import org.eclipse.imagen.*;
-import org.eclipse.imagen.operator.*;
-import org.eclipse.imagen.widgets.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.GridLayout;
+import java.awt.image.renderable.ParameterBlock;
+import java.util.Hashtable;
+
+import javax.swing.BorderFactory;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSlider;
+import javax.swing.border.LineBorder;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.RenderedOp;
+import org.eclipse.imagen.operator.CompositeDescriptor;
+import org.eclipse.imagen.widgets.ImageDisplay;
+import org.eclipse.imagen.widgets.ReadImage;
 
 public class Composite extends JPanel
                               implements ChangeListener {

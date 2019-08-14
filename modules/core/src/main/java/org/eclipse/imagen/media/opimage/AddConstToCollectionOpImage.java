@@ -17,14 +17,13 @@
 
 package org.eclipse.imagen.media.opimage;
 import java.awt.RenderingHints;
-import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Vector;
-import org.eclipse.imagen.ImageLayout;
-import org.eclipse.imagen.JAI;
+
 import org.eclipse.imagen.CollectionImage;
+import org.eclipse.imagen.JAI;
 
 /**
  * An <code>OpImage</code> implementing the "AddConstToCollection" operation.

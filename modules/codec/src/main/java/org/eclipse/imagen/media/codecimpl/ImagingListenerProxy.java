@@ -19,6 +19,7 @@ package org.eclipse.imagen.media.codecimpl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+
 import org.eclipse.imagen.media.codecimpl.util.ImagingException;
 
 public class ImagingListenerProxy {

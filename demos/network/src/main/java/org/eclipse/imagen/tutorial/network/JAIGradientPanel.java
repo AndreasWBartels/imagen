@@ -7,12 +7,17 @@
  */
 package org.eclipse.imagen.tutorial.network;
 
-import java.awt.image.renderable.*;
-import java.awt.event.*;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import java.awt.image.renderable.ParameterBlock;
 import java.util.Vector;
-import org.eclipse.imagen.*;
+
+import javax.swing.JComboBox;
+import javax.swing.JPanel;
+
+import org.eclipse.imagen.KernelJAI;
+import org.eclipse.imagen.PlanarImage;
 import org.eclipse.imagen.remote.RemoteJAI;
-import javax.swing.*;
 
 public class JAIGradientPanel extends JAIDemoPanel implements ItemListener {
 

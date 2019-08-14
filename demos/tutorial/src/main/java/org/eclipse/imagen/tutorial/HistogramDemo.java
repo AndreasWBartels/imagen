@@ -7,27 +7,32 @@
  */
 package org.eclipse.imagen.tutorial;
 
-import java.io.File;
 import java.awt.BorderLayout;
-import java.awt.GridLayout;
-import java.awt.FlowLayout;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.image.renderable.ParameterBlock;
-import java.awt.event.*;
 import java.awt.Color;
-import javax.swing.JPanel;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.image.renderable.ParameterBlock;
+import java.io.File;
+
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.LineBorder;
 
-import org.eclipse.imagen.JAI;
-import org.eclipse.imagen.PlanarImage;
 import org.eclipse.imagen.Histogram;
+import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.LookupTableJAI;
+import org.eclipse.imagen.PlanarImage;
 import org.eclipse.imagen.RenderedOp;
-import org.eclipse.imagen.widgets.*;
+import org.eclipse.imagen.widgets.Colorbar;
+import org.eclipse.imagen.widgets.ImageDisplay;
+import org.eclipse.imagen.widgets.Panner;
+import org.eclipse.imagen.widgets.XYPlot;
 
 
 public class HistogramDemo extends JPanel

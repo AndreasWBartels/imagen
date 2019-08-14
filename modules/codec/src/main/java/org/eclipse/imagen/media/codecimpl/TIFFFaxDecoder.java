@@ -16,7 +16,6 @@
  */
 
 package org.eclipse.imagen.media.codecimpl;
-import java.awt.image.WritableRaster;
 
 class TIFFFaxDecoder {
 

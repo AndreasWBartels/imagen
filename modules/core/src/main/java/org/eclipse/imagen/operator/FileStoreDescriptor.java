@@ -17,17 +17,18 @@
 
 package org.eclipse.imagen.operator;
 
-import org.eclipse.imagen.media.codec.ImageCodec;
-import org.eclipse.imagen.media.codec.ImageEncodeParam;
 import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.io.File;
 import java.io.IOException;
+
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.OperationDescriptorImpl;
 import org.eclipse.imagen.ParameterBlockJAI;
 import org.eclipse.imagen.RenderedOp;
+import org.eclipse.imagen.media.codec.ImageCodec;
+import org.eclipse.imagen.media.codec.ImageEncodeParam;
 import org.eclipse.imagen.registry.RenderedRegistryMode;
 
 /**

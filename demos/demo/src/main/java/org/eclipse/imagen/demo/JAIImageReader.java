@@ -9,12 +9,13 @@ package org.eclipse.imagen.demo;
 
 import java.awt.image.IndexColorModel;
 import java.awt.image.RenderedImage;
+
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.LookupTableJAI;
 import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.media.codec.FileSeekableStream;
 import org.eclipse.imagen.media.codec.ImageCodec;
 import org.eclipse.imagen.media.codec.ImageDecoder;
-import org.eclipse.imagen.media.codec.FileSeekableStream;
 import org.eclipse.imagen.media.codec.SeekableStream;
 
 public class JAIImageReader {

@@ -7,14 +7,26 @@
  */
 package org.eclipse.imagen.widgets;
 
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.geom.*;
-import java.awt.image.*;
-import java.awt.image.renderable.*;
-import javax.swing.*;
-import javax.swing.event.*;
-import org.eclipse.imagen.*;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Rectangle;
+import java.awt.RenderingHints;
+import java.awt.geom.AffineTransform;
+import java.awt.image.BufferedImage;
+import java.awt.image.ColorModel;
+import java.awt.image.DataBuffer;
+import java.awt.image.Raster;
+import java.awt.image.SampleModel;
+import java.awt.image.WritableRaster;
+import java.awt.image.renderable.RenderContext;
+import java.awt.image.renderable.RenderableImage;
+
+import javax.swing.JComponent;
+
+import org.eclipse.imagen.Interpolation;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.PlanarImage;
 
 /**
  * An output widget for a RenderableImage.  RenderableDisplay subclasses

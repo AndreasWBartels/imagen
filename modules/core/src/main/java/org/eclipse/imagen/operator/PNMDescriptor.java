@@ -16,14 +16,14 @@
  */
 
 package org.eclipse.imagen.operator;
-import org.eclipse.imagen.media.codec.SeekableStream;
 import java.awt.RenderingHints;
-import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
+
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.OperationDescriptorImpl;
 import org.eclipse.imagen.ParameterBlockJAI;
 import org.eclipse.imagen.RenderedOp;
+import org.eclipse.imagen.media.codec.SeekableStream;
 import org.eclipse.imagen.registry.RenderedRegistryMode;
 
 

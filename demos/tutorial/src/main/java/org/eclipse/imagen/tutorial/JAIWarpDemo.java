@@ -25,9 +25,16 @@ import java.awt.image.renderable.ParameterBlock;
 import java.text.NumberFormat;
 import java.util.Enumeration;
 import java.util.Vector;
-import org.eclipse.imagen.*;
 
-import javax.swing.*;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+import org.eclipse.imagen.InterpolationNearest;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.WarpPolynomial;
 
 interface DemoListener {
 

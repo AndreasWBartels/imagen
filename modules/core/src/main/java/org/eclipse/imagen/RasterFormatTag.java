@@ -16,9 +16,8 @@
  */
 
 package org.eclipse.imagen;
-import java.awt.image.SampleModel;
 import java.awt.image.ComponentSampleModel;
-import java.awt.Rectangle;
+import java.awt.image.SampleModel;
 
 
 /**

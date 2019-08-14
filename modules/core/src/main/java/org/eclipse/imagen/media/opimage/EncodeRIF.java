@@ -20,14 +20,14 @@ import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
-import java.io.OutputStream;
 import java.io.IOException;
-import org.eclipse.imagen.RenderedOp;
-import org.eclipse.imagen.util.ImagingListener;
+import java.io.OutputStream;
+
 import org.eclipse.imagen.media.codec.ImageCodec;
 import org.eclipse.imagen.media.codec.ImageEncodeParam;
 import org.eclipse.imagen.media.codec.ImageEncoder;
 import org.eclipse.imagen.media.util.ImageUtil;
+import org.eclipse.imagen.util.ImagingListener;
 
 
 /**

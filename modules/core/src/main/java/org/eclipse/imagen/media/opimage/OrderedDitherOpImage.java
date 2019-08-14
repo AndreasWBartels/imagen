@@ -30,16 +30,16 @@ import java.lang.ref.SoftReference;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.Vector;
+
 import org.eclipse.imagen.ColorCube;
 import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.KernelJAI;
-import org.eclipse.imagen.OpImage;
 import org.eclipse.imagen.PointOpImage;
 import org.eclipse.imagen.RasterAccessor;
-import org.eclipse.imagen.RasterFormatTag;
 import org.eclipse.imagen.RasterFactory;
-import org.eclipse.imagen.media.util.JDKWorkarounds;
+import org.eclipse.imagen.RasterFormatTag;
 import org.eclipse.imagen.media.util.ImageUtil;
+import org.eclipse.imagen.media.util.JDKWorkarounds;
 
 /**
  * An <code>OpImage</code> implementing the ordered dither operation as

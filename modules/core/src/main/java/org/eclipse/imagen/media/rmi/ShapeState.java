@@ -19,23 +19,20 @@ package org.eclipse.imagen.media.rmi;
 
 import java.awt.RenderingHints;
 import java.awt.Shape;
-import java.awt.geom.Area;
 import java.awt.geom.Arc2D;
+import java.awt.geom.Area;
 import java.awt.geom.CubicCurve2D;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.GeneralPath;
 import java.awt.geom.Line2D;
+import java.awt.geom.PathIterator;
 import java.awt.geom.QuadCurve2D;
 import java.awt.geom.Rectangle2D;
 import java.awt.geom.RoundRectangle2D;
-import java.awt.geom.AffineTransform;
-import java.awt.geom.PathIterator;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import org.eclipse.imagen.remote.SerializableState;
-import org.eclipse.imagen.remote.SerializerFactory;
 
 /**
  * This class is a serializable proxy for a Shape.

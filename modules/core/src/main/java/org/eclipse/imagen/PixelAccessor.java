@@ -34,6 +34,7 @@ import java.awt.image.SampleModel;
 import java.awt.image.SinglePixelPackedSampleModel;
 import java.awt.image.WritableRaster;
 import java.util.Vector;
+
 import org.eclipse.imagen.media.util.DataBufferUtils;
 import org.eclipse.imagen.media.util.ImageUtil;
 import org.eclipse.imagen.media.util.JDKWorkarounds;
@@ -1878,7 +1879,7 @@ public final class PixelAccessor {
             float[] fc = uid.getFloatData(0);
             ic = new int[size];
             for (int i = 0; i < size; i++) {
-                ic[i] = (int)fc[i];;
+                ic[i] = (int)fc[i];
             }
             break;
 

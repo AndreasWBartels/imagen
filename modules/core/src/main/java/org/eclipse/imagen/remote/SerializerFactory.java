@@ -21,10 +21,10 @@ import java.awt.RenderingHints;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Hashtable;
-import java.util.Iterator;
 import java.util.Vector;
-import org.eclipse.imagen.media.rmi.SerializerImpl;
+
 import org.eclipse.imagen.media.rmi.InterfaceState;
+import org.eclipse.imagen.media.rmi.SerializerImpl;
 
 /**
  * A utility class which provides factory methods for obtaining

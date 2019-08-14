@@ -21,7 +21,7 @@ import java.awt.RenderingHints;
 import java.awt.image.renderable.ParameterBlock;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Vector;
+
 import org.eclipse.imagen.CollectionImage;
 import org.eclipse.imagen.CollectionImageFactory;
 import org.eclipse.imagen.CollectionOp;

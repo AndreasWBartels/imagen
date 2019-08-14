@@ -17,18 +17,17 @@
 
 package org.eclipse.imagen;
 
-import org.eclipse.imagen.media.util.Rational;
-import org.eclipse.imagen.media.util.ImageUtil;
+import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.awt.geom.Point2D;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
-import java.awt.Point;
 import java.util.Map;
-import java.util.LinkedList;
-import org.eclipse.imagen.util.CaselessStringKey;
+
+import org.eclipse.imagen.media.util.ImageUtil;
+import org.eclipse.imagen.media.util.Rational;
 
 /**
  * A class extending <code>WarpOpImage</code> for use by further

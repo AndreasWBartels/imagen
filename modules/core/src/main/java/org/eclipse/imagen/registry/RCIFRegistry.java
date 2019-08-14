@@ -18,7 +18,7 @@
 package org.eclipse.imagen.registry;
 
 import java.awt.image.renderable.ParameterBlock;
-import java.util.Vector;
+
 import org.eclipse.imagen.CollectionImage;
 import org.eclipse.imagen.CollectionOp;
 import org.eclipse.imagen.JAI;

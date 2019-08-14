@@ -7,13 +7,15 @@
  */
 package org.eclipse.imagen.tutorial.network;
 
-import java.awt.*;
+import java.awt.Rectangle;
+import java.awt.image.DataBuffer;
 import java.awt.image.renderable.ParameterBlock;
 import java.util.Vector;
-import org.eclipse.imagen.*;
+
+import javax.swing.JPanel;
+
+import org.eclipse.imagen.PlanarImage;
 import org.eclipse.imagen.remote.RemoteJAI;
-import javax.swing.*;
-import java.awt.image.DataBuffer;
 
 public class JAIDyadicDividePanel extends JAIDyadicPanel {
   

@@ -19,31 +19,26 @@ package org.eclipse.imagen.media.rmi;
 
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
-import java.awt.geom.Rectangle2D;
-import java.awt.image.ColorModel;
-import java.awt.image.SampleModel;
-import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
-import java.awt.image.WritableRaster;
 import java.awt.image.renderable.RenderContext;
 import java.io.Serializable;
 import java.net.InetAddress;
 import java.rmi.Naming;
-import java.rmi.Remote;
-import java.rmi.RemoteException;
 import java.rmi.RMISecurityManager;
+import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Hashtable;
 import java.util.Vector;
+
 import org.eclipse.imagen.PlanarImage;
 import org.eclipse.imagen.PropertySource;
+import org.eclipse.imagen.RemoteImage;
 import org.eclipse.imagen.RenderableOp;
 import org.eclipse.imagen.RenderedOp;
-import org.eclipse.imagen.remote.SerializableRenderedImage;
-import org.eclipse.imagen.remote.RemoteImagingException;
-import org.eclipse.imagen.util.ImagingException;
-import org.eclipse.imagen.util.ImagingListener;
 import org.eclipse.imagen.media.util.ImageUtil;
+import org.eclipse.imagen.remote.RemoteImagingException;
+import org.eclipse.imagen.remote.SerializableRenderedImage;
+import org.eclipse.imagen.util.ImagingListener;
 
 /* A singleton class representing the serializable version of a null
    property. This required because java.awt.Image.UndefinedProperty

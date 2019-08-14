@@ -22,6 +22,7 @@ import java.awt.image.ImageConsumer;
 import java.awt.image.ImageProducer;
 import java.awt.image.Raster;
 import java.util.Vector;
+
 import org.eclipse.imagen.PlanarImage;
 
 public class PlanarImageProducer implements ImageProducer {

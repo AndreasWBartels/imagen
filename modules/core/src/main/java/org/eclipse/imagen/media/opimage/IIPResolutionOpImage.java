@@ -28,24 +28,23 @@ import java.awt.image.ComponentColorModel;
 import java.awt.image.DataBuffer;
 import java.awt.image.DataBufferByte;
 import java.awt.image.Raster;
-import java.awt.image.RenderedImage;
-import java.awt.image.SampleModel;
-import java.awt.image.WritableRaster;
-import java.io.InputStream;
 import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.net.URL;
+import java.util.Map;
 import java.util.Vector;
+
 import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.OpImage;
 import org.eclipse.imagen.RasterFactory;
+import org.eclipse.imagen.media.util.ImageUtil;
 import org.eclipse.imagen.util.ImagingException;
 import org.eclipse.imagen.util.ImagingListener;
-import java.util.Map;
+
 import com.sun.image.codec.jpeg.JPEGCodec;
 import com.sun.image.codec.jpeg.JPEGDecodeParam;
 import com.sun.image.codec.jpeg.JPEGImageDecoder;
-import org.eclipse.imagen.media.util.ImageUtil;
 
 /**
  * An OpImage class to generate an image from an IIP connection. A single
@@ -915,7 +914,7 @@ public class IIPResolutionOpImage extends OpImage {
      * Create a Raster from a JPEG-compressed data stream.
      */
     private Raster getJPEGTile(int tx, int ty, int subType, byte[] data) {
-        int tableIndex = (subType >> 24) & 0x000000ff;;
+        int tableIndex = (subType >> 24) & 0x000000ff;
         boolean colorConversion = (subType & 0x00ff0000) != 0;
         JPEGDecodeParam decodeParam = null;
         if(tableIndex != 0) {

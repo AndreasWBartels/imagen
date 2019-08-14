@@ -17,17 +17,14 @@
 
 package org.eclipse.imagen;
 
-import org.eclipse.imagen.media.util.SunTileCache;
-import org.eclipse.imagen.media.util.SunTileScheduler;
 import java.awt.Dimension;
 import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
+import java.awt.image.SampleModel;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderableImage;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.File;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.StringWriter;
@@ -36,11 +33,14 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Vector;
+
+import org.eclipse.imagen.media.util.ImagingListenerImpl;
+import org.eclipse.imagen.media.util.PropertyUtil;
+import org.eclipse.imagen.media.util.SunTileCache;
+import org.eclipse.imagen.media.util.SunTileScheduler;
 import org.eclipse.imagen.remote.NegotiableCapabilitySet;
 import org.eclipse.imagen.tilecodec.TileCodecParameterList;
 import org.eclipse.imagen.util.ImagingListener;
-import org.eclipse.imagen.media.util.ImagingListenerImpl;
-import org.eclipse.imagen.media.util.PropertyUtil;
 
 /**
  * A convenience class for instantiating operations.

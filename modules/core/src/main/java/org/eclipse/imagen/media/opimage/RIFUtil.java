@@ -17,6 +17,7 @@
 
 package org.eclipse.imagen.media.opimage;
 import java.awt.RenderingHints;
+
 import org.eclipse.imagen.BorderExtender;
 import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.JAI;

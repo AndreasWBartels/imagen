@@ -16,8 +16,8 @@
  */
 
 package org.eclipse.imagen;
-import java.awt.Rectangle;
 import java.awt.geom.Point2D;
+
 import org.eclipse.imagen.media.util.PolyWarpSolver;
 
 /**

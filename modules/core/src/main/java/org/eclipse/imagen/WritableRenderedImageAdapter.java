@@ -18,9 +18,9 @@
 package org.eclipse.imagen;
 import java.awt.Point;
 import java.awt.image.Raster;
+import java.awt.image.TileObserver;
 import java.awt.image.WritableRaster;
 import java.awt.image.WritableRenderedImage;
-import java.awt.image.TileObserver;
 
 /**
  * A <code>PlanarImage</code> wrapper for a

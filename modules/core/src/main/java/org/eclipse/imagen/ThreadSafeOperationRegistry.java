@@ -17,7 +17,6 @@
 
 package org.eclipse.imagen;
 
-import org.eclipse.imagen.media.util.RWLock;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInput;
@@ -26,6 +25,8 @@ import java.io.OutputStream;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Vector;
+
+import org.eclipse.imagen.media.util.RWLock;
 
 /**
  * A wrapper class on <code>OperationRegistry</code> which is

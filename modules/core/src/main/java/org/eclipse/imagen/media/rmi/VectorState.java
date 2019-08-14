@@ -21,11 +21,8 @@ import java.awt.RenderingHints;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.Serializable;
-import java.util.Vector;
 import java.util.Iterator;
-import org.eclipse.imagen.remote.SerializerFactory;
-import org.eclipse.imagen.remote.SerializableState;
+import java.util.Vector;
 
 /**
  * This class is a serializable proxy for a Vector object.

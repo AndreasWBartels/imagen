@@ -17,9 +17,6 @@
 
 package org.eclipse.imagen;
 
-import java.util.Enumeration;
-import java.util.Vector;
-
 /**
  * ProductOperationGraph manages a list of descriptors belonging to a
  * particular product. The descriptors have pairwise preferences between

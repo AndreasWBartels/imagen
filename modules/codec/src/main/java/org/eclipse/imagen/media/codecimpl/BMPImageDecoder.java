@@ -17,31 +17,25 @@
 
 package org.eclipse.imagen.media.codecimpl;
 import java.awt.Point;
-import java.awt.RenderingHints;
-import java.awt.Transparency;
 import java.awt.color.ColorSpace;
 import java.awt.image.DataBuffer;
 import java.awt.image.DataBufferByte;
 import java.awt.image.DataBufferInt;
 import java.awt.image.DataBufferUShort;
 import java.awt.image.DirectColorModel;
-import java.awt.image.Raster;
-import java.awt.image.RenderedImage;
-import java.awt.image.WritableRaster;
 import java.awt.image.IndexColorModel;
 import java.awt.image.MultiPixelPackedSampleModel;
+import java.awt.image.Raster;
+import java.awt.image.RenderedImage;
 import java.awt.image.SinglePixelPackedSampleModel;
-import java.io.IOException;
+import java.awt.image.WritableRaster;
 import java.io.BufferedInputStream;
+import java.io.IOException;
 import java.io.InputStream;
-import java.util.Hashtable;
-import java.util.Enumeration;
-import org.eclipse.imagen.media.codec.BMPEncodeParam;
+
 import org.eclipse.imagen.media.codec.ImageCodec;
-import org.eclipse.imagen.media.codec.ImageDecoder;
-import org.eclipse.imagen.media.codec.ImageDecoderImpl;
 import org.eclipse.imagen.media.codec.ImageDecodeParam;
-import org.eclipse.imagen.media.codecimpl.ImagingListenerProxy;
+import org.eclipse.imagen.media.codec.ImageDecoderImpl;
 import org.eclipse.imagen.media.codecimpl.util.ImagingException;
 import org.eclipse.imagen.media.codecimpl.util.RasterFactory;
 

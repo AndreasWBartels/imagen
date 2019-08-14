@@ -20,22 +20,18 @@ package org.eclipse.imagen.remote;
 import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
-import java.awt.image.RenderedImage;
+import java.awt.image.ColorModel;
 import java.awt.image.Raster;
 import java.awt.image.SampleModel;
-import java.awt.image.ColorModel;
 import java.awt.image.renderable.ParameterBlock;
-import java.io.IOException;
 import java.util.Vector;
-import java.util.Hashtable;
+
 import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.OperationRegistry;
 import org.eclipse.imagen.PlanarImage;
-import org.eclipse.imagen.RenderedOp;
 import org.eclipse.imagen.TileCache;
 import org.eclipse.imagen.util.ImagingListener;
-import org.eclipse.imagen.media.util.ImageUtil;
 
 /**
  * A subclass of <code>PlanarImage</code> which represents an image on a

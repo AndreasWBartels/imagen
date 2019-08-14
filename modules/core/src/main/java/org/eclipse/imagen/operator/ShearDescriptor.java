@@ -16,12 +16,12 @@
  */
 
 package org.eclipse.imagen.operator;
-import org.eclipse.imagen.media.util.PropertyGeneratorImpl;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.awt.geom.AffineTransform;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
+
 import org.eclipse.imagen.EnumeratedParameter;
 import org.eclipse.imagen.GeometricOpImage;
 import org.eclipse.imagen.Interpolation;
@@ -33,9 +33,8 @@ import org.eclipse.imagen.PlanarImage;
 import org.eclipse.imagen.PropertyGenerator;
 import org.eclipse.imagen.ROI;
 import org.eclipse.imagen.ROIShape;
-import org.eclipse.imagen.RenderableOp;
 import org.eclipse.imagen.RenderedOp;
-import org.eclipse.imagen.operator.ShearDir;
+import org.eclipse.imagen.media.util.PropertyGeneratorImpl;
 import org.eclipse.imagen.registry.RenderedRegistryMode;
 
 /**

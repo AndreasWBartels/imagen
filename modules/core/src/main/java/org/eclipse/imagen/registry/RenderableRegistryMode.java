@@ -19,6 +19,7 @@ package org.eclipse.imagen.registry;
 
 import java.awt.image.renderable.RenderableImage;
 import java.lang.reflect.Method;
+
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.RegistryMode;
 import org.eclipse.imagen.util.ImagingListener;

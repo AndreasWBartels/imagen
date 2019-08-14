@@ -17,7 +17,6 @@
 
 package org.eclipse.imagen;
 import java.awt.image.DataBuffer;
-import org.eclipse.imagen.LookupTableJAI;
 
 
 /**

@@ -19,7 +19,6 @@ package org.eclipse.imagen.media.iterator;
 import java.awt.Rectangle;
 import java.awt.image.DataBufferByte;
 import java.awt.image.RenderedImage;
-import java.awt.image.SampleModel;
 
 /**
  * @since EA2

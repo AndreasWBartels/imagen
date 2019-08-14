@@ -7,13 +7,18 @@
  */
 package org.eclipse.imagen.tutorial.network;
 
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.awt.image.renderable.ParameterBlock;
-import java.awt.event.*;
 import java.util.Vector;
-import org.eclipse.imagen.*;
+
+import javax.swing.JComboBox;
+import javax.swing.JPanel;
+
+import org.eclipse.imagen.EnumeratedParameter;
+import org.eclipse.imagen.PlanarImage;
 import org.eclipse.imagen.operator.TransposeDescriptor;
 import org.eclipse.imagen.remote.RemoteJAI;
-import javax.swing.*;
 
 public class JAITransposePanel extends JAIDemoPanel implements ItemListener {
 

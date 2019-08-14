@@ -7,28 +7,16 @@
  */
 package org.eclipse.imagen.demo.mpv;
 
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-import java.awt.Event;
-import java.awt.RenderingHints;
-import java.awt.event.MouseEvent;
-import java.awt.event.WindowAdapter;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
 import java.awt.event.MouseAdapter;
-import java.awt.image.DataBuffer;
-import java.awt.image.RenderedImage;
-import java.awt.image.renderable.ParameterBlock;
-import javax.swing.Action;
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
+import java.awt.event.MouseEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
 import javax.swing.JFrame;
-import javax.swing.SwingUtilities;
-import org.eclipse.imagen.JAI;
-import org.eclipse.imagen.ImageLayout;
-import javax.swing.JPopupMenu;
 import javax.swing.JMenuItem;
+import javax.swing.JPopupMenu;
 
 /** SimpleOverviewImage display and event handling class that includes a popup menu for enabling
  *  window leveling and hiding the overview display. This class contains a 

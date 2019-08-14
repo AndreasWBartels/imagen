@@ -20,13 +20,14 @@ package org.eclipse.imagen.media.rmi;
 import java.awt.RenderingHints;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
+
+import org.eclipse.imagen.media.util.ImageUtil;
 import org.eclipse.imagen.remote.RemoteImagingException;
 import org.eclipse.imagen.remote.SerializableState;
 import org.eclipse.imagen.remote.Serializer;
 import org.eclipse.imagen.remote.SerializerFactory;
 import org.eclipse.imagen.util.ImagingException;
 import org.eclipse.imagen.util.ImagingListener;
-import org.eclipse.imagen.media.util.ImageUtil;
 
 /**
  * Framework class for automatically creating <code>Serializer</code>s

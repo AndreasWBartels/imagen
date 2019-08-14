@@ -17,16 +17,14 @@
 
 package org.eclipse.imagen;
 
-import org.eclipse.imagen.media.util.CaselessStringArrayTable;
 import java.awt.RenderingHints;
-import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
-import java.util.Collection;
-import java.util.Hashtable;
-import java.util.Iterator;
 import java.util.ListResourceBundle;
 import java.util.Locale;
+import java.util.MissingResourceException;
 import java.util.ResourceBundle;
+
+import org.eclipse.imagen.media.util.CaselessStringArrayTable;
 import org.eclipse.imagen.util.Range;
 
 /**

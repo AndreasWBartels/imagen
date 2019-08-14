@@ -25,9 +25,9 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
 import org.eclipse.imagen.media.util.PropertyUtil;
 import org.eclipse.imagen.util.CaselessStringKey;
 

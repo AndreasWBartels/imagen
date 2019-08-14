@@ -17,15 +17,12 @@
 
 package org.eclipse.imagen.media.opimage;
 import java.awt.RenderingHints;
-import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
+
 import org.eclipse.imagen.BorderExtender;
 import org.eclipse.imagen.ImageLayout;
-import org.eclipse.imagen.JAI;
-import java.util.Map;
-import org.eclipse.imagen.operator.BorderDescriptor;
 
 /**
  * A <code>RIF</code> supporting the "border" operation in the

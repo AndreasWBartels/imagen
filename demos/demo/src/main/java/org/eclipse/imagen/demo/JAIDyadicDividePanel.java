@@ -7,16 +7,15 @@
  */
 package org.eclipse.imagen.demo;
 
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.image.renderable.ParameterBlock;
-import java.util.Hashtable;
-import java.util.Vector;
-import org.eclipse.imagen.*;
-import javax.swing.*;
-import javax.swing.event.*;
+import java.awt.Rectangle;
 import java.awt.image.DataBuffer;
-import java.awt.image.SampleModel;
+import java.awt.image.renderable.ParameterBlock;
+import java.util.Vector;
+
+import javax.swing.JPanel;
+
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.PlanarImage;
 
 public class JAIDyadicDividePanel extends JAIDyadicPanel {
   

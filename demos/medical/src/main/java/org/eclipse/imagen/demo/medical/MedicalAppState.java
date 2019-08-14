@@ -7,17 +7,17 @@
  */
 package org.eclipse.imagen.demo.medical;
 
-import java.awt.Robot;
 import java.awt.RenderingHints;
+import java.awt.Robot;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.image.ColorModel;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.File;
 import java.util.Hashtable;
+
 import javax.swing.JComboBox;
 import javax.swing.JSlider;
 import javax.swing.JTextField;
@@ -25,11 +25,10 @@ import javax.swing.JToggleButton;
 import javax.swing.ProgressMonitor;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
-import org.eclipse.imagen.ImageLayout;
+
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.NullOpImage;
 import org.eclipse.imagen.OpImage;
-import org.eclipse.imagen.PlanarImage;
 import org.eclipse.imagen.RenderedOp;
 
 /**

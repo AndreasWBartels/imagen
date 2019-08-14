@@ -7,10 +7,10 @@
  */
 package org.eclipse.imagen.widgets;
 
-import java.io.*;
-import java.awt.image.*;
-import java.awt.image.renderable.*;
-import org.eclipse.imagen.*;
+import java.awt.image.renderable.ParameterBlock;
+
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.PlanarImage;
 
 
 public class TutorUtils {

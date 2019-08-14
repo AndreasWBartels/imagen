@@ -16,35 +16,14 @@
  */
 
 package org.eclipse.imagen.media.codecimpl;
-import java.awt.Point;
-import java.awt.Rectangle;
-import java.awt.Transparency;
-import java.awt.color.ColorSpace;
-import java.awt.image.ColorModel;
-import java.awt.image.DataBuffer;
-import java.awt.image.DataBufferByte;
-import java.awt.image.DataBufferShort;
-import java.awt.image.DataBufferUShort;
-import java.awt.image.Raster;
-import java.awt.image.WritableRaster;
 import java.awt.image.RenderedImage;
-import java.awt.image.SampleModel;
-import java.awt.image.IndexColorModel;
-import java.awt.image.MultiPixelPackedSampleModel;
-import java.awt.image.PixelInterleavedSampleModel;
-import java.awt.image.ComponentColorModel;
-import java.io.File;
-import java.io.InputStream;
 import java.io.IOException;
-import org.eclipse.imagen.media.codec.ImageCodec;
-import org.eclipse.imagen.media.codec.ImageDecoder;
-import org.eclipse.imagen.media.codec.ImageDecoderImpl;
+
 import org.eclipse.imagen.media.codec.ImageDecodeParam;
+import org.eclipse.imagen.media.codec.ImageDecoderImpl;
 import org.eclipse.imagen.media.codec.SeekableStream;
 import org.eclipse.imagen.media.codec.TIFFDecodeParam;
 import org.eclipse.imagen.media.codec.TIFFDirectory;
-import org.eclipse.imagen.media.codec.TIFFField;
-import org.eclipse.imagen.media.codecimpl.util.RasterFactory;
 
 /**
  * A baseline TIFF reader. The reader has some functionality in addition to 

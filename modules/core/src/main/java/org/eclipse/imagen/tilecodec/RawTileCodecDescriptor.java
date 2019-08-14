@@ -18,11 +18,9 @@
 package org.eclipse.imagen.tilecodec ;
 
 import java.awt.image.SampleModel ;
-import org.eclipse.imagen.PropertyGenerator;
+
 import org.eclipse.imagen.ParameterListDescriptor;
 import org.eclipse.imagen.ParameterListDescriptorImpl;
-import org.eclipse.imagen.tilecodec.TileCodecDescriptorImpl ;
-import org.eclipse.imagen.tilecodec.TileCodecParameterList ;
 
 /**
  * This class is the descriptor for the "Raw" tile codec. The "Raw" tile

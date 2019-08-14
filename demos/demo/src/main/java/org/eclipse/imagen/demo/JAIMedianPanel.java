@@ -7,14 +7,18 @@
  */
 package org.eclipse.imagen.demo;
 
-import java.awt.*;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.awt.image.renderable.ParameterBlock;
-import java.awt.event.*;
 import java.util.Vector;
-import org.eclipse.imagen.*;
-import org.eclipse.imagen.operator.*;
-import javax.swing.*;
-import javax.swing.event.*;
+
+import javax.swing.JComboBox;
+import javax.swing.JPanel;
+
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.operator.MedianFilterDescriptor;
+import org.eclipse.imagen.operator.MedianFilterShape;
 
 public class JAIMedianPanel extends JAIDemoPanel implements ItemListener {
 

@@ -20,14 +20,14 @@ package org.eclipse.imagen.remote;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Enumeration;
-import java.util.List;
 import java.util.Hashtable;
+import java.util.List;
 import java.util.Vector;
-import org.eclipse.imagen.OperationDescriptor;
+
 import org.eclipse.imagen.ParameterList;
-import org.eclipse.imagen.ParameterListImpl;
 import org.eclipse.imagen.ParameterListDescriptor;
 import org.eclipse.imagen.ParameterListDescriptorImpl;
+import org.eclipse.imagen.ParameterListImpl;
 import org.eclipse.imagen.util.CaselessStringKey;
 
 /**

@@ -16,9 +16,8 @@
  */
 
 package org.eclipse.imagen;
-import java.awt.Rectangle;
 import java.awt.Point;
-import java.awt.image.BandedSampleModel;
+import java.awt.Rectangle;
 import java.awt.image.DataBuffer;
 import java.awt.image.DataBufferByte;
 import java.awt.image.DataBufferInt;
@@ -31,9 +30,10 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+
+import org.eclipse.imagen.media.util.DataBufferUtils;
 import org.eclipse.imagen.remote.SerializableState;
 import org.eclipse.imagen.remote.SerializerFactory;
-import org.eclipse.imagen.media.util.DataBufferUtils;
 
 /**
  * A lookup table object associated with the "Lookup" operation.  The

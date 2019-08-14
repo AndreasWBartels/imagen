@@ -7,17 +7,15 @@
  */
 package org.eclipse.imagen.demo.medical;
 
-import java.io.BufferedInputStream;
-import java.io.DataInputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.RandomAccessFile;
 import java.awt.Point;
 import java.awt.image.DataBuffer;
 import java.awt.image.DataBufferByte;
 import java.awt.image.DataBufferShort;
 import java.awt.image.DataBufferUShort;
 import java.awt.image.Raster;
+import java.io.IOException;
+import java.io.RandomAccessFile;
+
 import org.eclipse.imagen.RasterFactory;
 import org.eclipse.imagen.media.codecimpl.SimpleRenderedImage;
 

@@ -18,19 +18,15 @@
 package org.eclipse.imagen;
 import java.awt.RenderingHints;
 import java.awt.geom.Rectangle2D;
-import java.awt.geom.Rectangle2D.Float;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ContextualRenderedImageFactory;
 import java.awt.image.renderable.ParameterBlock;
-import java.awt.image.renderable.RenderableImage;
 import java.awt.image.renderable.RenderContext;
-import org.eclipse.imagen.ImageLayout;
-import org.eclipse.imagen.JAI;
-import org.eclipse.imagen.RenderedOp;
-import org.eclipse.imagen.registry.RenderedRegistryMode;
-import org.eclipse.imagen.util.ImagingException;
-import org.eclipse.imagen.util.ImagingListener;
+import java.awt.image.renderable.RenderableImage;
+
 import org.eclipse.imagen.media.util.ImageUtil;
+import org.eclipse.imagen.registry.RenderedRegistryMode;
+import org.eclipse.imagen.util.ImagingListener;
 
 /**
  * A utility class to minimize in most cases the effort required to implement

@@ -16,23 +16,13 @@
  */
 
 package org.eclipse.imagen.media.opimage;
-import java.awt.Rectangle;
-import java.awt.image.DataBuffer;
-import java.awt.image.SampleModel;
-import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
-import java.awt.image.WritableRaster;
-import java.awt.image.renderable.ParameterBlock;
-import java.awt.image.renderable.RenderedImageFactory;
-import org.eclipse.imagen.AreaOpImage;
+import java.util.Map;
+
 import org.eclipse.imagen.BorderExtender;
 import org.eclipse.imagen.ImageLayout;
-import org.eclipse.imagen.OpImage;
 import org.eclipse.imagen.RasterAccessor;
-import java.util.Map;
 import org.eclipse.imagen.operator.MinFilterDescriptor;
-import org.eclipse.imagen.media.opimage.MinFilterOpImage;
-// import org.eclipse.imagen.media.test.OpImageTester;
 
 /**
  * An OpImage class to perform min filtering on a source image.

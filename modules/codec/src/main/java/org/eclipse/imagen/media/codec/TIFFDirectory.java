@@ -16,8 +16,8 @@
  */
 
 package org.eclipse.imagen.media.codec;
-import java.io.IOException;
 import java.io.EOFException;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.Enumeration;
 import java.util.Hashtable;

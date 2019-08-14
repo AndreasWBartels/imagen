@@ -19,23 +19,22 @@ package org.eclipse.imagen.media.tilecodec ;
 
 import java.awt.Point;
 import java.awt.image.Raster;
-import java.awt.image.WritableRaster;
 import java.awt.image.SampleModel;
-import java.io.OutputStream;
-import java.io.ObjectOutputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.text.MessageFormat;
-import org.eclipse.imagen.JAI ;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
+
 import org.eclipse.imagen.ParameterListDescriptor ;
-import org.eclipse.imagen.RasterFactory ;
 import org.eclipse.imagen.tilecodec.TileCodecDescriptor ;
 import org.eclipse.imagen.tilecodec.TileCodecParameterList ;
 import org.eclipse.imagen.tilecodec.TileEncoderImpl ;
+
+import com.sun.image.codec.jpeg.JPEGCodec ;
 import com.sun.image.codec.jpeg.JPEGEncodeParam ;
 import com.sun.image.codec.jpeg.JPEGImageEncoder ;
-import com.sun.image.codec.jpeg.JPEGCodec ;
 import com.sun.image.codec.jpeg.JPEGQTable ;
+
 import sun.awt.image.codec.JPEGParam ;
 
 /**

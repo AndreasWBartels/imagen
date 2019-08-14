@@ -20,15 +20,14 @@ package org.eclipse.imagen.media.tilecodec;
 import java.awt.Point;
 import java.awt.RenderingHints;
 import java.awt.image.Raster;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
-import java.io.IOException;
-import org.eclipse.imagen.JAI;
-import org.eclipse.imagen.ParameterListDescriptor;
+
+import org.eclipse.imagen.media.util.ImageUtil;
 import org.eclipse.imagen.tilecodec.TileCodecParameterList;
 import org.eclipse.imagen.tilecodec.TileDecoderImpl;
 import org.eclipse.imagen.util.ImagingListener;
-import org.eclipse.imagen.media.util.ImageUtil;
 
 /**
  * A concrete implementation of the <code>TileDecoderImpl</code> class

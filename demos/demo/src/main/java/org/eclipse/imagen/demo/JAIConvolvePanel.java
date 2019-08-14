@@ -7,13 +7,17 @@
  */
 package org.eclipse.imagen.demo;
 
-import java.awt.*;
-import java.awt.image.renderable.*;
-import java.awt.event.*;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import java.awt.image.renderable.ParameterBlock;
 import java.util.Vector;
-import org.eclipse.imagen.*;
-import javax.swing.*;
-import javax.swing.event.*;
+
+import javax.swing.JComboBox;
+import javax.swing.JPanel;
+
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.KernelJAI;
+import org.eclipse.imagen.PlanarImage;
 
 public class JAIConvolvePanel extends JAIDemoPanel implements ItemListener {
 

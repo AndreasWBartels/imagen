@@ -16,7 +16,6 @@
  */
 
 package org.eclipse.imagen;
-import java.awt.image.renderable.ParameterBlock;
 import java.io.Serializable;
 
 /**

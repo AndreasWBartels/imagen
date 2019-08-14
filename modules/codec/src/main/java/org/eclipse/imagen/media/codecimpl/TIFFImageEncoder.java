@@ -16,12 +16,6 @@
  */
 
 package org.eclipse.imagen.media.codecimpl;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.RandomAccessFile;
 import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.color.ColorSpace;
@@ -36,13 +30,20 @@ import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.RandomAccessFile;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.SortedSet;
 import java.util.TreeSet;
 import java.util.zip.Deflater;
-import org.eclipse.imagen.media.codec.ImageEncoderImpl;
+
 import org.eclipse.imagen.media.codec.ImageEncodeParam;
+import org.eclipse.imagen.media.codec.ImageEncoderImpl;
 import org.eclipse.imagen.media.codec.JPEGEncodeParam;
 import org.eclipse.imagen.media.codec.SeekableOutputStream;
 import org.eclipse.imagen.media.codec.TIFFEncodeParam;

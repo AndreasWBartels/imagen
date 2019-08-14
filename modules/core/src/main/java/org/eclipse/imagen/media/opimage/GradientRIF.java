@@ -20,13 +20,10 @@ import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
+
 import org.eclipse.imagen.BorderExtender;
 import org.eclipse.imagen.ImageLayout;
-import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.KernelJAI;
-import java.awt.image.SampleModel;
-import java.awt.image.DataBuffer;
-import java.util.Map;
 
 /**
  * @see GradientOpImage

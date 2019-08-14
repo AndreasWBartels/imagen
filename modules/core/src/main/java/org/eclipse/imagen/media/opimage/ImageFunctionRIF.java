@@ -18,11 +18,11 @@
 package org.eclipse.imagen.media.opimage;
 import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
-import java.awt.image.renderable.RenderedImageFactory;
 import java.awt.image.renderable.ParameterBlock;
+import java.awt.image.renderable.RenderedImageFactory;
+
 import org.eclipse.imagen.ImageFunction;
 import org.eclipse.imagen.ImageLayout;
-import java.util.Map;
 
 /**
  * A <code>RIF</code> supporting the "ImageFunction" operation in the rendered

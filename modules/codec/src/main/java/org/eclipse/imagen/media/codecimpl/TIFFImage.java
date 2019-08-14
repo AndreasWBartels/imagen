@@ -18,50 +18,41 @@
 package org.eclipse.imagen.media.codecimpl;
 import java.awt.Point;
 import java.awt.Rectangle;
-import java.awt.RenderingHints;
 import java.awt.Transparency;
 import java.awt.color.ColorSpace;
-import java.awt.image.ColorModel;
+import java.awt.image.ComponentColorModel;
 import java.awt.image.DataBuffer;
 import java.awt.image.DataBufferByte;
+import java.awt.image.DataBufferInt;
 import java.awt.image.DataBufferShort;
 import java.awt.image.DataBufferUShort;
-import java.awt.image.DataBufferInt;
-import java.awt.image.Raster;
-import java.awt.image.WritableRaster;
-import java.awt.image.RenderedImage;
-import java.awt.image.SampleModel;
 import java.awt.image.IndexColorModel;
 import java.awt.image.MultiPixelPackedSampleModel;
-import java.awt.image.PixelInterleavedSampleModel;
-import java.awt.image.ComponentColorModel;
+import java.awt.image.Raster;
+import java.awt.image.SampleModel;
+import java.awt.image.WritableRaster;
 import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.InputStream;
 import java.io.IOException;
-import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.text.MessageFormat;
 import java.util.Locale;
 import java.util.zip.DataFormatException;
 import java.util.zip.Inflater;
+
 import org.eclipse.imagen.media.codec.ImageCodec;
-import org.eclipse.imagen.media.codec.ImageDecoder;
-import org.eclipse.imagen.media.codec.ImageDecoderImpl;
-import org.eclipse.imagen.media.codec.ImageDecodeParam;
 import org.eclipse.imagen.media.codec.SeekableStream;
 import org.eclipse.imagen.media.codec.TIFFDecodeParam;
 import org.eclipse.imagen.media.codec.TIFFDirectory;
 import org.eclipse.imagen.media.codec.TIFFField;
 import org.eclipse.imagen.media.codecimpl.util.DataBufferFloat;
 import org.eclipse.imagen.media.codecimpl.util.FloatDoubleColorModel;
+import org.eclipse.imagen.media.codecimpl.util.ImagingException;
 import org.eclipse.imagen.media.codecimpl.util.RasterFactory;
+import org.eclipse.imagen.media.util.SimpleCMYKColorSpace;
+
 import com.sun.image.codec.jpeg.JPEGCodec;
 import com.sun.image.codec.jpeg.JPEGDecodeParam;
 import com.sun.image.codec.jpeg.JPEGImageDecoder;
-import org.eclipse.imagen.media.codecimpl.ImagingListenerProxy;
-import org.eclipse.imagen.media.codecimpl.util.ImagingException;
-import org.eclipse.imagen.media.util.SimpleCMYKColorSpace;
 
 public class TIFFImage extends SimpleRenderedImage {
 

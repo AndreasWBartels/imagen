@@ -20,10 +20,10 @@ import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
-import org.eclipse.imagen.JAI;
+
 import org.eclipse.imagen.ROI;
-import org.eclipse.imagen.util.ImagingListener;
 import org.eclipse.imagen.media.util.ImageUtil;
+import org.eclipse.imagen.util.ImagingListener;
 
 /**
  * A <code>RIF</code> supporting the "Histogram" operation in the

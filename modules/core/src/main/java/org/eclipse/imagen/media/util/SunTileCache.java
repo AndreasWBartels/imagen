@@ -16,20 +16,21 @@
  */
 
 package org.eclipse.imagen.media.util;
+import java.awt.Point;
 import java.awt.RenderingHints;
+import java.awt.image.Raster;
+import java.awt.image.RenderedImage;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.ConcurrentModificationException;
-import java.util.Iterator;
-import java.util.Observable;
-import java.util.Vector;
 import java.util.Enumeration;
 import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.Observable;
 import java.util.SortedSet;
 import java.util.TreeSet;
-import java.awt.Point;
-import java.awt.image.Raster;
-import java.awt.image.RenderedImage;
+import java.util.Vector;
+
 import org.eclipse.imagen.EnumeratedParameter;
 import org.eclipse.imagen.TileCache;
 import org.eclipse.imagen.util.ImagingListener;
