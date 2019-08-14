@@ -1489,7 +1489,7 @@ public abstract class PNGEncodeParam implements ImageEncodeParam {
                 int curr = currRow[i] & 0xff;
                 int left = currRow[i - bytesPerPixel] & 0xff;
                 int up = prevRow[i] & 0xff;
-                int difference = curr - (left + up)/2;;
+                int difference = curr - (left + up)/2;
                 averageFilteredRow[i] = (byte)difference;
                 
                 badness += abs(difference);

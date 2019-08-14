@@ -71,7 +71,7 @@ import org.eclipse.imagen.media.util.SimpleCMYKColorSpace;
  */
 public abstract class ImageCodec {
 
-    private static Hashtable codecs = new Hashtable();
+    private static Hashtable<String,ImageCodec> codecs = new Hashtable<>();
 
     /** Allow only subclasses to instantiate this class. */
     protected ImageCodec() {}
@@ -129,7 +129,7 @@ public abstract class ImageCodec {
      * Returns an <code>Enumeration</code> of all regstered
      * <code>ImageCodec</code> objects.
      */
-    public static Enumeration getCodecs() {
+    public static Enumeration<ImageCodec> getCodecs() {
         return codecs.elements();
     }
 
@@ -218,7 +218,7 @@ public abstract class ImageCodec {
         return codec.createImageDecoder(src, param);
     }
 
-    private static String[] vectorToStrings(Vector nameVec) {
+    private static String[] vectorToStrings(Vector<String> nameVec) {
         int count = nameVec.size();
         String[] names = new String[count];
         for (int i = 0; i < count; i++) {
@@ -254,10 +254,9 @@ public abstract class ImageCodec {
             throw new IllegalArgumentException(JaiI18N.getString("ImageCodec2"));
         }
 
-        Enumeration enumeration = codecs.elements();
-        Vector nameVec = new Vector();
+        Enumeration<ImageCodec> enumeration = codecs.elements();
+        Vector<String> nameVec = new Vector<>();
 
-        String opName = null;
         while (enumeration.hasMoreElements()) {
             ImageCodec codec = (ImageCodec)enumeration.nextElement();
 
@@ -307,10 +306,9 @@ public abstract class ImageCodec {
      */
     public static String[] getEncoderNames(RenderedImage im,
                                            ImageEncodeParam param) {
-        Enumeration enumeration = codecs.elements();
-        Vector nameVec = new Vector();
+        Enumeration<ImageCodec> enumeration = codecs.elements();
+        Vector<String> nameVec = new Vector<>();
 
-        String opName = null;
         while (enumeration.hasMoreElements()) {
             ImageCodec codec = (ImageCodec)enumeration.nextElement();
 
