@@ -245,7 +245,7 @@ public class MedicalApp extends JFrame implements MedicalAppConstants  {
         // Constructor
         FileAction(String name) {
             super(JaiI18N.getString(name));
-            String iconFileName = "images/" + name.toLowerCase() + ".gif";
+            String iconFileName = "org/eclipse/imagen/demo/medical" + name.toLowerCase() + ".gif";
             if (new File(iconFileName).exists())
             putValue(SMALL_ICON, new ImageIcon(iconFileName));
         }

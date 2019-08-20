@@ -7,29 +7,27 @@
  */
 package org.eclipse.imagen.demo.medical;
 
-
 import java.util.Locale;
 import java.util.ResourceBundle;
 
 /** The class for inetrnationalization. */
 
-
 class JaiI18N {
-    static String packageName = "";
-    private static ResourceBundle   resources =
-	ResourceBundle.getBundle("MedicalApp", Locale.getDefault());
+  static String packageName = "";
+  private static ResourceBundle resources =
+      ResourceBundle.getBundle("org/eclipse/imagen/demo/medical/MedicalApp", Locale.getDefault());
 
-    /** Return a property defined in the property file. */
+  /** Return a property defined in the property file. */
 
+  public static String getString(final String key) {
+    String s = resources.getString(key);
 
-    public static String getString(String key) {
-        String s = resources.getString(key);
-
-	// If the string is quoted, remove the quotation mark.
-	// Sometimes, put the quotation marks are used to reserve more space
-	// by adding white charaters.
-	if (s.startsWith("\""))
-	    s = s.substring(1, s.length() - 1);
-	return s;
+    // If the string is quoted, remove the quotation mark.
+    // Sometimes, put the quotation marks are used to reserve more space
+    // by adding white charaters.
+    if (s.startsWith("\"")) {
+      s = s.substring(1, s.length() - 1);
     }
+    return s;
+  }
 }

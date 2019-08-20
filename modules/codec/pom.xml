@@ -11,4 +11,18 @@
     <name>${project.groupId}:${project.artifactId}</name>
     <description>ImageN encode/decode codecs</description>
     <packaging>jar</packaging>
+
+  <dependencies>
+      <dependency>
+          <groupId>org.junit.jupiter</groupId>
+          <artifactId>junit-jupiter-engine</artifactId>
+          <scope>test</scope>
+      </dependency>
+      <dependency>
+          <groupId>org.junit.jupiter</groupId>
+          <artifactId>junit-jupiter-api</artifactId>
+          <scope>test</scope>
+      </dependency>
+  </dependencies>
+    
 </project>
