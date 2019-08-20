@@ -33,8 +33,8 @@ import java.util.jar.JarFile;
 
 public class PropertyUtil {
 
-    private static Hashtable bundles = new Hashtable();
-    private static String propertiesDir = "org.eclipse.imagen";
+    private static Hashtable<String,ResourceBundle> bundles = new Hashtable<>();
+    private static String propertiesDir = "org/eclipse/imagen";
     
     public static InputStream getFileFromClasspath(String path) 
         throws IOException, FileNotFoundException {
@@ -84,8 +84,8 @@ public class PropertyUtil {
         // try to load the file from either $java_home/ext/jai_core.jar
         // or $java_home/jai_core.jar.  The ext is where it should be
         // when the bug finally gets fixed.  
-        PrivilegedAction p = new PrivilegedAction() {
-            public Object run() {
+        PrivilegedAction<InputStream> p = new PrivilegedAction<InputStream>() {
+            public InputStream run() {
                 String localHome = null;
                 String localUrlHeader = null;
                 if(home != null) {
@@ -96,10 +96,10 @@ public class PropertyUtil {
                     localUrlHeader = localHome + sep + "lib"  + sep;
                 }
                 String filenames[] = {
-                    localUrlHeader + "ext" + sep + "jai_core.jar",
-                    localUrlHeader + "ext" + sep + "jai_codec.jar",
-                    localUrlHeader + "jai_core.jar",
-                    localUrlHeader + "jai_codec.jar"
+                    localUrlHeader + "ext" + sep + "imagen-core.jar",
+                    localUrlHeader + "ext" + sep + "imagen-codec.jar",
+                    localUrlHeader + "imagen-core.jar",
+                    localUrlHeader + "imagen-codec.jar"
                 };
                 
                 for (int i = 0; i < filenames.length; i++) {
@@ -117,7 +117,7 @@ public class PropertyUtil {
             }
         };
 
-        return (InputStream)AccessController.doPrivileged(p);
+        return AccessController.doPrivileged(p);
     }
 
     private static InputStream getFileFromJar(String jarFilename, 
@@ -182,23 +182,23 @@ public class PropertyUtil {
 
         prefix = prefix.toLowerCase();
 
-	Vector names = new Vector();
-	for (int i = 0; i < propertyNames.length; i++) {
-	    if (propertyNames[i].toLowerCase().startsWith(prefix)) {
-		names.addElement(propertyNames[i]);
-	    }
-	}
-
-        if (names.size() == 0) {
-            return null;
+        Vector<String> names = new Vector<>();
+        for (int i = 0; i < propertyNames.length; i++) {
+          if (propertyNames[i].toLowerCase().startsWith(prefix)) {
+            names.addElement(propertyNames[i]);
+          }
         }
-
-	// Copy the strings from the Vector over to a String array.
-	String prefixNames[] = new String[names.size()];
-	int count = 0;
-	for (Iterator it = names.iterator(); it.hasNext(); ) {
-	    prefixNames[count++] = (String)it.next();
-	}
+    
+        if (names.size() == 0) {
+          return null;
+        }
+    
+        // Copy the strings from the Vector over to a String array.
+        String prefixNames[] = new String[names.size()];
+        int count = 0;
+        for (Iterator<String> it = names.iterator(); it.hasNext();) {
+          prefixNames[count++] = (String) it.next();
+        }
 
         return prefixNames;
     }
