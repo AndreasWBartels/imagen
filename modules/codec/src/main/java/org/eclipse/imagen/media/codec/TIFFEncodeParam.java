@@ -93,9 +93,6 @@ public class TIFFEncodeParam implements ImageEncodeParam {
 
     private TIFFField[] extraFields;
 
-    private boolean convertJPEGRGBToYCbCr = true;
-    private JPEGEncodeParam jpegEncodeParam = null;
-
     private int deflateLevel = Deflater.DEFAULT_COMPRESSION;
 
     private boolean isLittleEndian = false;
@@ -335,64 +332,6 @@ public class TIFFEncodeParam implements ImageEncodeParam {
      */
     public int getDeflateLevel() {
         return deflateLevel;
-    }
-
-    /**
-     * Sets flag indicating whether to convert RGB data to YCbCr when the
-     * compression type is JPEG.  The default value is <code>true</code>.
-     * This flag is ignored if the compression type is not JPEG.
-     */
-    public void setJPEGCompressRGBToYCbCr(boolean convertJPEGRGBToYCbCr) {
-        this.convertJPEGRGBToYCbCr = convertJPEGRGBToYCbCr;
-    }
-
-    /**
-     * Whether RGB data will be converted to YCbCr when using JPEG compression.
-     */
-    public boolean getJPEGCompressRGBToYCbCr() {
-        return convertJPEGRGBToYCbCr;
-    }
-
-    /**
-     * Sets the JPEG compression parameters.  These parameters are ignored
-     * if the compression type is not JPEG.  The argument may be
-     * <code>null</code> to indicate that default compression parameters
-     * are to be used.  For maximum conformance with the specification it
-     * is recommended in most cases that only the quality compression
-     * parameter be set.
-     *
-     * <p> The <code>writeTablesOnly</code> and <code>JFIFHeader</code>
-     * flags of the <code>JPEGEncodeParam</code> are ignored.  The
-     * <code>writeImageOnly</code> flag is used to determine whether the
-     * JPEGTables field will be written to the TIFF stream: if
-     * <code>writeImageOnly</code> is <code>true</code>, then the JPEGTables
-     * field will be written and will contain a valid JPEG abbreviated
-     * table specification datastream.  In this case the data in each data
-     * segment (strip or tile) will contain an abbreviated JPEG image
-     * datastream.  If the <code>writeImageOnly</code> flag is
-     * <code>false</code>, then the JPEGTables field will not be written and
-     * each data segment will contain a complete JPEG interchange datastream.
-     */
-    public void setJPEGEncodeParam(JPEGEncodeParam jpegEncodeParam) {
-        if(jpegEncodeParam != null) {
-            jpegEncodeParam = (JPEGEncodeParam)jpegEncodeParam.clone();
-            jpegEncodeParam.setWriteTablesOnly(false);
-            jpegEncodeParam.setWriteJFIFHeader(false);
-        }
-        this.jpegEncodeParam = jpegEncodeParam;
-    }
-
-    /**
-     * Retrieves the JPEG compression parameters.
-     */
-    public JPEGEncodeParam getJPEGEncodeParam() {
-        if(jpegEncodeParam == null) {
-            jpegEncodeParam = new JPEGEncodeParam();
-            jpegEncodeParam.setWriteTablesOnly(false);
-            jpegEncodeParam.setWriteImageOnly(true);
-            jpegEncodeParam.setWriteJFIFHeader(false);
-        }
-        return jpegEncodeParam;
     }
 
     /**

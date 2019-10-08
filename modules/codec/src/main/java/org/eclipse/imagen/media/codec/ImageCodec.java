@@ -36,7 +36,6 @@ import org.eclipse.imagen.media.codecimpl.BMPCodec;
 import org.eclipse.imagen.media.codecimpl.FPXCodec;
 import org.eclipse.imagen.media.codecimpl.GIFCodec;
 import org.eclipse.imagen.media.codecimpl.ImagingListenerProxy;
-import org.eclipse.imagen.media.codecimpl.JPEGCodec;
 import org.eclipse.imagen.media.codecimpl.PNGCodec;
 import org.eclipse.imagen.media.codecimpl.PNMCodec;
 import org.eclipse.imagen.media.codecimpl.TIFFCodec;
@@ -83,7 +82,6 @@ public abstract class ImageCodec {
         registerCodec(new BMPCodec());
         registerCodec(new GIFCodec());
         registerCodec(new FPXCodec());
-        registerCodec(new JPEGCodec());
         registerCodec(new PNGCodec());
         registerCodec(new PNMCodec());
         registerCodec(new TIFFCodec());

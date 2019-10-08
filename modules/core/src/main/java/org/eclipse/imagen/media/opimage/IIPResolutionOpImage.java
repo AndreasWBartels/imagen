@@ -42,10 +42,6 @@ import org.eclipse.imagen.media.util.ImageUtil;
 import org.eclipse.imagen.util.ImagingException;
 import org.eclipse.imagen.util.ImagingListener;
 
-import com.sun.image.codec.jpeg.JPEGCodec;
-import com.sun.image.codec.jpeg.JPEGDecodeParam;
-import com.sun.image.codec.jpeg.JPEGImageDecoder;
-
 /**
  * An OpImage class to generate an image from an IIP connection. A single
  * resolution level of the remote IIP image is retrieved.
@@ -111,9 +107,6 @@ public class IIPResolutionOpImage extends OpImage {
 
     /* The number of tiles in the X direction. */
     private int numXTiles;
-
-    /* The JPEGDecodeParam cache */
-    private JPEGDecodeParam[] decodeParamCache = new JPEGDecodeParam[255];
 
     /* Property initialization flag. */
     private boolean arePropertiesInitialized = false;
@@ -829,9 +822,6 @@ public class IIPResolutionOpImage extends OpImage {
                 case TILE_SINGLE_COLOR:
                     raster = getSingleColorTile(tx, ty, compressionSubType);
                     break;
-                case TILE_JPEG:
-                    raster = getJPEGTile(tx, ty, compressionSubType, data);
-                    break;
                 case TILE_INVALID:
                 default:
                     raster = createWritableRaster(sampleModel,
@@ -908,90 +898,6 @@ public class IIPResolutionOpImage extends OpImage {
         DataBuffer dataBuffer = new DataBufferByte(data, data.length);
 
         return Raster.createRaster(sampleModel, dataBuffer, new Point(tx, ty));
-    }
-
-    /*
-     * Create a Raster from a JPEG-compressed data stream.
-     */
-    private Raster getJPEGTile(int tx, int ty, int subType, byte[] data) {
-        int tableIndex = (subType >> 24) & 0x000000ff;
-        boolean colorConversion = (subType & 0x00ff0000) != 0;
-        JPEGDecodeParam decodeParam = null;
-        if(tableIndex != 0) {
-            decodeParam = getJPEGDecodeParam(tableIndex);
-        }
-
-        ByteArrayInputStream byteStream = new ByteArrayInputStream(data);
-        JPEGImageDecoder decoder = decodeParam == null ?
-            JPEGCodec.createJPEGDecoder(byteStream) :
-            JPEGCodec.createJPEGDecoder(byteStream, decodeParam);
-
-        Raster raster = null;
-        try {
-            raster = decoder.decodeAsRaster().createTranslatedChild(tx, ty);
-        } catch(Exception e) {
-
-            ImagingListener listener =
-                ImageUtil.getImagingListener(renderHints);
-            listener.errorOccurred(JaiI18N.getString("IIPResolutionOpImage3"),
-                                   new ImagingException(e),
-                                   this, false);
-/*
-            String msg = JaiI18N.getString("IIPResolutionOpImage3")+" "+
-                e.getMessage();
-            throw new RuntimeException(msg);
-*/
-        }
-        closeStream(byteStream);
-
-        if(colorSpaceType == CS_NIFRGB && colorConversion) {
-            YCbCrToNIFRGB(raster);
-        }
-
-        return raster;
-    }
-
-    /*
-     * Retrieve the JPEGDecodeParam object for the indicated table. If the
-     * object is available in the config, use it; otherwise retrieve it from
-     * the server. An ArrayIndexOutOfBoundsException will be thrown if
-     * the parameter is not in the range [1,256].
-     */
-    private synchronized JPEGDecodeParam getJPEGDecodeParam(int tableIndex) {
-        JPEGDecodeParam decodeParam = decodeParamCache[tableIndex-1];
-
-        if(decodeParam == null) {
-            String cmd = new String("OBJ=Comp-group,"+
-                                    TILE_JPEG+","+tableIndex);
-            InputStream stream = postCommands(new String[] {cmd});
-            String label = null;
-            while((label = getLabel(stream)) != null) {
-                if(label.startsWith("comp-group")) {
-                    byte[] table = getDataAsByteArray(stream);
-                    ByteArrayInputStream tableStream =
-                        new ByteArrayInputStream(table);
-                    JPEGImageDecoder decoder =
-                        JPEGCodec.createJPEGDecoder(tableStream);
-                    try {
-                        // This call is necessary.
-                        decoder.decodeAsRaster();
-                    } catch(Exception e) {
-                        // Ignore.
-                    }
-                    decodeParam = decoder.getJPEGDecodeParam();
-                } else {
-                    checkError(label, stream, true);
-                }
-            }
-
-            endResponse(stream);
-
-            if(decodeParam != null) {
-                decodeParamCache[tableIndex-1] = decodeParam;
-            }
-        }
-
-        return decodeParam;
     }
 
     /*

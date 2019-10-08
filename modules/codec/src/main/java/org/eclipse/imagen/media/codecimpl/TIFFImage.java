@@ -31,7 +31,6 @@ import java.awt.image.MultiPixelPackedSampleModel;
 import java.awt.image.Raster;
 import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.text.MessageFormat;
@@ -49,10 +48,6 @@ import org.eclipse.imagen.media.codecimpl.util.FloatDoubleColorModel;
 import org.eclipse.imagen.media.codecimpl.util.ImagingException;
 import org.eclipse.imagen.media.codecimpl.util.RasterFactory;
 import org.eclipse.imagen.media.util.SimpleCMYKColorSpace;
-
-import com.sun.image.codec.jpeg.JPEGCodec;
-import com.sun.image.codec.jpeg.JPEGDecodeParam;
-import com.sun.image.codec.jpeg.JPEGImageDecoder;
 
 public class TIFFImage extends SimpleRenderedImage {
 
@@ -107,10 +102,6 @@ public class TIFFImage extends SimpleRenderedImage {
     // LZW compression related variable
     int predictor;
 
-    // TTN2 JPEG related variables
-    JPEGDecodeParam decodeParam = null;
-    boolean colorConvertJPEG = false;
-
     // DEFLATE variables
     Inflater inflater = null;
 
@@ -126,50 +117,6 @@ public class TIFFImage extends SimpleRenderedImage {
     // Decoders
     private TIFFFaxDecoder decoder = null;
     private TIFFLZWDecoder lzwDecoder = null;
-
-    /**
-     * Decode a buffer of data into a Raster with the specified location.
-     *
-     * @param data buffer contain an interchange or abbreviated datastream.
-     * @param decodeParam decoding parameters; may be null unless the
-     *        data buffer contains an abbreviated datastream in which case
-     *        it may not be null or an error will occur.
-     * @param colorConvert whether to perform color conversion; in this
-     *        case that would be limited to YCbCr-to-RGB.
-     * @param minX the X position of the returned Raster.
-     * @param minY the Y position of the returned Raster.
-     */
-    private static final Raster decodeJPEG(byte[] data,
-                                           JPEGDecodeParam decodeParam,
-                                           boolean colorConvert,
-                                           int minX,
-                                           int minY) {
-        // Create an InputStream from the compressed data array.
-        ByteArrayInputStream jpegStream = new ByteArrayInputStream(data);
-
-        // Create a decoder.
-        JPEGImageDecoder decoder = decodeParam == null ?
-            JPEGCodec.createJPEGDecoder(jpegStream) :
-            JPEGCodec.createJPEGDecoder(jpegStream,
-                                        decodeParam);
-
-        // Decode the compressed data into a Raster.
-        Raster jpegRaster = null;
-        try {
-            jpegRaster = colorConvert ?
-                decoder.decodeAsBufferedImage().getWritableTile(0, 0) :
-                decoder.decodeAsRaster();
-        } catch (IOException ioe) {
-            String message = JaiI18N.getString("TIFFImage13");
-            ImagingListenerProxy.errorOccurred(message,
-                                   new ImagingException(message, ioe),
-                                   TIFFImage.class, false);
-//            throw new RuntimeException(JaiI18N.getString("TIFFImage13"));
-        }
-
-        // Translate the decoded Raster to the specified location and return.
-        return jpegRaster.createTranslatedChild(minX, minY);
-    }
 
     /**
      * Inflates <code>deflated</code> into <code>inflated</code> using the
@@ -486,14 +433,6 @@ public class TIFFImage extends SimpleRenderedImage {
 		imageType = TYPE_CMYK;
 	    }
         case 6: // YCbCr
-            if(compression == COMP_JPEG_TTN2 &&
-               sampleSize == 8 && samplesPerPixel == 3) {
-                // Set color conversion flag.
-                colorConvertJPEG = param.getJPEGDecompressYCbCrToRGB();
-
-                // Set type to RGB if color converting.
-                imageType = colorConvertJPEG ? TYPE_RGB : TYPE_GENERIC;
-            } else {
                 TIFFField chromaField = dir.getField(TIFF_YCBCR_SUBSAMPLING);
                 if(chromaField != null) {
                     chromaSubH = chromaField.getAsInt(0);
@@ -507,7 +446,6 @@ public class TIFFImage extends SimpleRenderedImage {
                 } else if(sampleSize == 8 && samplesPerPixel == 3) {
                     imageType = TYPE_YCBCR_SUB;
                 }
-            }
             break;
         default: // Other including CIE L*a*b*, unknown.
             if(sampleSize % 8 == 0) {
@@ -722,26 +660,7 @@ public class TIFFImage extends SimpleRenderedImage {
             throw new RuntimeException(JaiI18N.getString("TIFFImage15"));
 
         case COMP_JPEG_TTN2:
-            if(!(sampleSize == 8 &&
-                 ((imageType == TYPE_GRAY && samplesPerPixel == 1) ||
-                  (imageType == TYPE_PALETTE && samplesPerPixel == 1) ||
-                  (imageType == TYPE_RGB && samplesPerPixel == 3)))) {
-                throw new RuntimeException(JaiI18N.getString("TIFFImage16"));
-            }
-
-            // Create decodeParam from JPEGTables field if present.
-            if(dir.isTagPresent(TIFF_JPEG_TABLES)) {
-                TIFFField jpegTableField = dir.getField(TIFF_JPEG_TABLES);
-                byte[] jpegTable = jpegTableField.getAsBytes();
-                ByteArrayInputStream tableStream =
-                    new ByteArrayInputStream(jpegTable);
-                JPEGImageDecoder decoder =
-                    JPEGCodec.createJPEGDecoder(tableStream);
-                decoder.decodeAsRaster();
-                decodeParam = decoder.getJPEGDecodeParam();
-            }
-
-            break;
+          throw new RuntimeException(JaiI18N.getString("TIFFImage16"));
         default:
             throw new RuntimeException(JaiI18N.getString("TIFFImage10"));
 	}
@@ -773,15 +692,9 @@ public class TIFFImage extends SimpleRenderedImage {
             // Create a pixel interleaved SampleModel with decreasing
             // band offsets.
             int[] RGBOffsets = new int[numBands];
-            if(compression == COMP_JPEG_TTN2) {
-                for (int i=0; i<numBands; i++) {
-                    RGBOffsets[i] = numBands - 1 - i;
-                }
-            } else {
                 for (int i=0; i<numBands; i++) {
                     RGBOffsets[i] = i;
                 }
-            }
             sampleModel = createPixelInterleavedSampleModel(dataType,
                                                             tileWidth,
                                                             tileHeight,
@@ -1291,25 +1204,6 @@ public class TIFFImage extends SimpleRenderedImage {
 			    tempData = new byte[unitsBeforeLookup];
 			    lzwDecoder.decode(data, tempData, newRect.height);
 
-                        } else if (compression == COMP_JPEG_TTN2) {
-
-                            stream.readFully(data, 0, byteCount);
-                            Raster tempTile = decodeJPEG(data,
-                                                         decodeParam,
-                                                         colorConvertJPEG,
-                                                         tile.getMinX(),
-                                                         tile.getMinY());
-                            int[] tempPixels = new int[unitsBeforeLookup];
-                            tempTile.getPixels(tile.getMinX(),
-                                               tile.getMinY(),
-                                               tile.getWidth(),
-                                               tile.getHeight(),
-                                               tempPixels);
-			    tempData = new byte[unitsBeforeLookup];
-                            for(int i = 0; i < unitsBeforeLookup; i++) {
-                                tempData[i] = (byte)tempPixels[i];
-                            }
-
 			}  else if (compression == COMP_DEFLATE) {
 
 			    stream.readFully(data, 0, byteCount);
@@ -1367,15 +1261,6 @@ public class TIFFImage extends SimpleRenderedImage {
 
 			    stream.readFully(data, 0, byteCount);
 			    lzwDecoder.decode(data, bdata, newRect.height);
-
-                        } else if (compression == COMP_JPEG_TTN2) {
-
-                            stream.readFully(data, 0, byteCount);
-                            tile.setRect(decodeJPEG(data,
-                                                    decodeParam,
-                                                    colorConvertJPEG,
-                                                    tile.getMinX(),
-                                                    tile.getMinY()));
 
 			}  else if (compression == COMP_DEFLATE) {
 
@@ -1574,14 +1459,6 @@ public class TIFFImage extends SimpleRenderedImage {
 			stream.readFully(data, 0, byteCount);
 			decodePackbits(data, unitsInThisTile, bdata);
 
-		    } else if (compression == COMP_JPEG_TTN2) {
-
-			stream.readFully(data, 0, byteCount);
-                        tile.setRect(decodeJPEG(data,
-                                                decodeParam,
-                                                colorConvertJPEG,
-                                                tile.getMinX(),
-                                                tile.getMinY()));
 		    } else if (compression == COMP_DEFLATE) {
 
 			stream.readFully(data, 0, byteCount);

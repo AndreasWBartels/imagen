@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.eclipse.imagen</groupId>
     <artifactId>imagen</artifactId>
-    <version>0.4-SNAPSHOT</version>
+    <version>0.4-JAVA11-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>ImageN</name>
@@ -167,8 +167,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>11</source>
+                    <target>11</target>
                     <debug>true</debug>
                     <encoding>UTF-8</encoding>
                     <fork>true</fork>                                          <!-- required for compiler argument below -->

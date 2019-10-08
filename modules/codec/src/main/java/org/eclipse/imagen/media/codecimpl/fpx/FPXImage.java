@@ -36,10 +36,6 @@ import org.eclipse.imagen.media.codecimpl.ImagingListenerProxy;
 import org.eclipse.imagen.media.codecimpl.SimpleRenderedImage;
 import org.eclipse.imagen.media.codecimpl.util.RasterFactory;
 
-import com.sun.image.codec.jpeg.JPEGCodec;
-import com.sun.image.codec.jpeg.JPEGDecodeParam;
-import com.sun.image.codec.jpeg.JPEGImageDecoder;
-
 public class FPXImage extends SimpleRenderedImage {
 
     private static final int SUBIMAGE_COLOR_SPACE_COLORLESS = 0;
@@ -576,105 +572,6 @@ public class FPXImage extends SimpleRenderedImage {
         return ras;
     }
 
-    private Raster getJPEGCompressedTile(int tileX, int tileY)
-        throws IOException {
-        // System.out.println("JPEG compressed tile.");
-
-        int tileIndex = tileY*tilesAcross + tileX;
-
-        int tx = tileXToX(tileX);
-        int ty = tileYToY(tileY);
-
-        int subtype = getCompressionSubtype(tileIndex);
-        int interleave = (subtype >> 0) & 0xff;
-        int chroma = (subtype >> 8) & 0xff;
-        int conversion = (subtype >> 16) & 0xff;
-        int table = (subtype >> 24) & 0xff;
-
-        JPEGImageDecoder dec;
-        JPEGDecodeParam param = null;
-
-        if (table != 0) {
-            InputStream tableStream =
-                new ByteArrayInputStream(JPEGTable[table]);
-            dec = JPEGCodec.createJPEGDecoder(tableStream);
-            Raster junk = dec.decodeAsRaster();
-            param = dec.getJPEGDecodeParam();
-        }
-
-        subimageDataStream.seek(getTileOffset(tileIndex));
-        if (param != null) {
-            dec = JPEGCodec.createJPEGDecoder(subimageDataStream, param);
-        } else {
-            dec = JPEGCodec.createJPEGDecoder(subimageDataStream);
-        }
-        Raster ras = dec.decodeAsRaster().createTranslatedChild(tx, ty);
-
-        DataBufferByte dataBuffer = (DataBufferByte)ras.getDataBuffer();
-        byte[] data = dataBuffer.getData();
-
-        int subimageColorType = subimageColor[resolution][0] >> 16;
-
-        int size = tileWidth*tileHeight;
-        if ((conversion == 0) && (subimageColorType == 2)) {
-            // System.out.println("Converting PhotoYCC to NIFRGB");
-            int offset = 0;
-            for (int i = 0; i < size; i++) {
-                float Y  = data[offset] & 0xff;
-                float Cb = data[offset + 1] & 0xff;
-                float Cr = data[offset + 2] & 0xff;
-
-                float scaledY = Y*1.3584F;
-                byte red = PhotoYCCToNIFRed(scaledY, Cb, Cr);
-                byte green = PhotoYCCToNIFGreen(scaledY, Cb, Cr);
-                byte blue = PhotoYCCToNIFBlue(scaledY, Cb, Cr);
-
-                data[offset]     = red;
-                data[offset + 1] = green;
-                data[offset + 2] = blue;
-
-                offset += numChannels;
-            }
-        } else if ((conversion == 1) && (subimageColorType == 3)) {
-            // System.out.println("Converting YCC to NIFRGB");
-            int offset = 0;
-            for (int i = 0; i < size; i++) {
-                float Y  = data[offset] & 0xff;
-                float Cb = data[offset + 1] & 0xff;
-                float Cr = data[offset + 2] & 0xff;
-
-                byte red = YCCToNIFRed(Y, Cb, Cr);
-                byte green = YCCToNIFGreen(Y, Cb, Cr);
-                byte blue = YCCToNIFBlue(Y, Cb, Cr);
-
-                data[offset]     = red;
-                data[offset + 1] = green;
-                data[offset + 2] = blue;
-
-                offset += numChannels;
-            }
-        }
-
-        // Perform special inversion step when output space is
-        // NIF RGB (subimageColorType == 3) with premultiplied opacity
-        // (numChannels == 4).
-        if ((conversion == 1) &&
-            (subimageColorType == 3) && (numChannels == 4)) {
-            // System.out.println("Flipping NIFRGB");
-
-            int offset = 0;
-            for (int i = 0; i < size; i++) {
-                data[offset + 0] = (byte)(255 - data[offset + 0]);
-                data[offset + 1] = (byte)(255 - data[offset + 1]);
-                data[offset + 2] = (byte)(255 - data[offset + 2]);
-
-                offset += 4;
-            }
-        }
-
-        return ras;
-    }
-
     public synchronized Raster getTile(int tileX, int tileY) {
         int tileIndex = tileY*tilesAcross + tileX;
 
@@ -685,7 +582,8 @@ public class FPXImage extends SimpleRenderedImage {
             } else if (ctype == 1) {
                 return getSingleColorCompressedTile(tileX, tileY);
             } else if (ctype == 2) {
-                return getJPEGCompressedTile(tileX, tileY);
+              
+//                return getJPEGCompressedTile(tileX, tileY);
             }
             return null;
         } catch (IOException e) {
