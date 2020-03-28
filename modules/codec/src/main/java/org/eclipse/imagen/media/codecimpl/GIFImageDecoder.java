@@ -187,7 +187,7 @@ public class GIFImageDecoder extends ImageDecoderImpl {
 /**
  * @since 1.1.1
  */
-class GIFImage extends SimpleRenderedImage {
+class GIFImage extends SimpleRenderedImage implements Disposable {
     // Constants used to control interlacing.
     private static final int[] INTERLACE_INCREMENT = { 8, 8, 4, 2, -1 };
     private static final int[] INTERLACE_OFFSET = { 0, 4, 2, 1, -1 };

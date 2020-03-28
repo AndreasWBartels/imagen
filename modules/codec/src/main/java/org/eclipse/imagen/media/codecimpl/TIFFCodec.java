@@ -65,20 +65,18 @@ public final class TIFFCodec extends ImageCodec {
     }
 
     public boolean isFormatRecognized(byte[] header) {
-        if ((header[0] == 0x49) &&
-            (header[1] == 0x49) &&
-            (header[2] == 0x2a) &&
-            (header[3] == 0x00)) {
-            return true;
-        }
+      if ((header[0] == 0x49) && (header[1] == 0x49) && (header[2] == 0x2a) && (header[3] == 0x00)) {
+        return true;
+      }
 
-        if ((header[0] == 0x4d) &&
-            (header[1] == 0x4d) &&
-            (header[2] == 0x00) &&
-            (header[3] == 0x2a)) {
-            return true;
-        }
+      if ((header[0] == 0x49) && (header[1] == 0x49) && (header[2] == 0x2b) && (header[3] == 0x00)) {
+        return true;
+      }
 
-        return false;
+      if ((header[0] == 0x4d) && (header[1] == 0x4d) && (header[2] == 0x00) && (header[3] == 0x2a)) {
+        return true;
+      }
+
+      return false;
     }
 }

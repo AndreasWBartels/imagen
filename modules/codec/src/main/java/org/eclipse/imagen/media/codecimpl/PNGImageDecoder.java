@@ -145,7 +145,7 @@ class PNGChunk {
  * zTXt chunks
  *
  */
-class PNGImage extends SimpleRenderedImage {
+class PNGImage extends SimpleRenderedImage implements Disposable {
 
     public static final int PNG_COLOR_GRAY = 0;
     public static final int PNG_COLOR_RGB = 2;

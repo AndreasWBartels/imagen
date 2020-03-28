@@ -83,10 +83,13 @@ class StreamImage extends RenderedImageAdapter {
     /*
      * Close the stream.
      */
-    protected void finalize() throws Throwable {
-        stream.close();
-        super.finalize();
+  protected void finalize() throws Throwable {
+    try {
+      stream.close();
+    } finally {
+      super.finalize();
     }
+  }
 }
 
 /**

@@ -818,10 +818,13 @@ public abstract class PlanarImageServerProxy extends PlanarImage implements Remo
      * Uncaches all the tiles when this image is garbage collected.
      */
     protected void finalize() throws Throwable {
+      try {
         if (cache != null) {
-            cache.removeTiles(this);
+          cache.removeTiles(this);
         }
+      } finally {
         super.finalize();
+      }
     }
 
     //

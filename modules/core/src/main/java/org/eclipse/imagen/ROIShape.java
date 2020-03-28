@@ -1152,6 +1152,7 @@ public class ROIShape extends ROI {
 			     RenderingHints.VALUE_ANTIALIAS_ON);
 	g2d.fill(theShape);
 
+	g2d.dispose();
 	theImage = pi; // Cache the output
         
         return theImage;

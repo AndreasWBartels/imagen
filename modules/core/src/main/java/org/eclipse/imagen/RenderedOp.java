@@ -2989,13 +2989,14 @@ public class RenderedOp extends PlanarImage
             return;
         }
 
-        isDisposed = true;
-
-        if(theImage != null) {
-            theImage.dispose();
+        try {
+          isDisposed = true;
+          if(theImage != null) {
+              theImage.dispose();
+          }
+        } finally {
+          super.dispose();
         }
-
-        super.dispose();
     }
 
     /* ----- [De]serialization methods ----- */

@@ -60,7 +60,7 @@ public class BMPImageDecoder extends ImageDecoderImpl {
     }
 }
 
-class BMPImage extends SimpleRenderedImage {
+class BMPImage extends SimpleRenderedImage implements Disposable {
 
     // BMP variables
     private BufferedInputStream inputStream;

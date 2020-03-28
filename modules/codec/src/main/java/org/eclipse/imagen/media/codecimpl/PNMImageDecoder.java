@@ -58,7 +58,7 @@ public class PNMImageDecoder extends ImageDecoderImpl {
     }
 }
 
-class PNMImage extends SimpleRenderedImage {
+class PNMImage extends SimpleRenderedImage implements Disposable {
 
     private static final int PBM_ASCII = '1';
     private static final int PGM_ASCII = '2';

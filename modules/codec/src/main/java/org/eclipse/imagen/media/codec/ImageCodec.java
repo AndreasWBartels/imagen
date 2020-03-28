@@ -41,7 +41,7 @@ import org.eclipse.imagen.media.codecimpl.PNMCodec;
 import org.eclipse.imagen.media.codecimpl.TIFFCodec;
 import org.eclipse.imagen.media.codecimpl.WBMPCodec;
 import org.eclipse.imagen.media.codecimpl.util.FloatDoubleColorModel;
-import org.eclipse.imagen.media.util.SimpleCMYKColorSpace;
+import org.eclipse.imagen.media.codecimpl.util.SimpleCMYKColorSpace;
 
 /**
  * An abstract class allowing the creation of image decoders and

@@ -48,6 +48,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Vector;
 
+import org.eclipse.imagen.media.codecimpl.Disposable;
 import org.eclipse.imagen.media.util.DataBufferUtils;
 import org.eclipse.imagen.media.util.ImageUtil;
 import org.eclipse.imagen.media.util.JDKWorkarounds;
@@ -182,7 +183,7 @@ import org.eclipse.imagen.media.util.PropertyUtil;
  * @see SnapshotImage
  * @see TiledImage
  */
-public abstract class PlanarImage implements ImageJAI, RenderedImage {
+public abstract class PlanarImage implements ImageJAI, RenderedImage, Disposable {
 
     /** The UID for this image. */
     private Object UID;
@@ -2695,8 +2696,7 @@ public abstract class PlanarImage implements ImageJAI, RenderedImage {
             throw new IllegalArgumentException(JaiI18N.getString("Generic0"));
         }
 
-        JAI.getDefaultInstance().getTileScheduler().prefetchTiles(this,
-                                                                  tileIndices);
+        JAI.getDefaultInstance().getTileScheduler().prefetchTiles(this, tileIndices);
     }
 
     /**
@@ -2748,7 +2748,11 @@ public abstract class PlanarImage implements ImageJAI, RenderedImage {
      *            garbage collector.
      */
     protected void finalize() throws Throwable {
+      try {
         dispose();
+      } finally {
+        super.finalize();
+      }
     }
 
     /** For debugging. */

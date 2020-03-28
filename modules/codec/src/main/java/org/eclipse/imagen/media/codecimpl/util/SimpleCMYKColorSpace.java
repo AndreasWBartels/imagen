@@ -15,7 +15,7 @@
  *
  */
 
-package org.eclipse.imagen.media.util;
+package org.eclipse.imagen.media.codecimpl.util;
 
 import java.awt.color.ColorSpace;
 
@@ -24,6 +24,8 @@ import java.awt.color.ColorSpace;
  * color space.
  */
 public final class SimpleCMYKColorSpace extends ColorSpace {
+
+    private static final long serialVersionUID = 1L;
     private static ColorSpace theInstance = null;
     private ColorSpace csRGB;
 

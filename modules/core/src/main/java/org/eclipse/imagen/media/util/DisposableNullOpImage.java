@@ -17,6 +17,7 @@
 
 package org.eclipse.imagen.media.util;
 
+import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
 import java.lang.reflect.AccessibleObject;
 import java.lang.reflect.Method;
@@ -26,47 +27,55 @@ import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.NullOpImage;
 import org.eclipse.imagen.PlanarImage;
 import org.eclipse.imagen.RenderedImageAdapter;
+import org.eclipse.imagen.media.codecimpl.Disposable;
 
 /**
- * <code>NullOpImage</code> subclass which conditionally forwards
- * {@link #dispose()} to its source. The call will be forwarded if the
- * source is a <code>PlanarImage</code> or a <code>RenderedImage</code>
- * wrapped by <code>RenderedImageAdapter</code> and which has a
- * <code>dispose()</code> method with no parameters. In the former case
- * the call is forwarded directly, and in the latter via reflection.
+ * <code>NullOpImage</code> subclass which conditionally forwards {@link #dispose()} to its source. The call will be
+ * forwarded if the source is a <code>PlanarImage</code> or a <code>RenderedImage</code> wrapped by
+ * <code>RenderedImageAdapter</code> and which has a <code>dispose()</code> method with no parameters. In the former
+ * case the call is forwarded directly, and in the latter via reflection.
  *
  * @since JAI 1.1.3
  */
 public class DisposableNullOpImage extends NullOpImage {
-    public DisposableNullOpImage(RenderedImage source,
-                                 ImageLayout layout,
-                                 Map configuration,
-                                 int computeType) {
-        super(source, layout, configuration, computeType);
-    }
+  public DisposableNullOpImage(final RenderedImage source,
+      final ImageLayout layout,
+      final Map configuration,
+      final int computeType) {
+    super(source, layout, configuration, computeType);
+  }
 
-    public synchronized void dispose() {
-        PlanarImage src = getSource(0);
-        if(src instanceof RenderedImageAdapter) {
-            // Use relection to invoke dispose();
-            RenderedImage trueSrc =
-                ((RenderedImageAdapter)src).getWrappedImage();
-            Method disposeMethod = null;
-            try {
-                Class cls = trueSrc.getClass();
-                disposeMethod = cls.getMethod("dispose", null);
-                if(!disposeMethod.isAccessible()) {
-                    AccessibleObject.setAccessible(new AccessibleObject[] {
-                        disposeMethod
-                    }, true);
-                }
-                disposeMethod.invoke(trueSrc, null);
-            } catch(Exception e) {
-                // Ignore it.
-            }
+  @Override
+  public synchronized void dispose() {
+    try {
+      PlanarImage src = getSource(0);
+      if (src instanceof RenderedImageAdapter) {
+        // Use relection to invoke dispose();
+        RenderedImage trueSrc = ((RenderedImageAdapter) src).getWrappedImage();
+        if (trueSrc instanceof BufferedImage) {
+
+        } else if (trueSrc instanceof Disposable) {
+          ((Disposable) trueSrc).dispose();
         } else {
-            // Invoke dispose() directly.
-            src.dispose();
+          try {
+            Class cls = trueSrc.getClass();
+            Method disposeMethod = cls.getMethod("dispose");
+            if (!disposeMethod.canAccess(trueSrc)) {
+              AccessibleObject.setAccessible(new AccessibleObject[] {
+                  disposeMethod
+              }, true);
+            }
+            disposeMethod.invoke(trueSrc);
+          } catch (Exception e) {
+            // Ignore it.
+          }
         }
+      } else {
+        // Invoke dispose() directly.
+        src.dispose();
+      }
+    } finally {
+      super.dispose();
     }
+  }
 }
