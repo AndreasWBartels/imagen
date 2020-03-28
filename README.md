@@ -35,9 +35,9 @@ This process is incomplete, the supported build environments are outlined below:
 
 | module | Oracle JDK 8 | OpenJDK 8 | OpenJDK 11 |
 |--------|--------------|-----------|------------|
-| codec  | compiles     |           |            |
-| core   | compiles     |           |            |
-| mlib   | compiles     |           |            |
+| codec  | compiles     |           | compiles   |
+| core   | compiles     |           | compiles   |
+| mlib   | compiles     |           | deleted    |
 
 If using an unsupported environment:
 
@@ -45,17 +45,3 @@ If using an unsupported environment:
 COMPILATION ERROR : 
 TIFFImage.java:[59,31] error: package com.sun.image.codec.jpeg does not exist
 ```
-
-### MediaLab
-
-MediaLib integration requires `mlibwrapper_jai.jar` and is available using:
-
-    mvn install -Pmlib
-
-To install `mlibwrapper_jai.jar` into your local repository use:
-
-    mvn install:install-file -Dfile=mlibwrapper_jai.jar \
-        -DgroupId=javax.media -DartifactId=mlibwrapper_jai \
-        -Dversion=1.1.3 -Dpackaging=jar -DgeneratePom=true
-
-The functionality is unsupported and maintained for historic interest only. The MediaLib library is no longer readily available.
