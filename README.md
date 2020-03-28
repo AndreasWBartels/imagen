@@ -33,15 +33,8 @@ The *ImageN* codebase is in the process of being migrated from a Java Extension 
 
 This process is incomplete, the supported build environments are outlined below:
 
-| module | Oracle JDK 8 | OpenJDK 8 | OpenJDK 11 |
-|--------|--------------|-----------|------------|
-| codec  | compiles     |           | compiles   |
-| core   | compiles     |           | compiles   |
-| mlib   | compiles     |           | deleted    |
+| module | OpenJDK 11 |
+|--------|------------|
+| codec  | compiles   |
+| core   | compiles   |
 
-If using an unsupported environment:
-
-```
-COMPILATION ERROR : 
-TIFFImage.java:[59,31] error: package com.sun.image.codec.jpeg does not exist
-```
