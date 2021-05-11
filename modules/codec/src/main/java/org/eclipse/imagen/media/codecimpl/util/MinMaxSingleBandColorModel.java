@@ -19,15 +19,6 @@ public class MinMaxSingleBandColorModel extends ColorModel {
       final double minValue,
       final double maxValue,
       final double noData,
-      final ColorSpace colorSpace,
-      final int transferType) {
-    this(minValue, maxValue, noData, true, colorSpace, transferType);
-  }
-
-  public MinMaxSingleBandColorModel(
-      final double minValue,
-      final double maxValue,
-      final double noData,
       final boolean hasAlpha,
       final ColorSpace colorSpace,
       final int transferType) {
@@ -37,7 +28,7 @@ public class MinMaxSingleBandColorModel extends ColorModel {
             8 },
         colorSpace,
         hasAlpha,
-        false,
+        hasAlpha,
         Transparency.TRANSLUCENT,
         transferType);
 
@@ -209,7 +200,7 @@ public class MinMaxSingleBandColorModel extends ColorModel {
 
   @Override
   public int getAlpha(final Object inData) {
-    return getValue(inData) == this.noDataValue ? 0 : 255;
+    return alpha(getValue(inData));
   }
 
   /**
@@ -233,10 +224,23 @@ public class MinMaxSingleBandColorModel extends ColorModel {
   public int getRGB(final Object inData) {
 
     final double value = getValue(inData);
-    final int alpha = value == this.noDataValue ? 0 : 255;
+    final int alpha = alpha(value);
     final int valueResult = convert(value);
 
     return (alpha << 24) | (valueResult << 16) | (valueResult << 8) | valueResult;
+  }
+
+  protected int alpha(final double value) {
+    if (value < this.minValue) {
+      return 0;
+    }
+    if (value > this.maxValue) {
+      return 0;
+    }
+    if (value == this.noDataValue) {
+      return 0;
+    }
+    return 255;
   }
 
   /**

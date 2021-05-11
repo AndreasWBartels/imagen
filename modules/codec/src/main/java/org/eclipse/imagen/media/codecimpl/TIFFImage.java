@@ -22,6 +22,7 @@ import java.awt.image.DataBuffer;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.Optional;
 
 import org.eclipse.imagen.media.codec.SeekableStream;
 import org.eclipse.imagen.media.codec.TIFFDecodeParam;
@@ -55,10 +56,6 @@ public class TIFFImage extends TIFFImageOrginal {
       return new ObjectPair<>(firstObject, secondObject);
     }
   }
-
-  private static final int NODATA_TIFFFIELD = 42113;
-  private static final int TIFFTAG_MINSAMPLEVALUE = 280;
-  private static final int TIFFTAG_MAXSAMPLEVALUE = 281;
 
   public TIFFImage(final SeekableStream stream, final TIFFDecodeParam param, final int directory)
       throws IOException {
@@ -133,18 +130,22 @@ public class TIFFImage extends TIFFImageOrginal {
         minMaxValues.getFirstObject().doubleValue(),
         minMaxValues.getSecondObject().doubleValue(),
         noDataValue.doubleValue(),
-        this.colorModel.getColorSpace(),
+        true,
+        new PseudoColorSpace(1),
         transferType);
-
   }
 
   private ObjectPair<Double, Double> calculateMinMaxValues(
       final int transferType,
       final Double noDataValue) {
-    final Double min = getDoubleData(DataBuffer.TYPE_SHORT, TIFFTAG_MINSAMPLEVALUE);
-    final Double max = getDoubleData(DataBuffer.TYPE_SHORT, TIFFTAG_MAXSAMPLEVALUE);
+    final Double min =
+        Optional.ofNullable(getDoubleData(DataBuffer.TYPE_SHORT, TIFFImageDecoder.TIFFTAG_MINSAMPLEVALUE))
+            .orElse(getDoubleData(DataBuffer.TYPE_SHORT, TIFFImageDecoder.TIFF_S_MIN_SAMPLE_VALUE));
+    final Double max =
+        Optional.ofNullable(getDoubleData(DataBuffer.TYPE_SHORT, TIFFImageDecoder.TIFFTAG_MAXSAMPLEVALUE))
+            .orElse(getDoubleData(DataBuffer.TYPE_SHORT, TIFFImageDecoder.TIFF_S_MAX_SAMPLE_VALUE));
 
-    if (min != null & max != null) {
+    if (min != null && max != null) {
       return ObjectPair.of(min, max);
     }
     if (Boolean.getBoolean("org.eclipse.imagen.media.codec.tiff.bruteforce.minmax")) {
@@ -196,7 +197,6 @@ public class TIFFImage extends TIFFImageOrginal {
       final int transferType,
       final double noDataValue) {
     if (transferType == DataBuffer.TYPE_INT) {
-      // return new ObjectPair<Double, Double>(Double.valueOf(0), Double.valueOf(Short.MAX_VALUE));
       final Rectangle bounds = this.getBounds();
       final int[] buffer = new int[bounds.width * bounds.height];
 
@@ -207,7 +207,7 @@ public class TIFFImage extends TIFFImageOrginal {
 
       boolean found = false;
       for (final int value : buffer) {
-        if (value != noDataValue) {
+        if (value != (int) noDataValue) {
           minValue = Math.min(minValue, value);
           maxValue = Math.max(maxValue, value);
           found = true;
@@ -219,8 +219,6 @@ public class TIFFImage extends TIFFImageOrginal {
       return ObjectPair.of(Double.valueOf(minValue), Double.valueOf(maxValue));
     }
     if (transferType == DataBuffer.TYPE_BYTE) {
-      // return new ObjectObjectPair<Double, Double>(Double.valueOf(0),
-      // Double.valueOf(Short.MAX_VALUE));
       final Rectangle bounds = this.getBounds();
       final int[] buffer = new int[bounds.width * bounds.height];
 
@@ -232,7 +230,7 @@ public class TIFFImage extends TIFFImageOrginal {
       boolean found = false;
       for (final int aBuffer : buffer) {
         final int value = aBuffer;
-        if (value != noDataValue) {
+        if (value != (int) noDataValue) {
           minValue = Math.min(minValue, value);
           maxValue = Math.max(maxValue, value);
           found = true;
@@ -244,8 +242,6 @@ public class TIFFImage extends TIFFImageOrginal {
       return ObjectPair.of(Double.valueOf(minValue), Double.valueOf(maxValue));
     }
     if (transferType == DataBuffer.TYPE_USHORT) {
-      // return new ObjectObjectPair<Double, Double>(Double.valueOf(0),
-      // Double.valueOf(Short.MAX_VALUE));
       final Rectangle bounds = this.getBounds();
       final int[] buffer = new int[bounds.width * bounds.height];
 
@@ -257,7 +253,7 @@ public class TIFFImage extends TIFFImageOrginal {
       boolean found = false;
       for (final int aBuffer : buffer) {
         final int value = (short) aBuffer;
-        if (value != noDataValue) {
+        if (value != (int) noDataValue) {
           minValue = Math.min(minValue, value);
           maxValue = Math.max(maxValue, value);
           found = true;
@@ -269,8 +265,6 @@ public class TIFFImage extends TIFFImageOrginal {
       return ObjectPair.of(Double.valueOf(minValue), Double.valueOf(maxValue));
     }
     if (transferType == DataBuffer.TYPE_SHORT) {
-      // return new ObjectObjectPair<Double, Double>(Double.valueOf(0),
-      // Double.valueOf(Short.MAX_VALUE));
       final Rectangle bounds = this.getBounds();
       final int[] buffer = new int[bounds.width * bounds.height];
 
@@ -282,7 +276,7 @@ public class TIFFImage extends TIFFImageOrginal {
       boolean found = false;
       for (final int aBuffer : buffer) {
         final int value = (short) aBuffer;
-        if (value != noDataValue) {
+        if (value != (int) noDataValue) {
           minValue = Math.min(minValue, value);
           maxValue = Math.max(maxValue, value);
           found = true;
@@ -340,7 +334,7 @@ public class TIFFImage extends TIFFImageOrginal {
   }
 
   private Double getNoDataValue(final int transferType) {
-    final int fiffFieldId = NODATA_TIFFFIELD;
+    final int fiffFieldId = TIFFImageDecoder.NODATA_TIFFFIELD;
     return getDoubleData(transferType, fiffFieldId);
   }
 

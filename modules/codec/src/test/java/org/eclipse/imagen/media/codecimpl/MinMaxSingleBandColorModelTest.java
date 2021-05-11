@@ -8,7 +8,7 @@ import java.awt.image.DataBuffer;
 import org.eclipse.imagen.media.codecimpl.util.MinMaxSingleBandColorModel;
 import org.junit.jupiter.api.Test;
 
-public class TiffColorModelTest {
+public class MinMaxSingleBandColorModelTest {
 
   @Test
   public void testFloat() {
@@ -16,6 +16,7 @@ public class TiffColorModelTest {
         0,
         100,
         -1,
+        true,
         ColorSpace.getInstance(ColorSpace.CS_GRAY),
         DataBuffer.TYPE_FLOAT);
 
@@ -26,8 +27,8 @@ public class TiffColorModelTest {
 
     test(colorModel, 0, 0, new float[] { -1 });
 
-    test(colorModel, 255, 0, new float[] { -16 });
-    test(colorModel, 255, 255, new float[] { 103 });
+    test(colorModel, 0, 0, new float[] { -16 });
+    test(colorModel, 0, 255, new float[] { 103 });
   }
 
   @Test
@@ -36,6 +37,7 @@ public class TiffColorModelTest {
         0,
         100,
         -1,
+        true,
         ColorSpace.getInstance(ColorSpace.CS_GRAY),
         DataBuffer.TYPE_DOUBLE);
 
@@ -46,8 +48,8 @@ public class TiffColorModelTest {
 
     test(colorModel, 0, 0, new double[] { -1 });
 
-    test(colorModel, 255, 0, new double[] { -16 });
-    test(colorModel, 255, 255, new double[] { 103 });
+    test(colorModel, 0, 0, new double[] { -16 });
+    test(colorModel, 0, 255, new double[] { 103 });
   }
 
   @Test
@@ -55,7 +57,8 @@ public class TiffColorModelTest {
     final MinMaxSingleBandColorModel colorModel = new MinMaxSingleBandColorModel(
         -255,
         255,
-        -1,
+        -999,
+        true,
         ColorSpace.getInstance(ColorSpace.CS_GRAY),
         DataBuffer.TYPE_FLOAT);
 
@@ -65,7 +68,7 @@ public class TiffColorModelTest {
     test(colorModel, 255, 191, new float[] { 127 });
     test(colorModel, 255, 255, new float[] { 255 });
 
-    test(colorModel, 0, 0, new float[] { -1 });
+    test(colorModel, 0, 0, new float[] { -999 });
   }
 
   private void test(
