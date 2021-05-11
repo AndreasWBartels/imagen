@@ -17,20 +17,18 @@
 
 package org.eclipse.imagen.media.opimage;
 import java.awt.Rectangle;
-import java.awt.geom.AffineTransform;
 import java.awt.geom.Point2D;
+import java.awt.geom.AffineTransform;
 import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
-import java.util.Map;
-// import org.eclipse.imagen.media.test.OpImageTester;
-
 import org.eclipse.imagen.BorderExtender;
 import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.Interpolation;
 import org.eclipse.imagen.RasterAccessor;
 import org.eclipse.imagen.RasterFormatTag;
+import java.util.Map;
 
 /**
  * An OpImage subclass that performs bicubic Affine mapping
@@ -318,7 +316,7 @@ final class AffineBicubicOpImage extends AffineOpImage {
                         float_fracx = fracx;
                         float_fracy = fracy;
                         frac_xx = float_fracx * (1.0F - float_fracx);
-                        frac_yy = float_fracx * (1.0F - float_fracy);
+                        frac_yy = float_fracy * (1.0F - float_fracy);
 
                         s0 = s00 + ((s10 - s00) * float_fracx);
                         s1 = s01 + ((s11 - s01) * float_fracx);
@@ -582,7 +580,7 @@ final class AffineBicubicOpImage extends AffineOpImage {
                         float_fracx = fracx;
                         float_fracy = fracy;
                         frac_xx = float_fracx * (1.0F - float_fracx);
-                        frac_yy = float_fracx * (1.0F - float_fracy);
+                        frac_yy = float_fracy * (1.0F - float_fracy);
 
                         s0 = s00 + ((s10 - s00) * float_fracx);
                         s1 = s01 + ((s11 - s01) * float_fracx);
@@ -848,7 +846,7 @@ final class AffineBicubicOpImage extends AffineOpImage {
                         float_fracx = fracx;
                         float_fracy = fracy;
                         frac_xx = float_fracx * (1.0F - float_fracx);
-                        frac_yy = float_fracx * (1.0F - float_fracy);
+                        frac_yy = float_fracy * (1.0F - float_fracy);
 
                         s0 = s00 + ((s10 - s00) * float_fracx);
                         s1 = s01 + ((s11 - s01) * float_fracx);
@@ -1113,7 +1111,7 @@ final class AffineBicubicOpImage extends AffineOpImage {
                         float_fracx = fracx;
                         float_fracy = fracy;
                         frac_xx = float_fracx * (1.0F - float_fracx);
-                        frac_yy = float_fracx * (1.0F - float_fracy);
+                        frac_yy = float_fracy * (1.0F - float_fracy);
 
                         s0 = s00 + ((s10 - s00) * float_fracx);
                         s1 = s01 + ((s11 - s01) * float_fracx);
@@ -1377,7 +1375,7 @@ final class AffineBicubicOpImage extends AffineOpImage {
                         float_fracx = fracx;
                         float_fracy = fracy;
                         frac_xx = float_fracx * (1.0F - float_fracx);
-                        frac_yy = float_fracx * (1.0F - float_fracy);
+                        frac_yy = float_fracy * (1.0F - float_fracy);
 
                         s0 = s00 + ((s10 - s00) * float_fracx);
                         s1 = s01 + ((s11 - s01) * float_fracx);
@@ -1628,7 +1626,7 @@ final class AffineBicubicOpImage extends AffineOpImage {
                         float_fracx = fracx;
                         float_fracy = fracy;
                         frac_xx = float_fracx * (1.0F - float_fracx);
-                        frac_yy = float_fracx * (1.0F - float_fracy);
+                        frac_yy = float_fracy * (1.0F - float_fracy);
 
                         s0 = s00 + ((s10 - s00) * float_fracx);
                         s1 = s01 + ((s11 - s01) * float_fracx);

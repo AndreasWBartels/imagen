@@ -21,8 +21,6 @@ import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
-import java.util.Map;
-
 import org.eclipse.imagen.BorderExtender;
 import org.eclipse.imagen.ImageLayout;
 import org.eclipse.imagen.Interpolation;
@@ -30,6 +28,7 @@ import org.eclipse.imagen.InterpolationTable;
 import org.eclipse.imagen.RasterAccessor;
 import org.eclipse.imagen.RasterFormatTag;
 import org.eclipse.imagen.ScaleOpImage;
+import java.util.Map;
 import org.eclipse.imagen.media.util.Rational;
 // import org.eclipse.imagen.media.test.OpImageTester;
 
@@ -712,8 +711,8 @@ final class ScaleBicubicOpImage extends ScaleOpImage {
 		    s = (int)((sum + round) >> precisionBits);
 			
 		    // clamp the value to ushort range
-		    if (s > 65536) {
-			s = 65536;
+		    if (s > 65535) {
+			s = 65535;
 		    } else if (s < 0) {
 			s = 0;
 		    }
